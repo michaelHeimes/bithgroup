@@ -1,0 +1,12 @@
+*~
+.env
+.DS_Store
+.svn
+.cvs
+.htaccess
+*.bak
+*.swp
+.vscode
+Thumbs.db
+*.log
+node_modules/

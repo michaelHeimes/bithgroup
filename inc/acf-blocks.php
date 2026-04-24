@@ -16,7 +16,7 @@ function my_acf_init_block_types() {
                 'jsx'   => true,
                 'color' => array(
                     'background' => true,
-                    'text'       => true,
+                    'text'       => false,
                     'gradients'  => true,
                     'gradients'  => array(
                         array( 'name' => 'Bith Radial', 'slug' => 'bith-radial', 'gradient' => 'radial-gradient(50% 50% at 50% 50%, #FFF 0%, #E2F0B9 100%)' ),

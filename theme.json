@@ -3,6 +3,10 @@
   "settings": {
 	"color": {
 	  "custom": false,
+	  "text": false,
+	  "background": false,         
+	  "link": false,            
+	  "custom": false,
 	  "customGradient": false,
 	  "defaultPalette": false,
 	  "defaultGradients": false,

@@ -200,6 +200,26 @@ function trailhead_scripts() {
 	 }
  }
  add_action('wp_enqueue_scripts', 'trailhead_scripts');
+ 
+ function trailhead_add_editor_styles() {
+	 // 1. Enable support for editor styles
+	 add_theme_support( 'editor-styles' );
+ 
+	 // 2. Locate the manifest
+	 $manifest_path = get_template_directory() . '/dist/manifest.json';
+	 
+	 if (file_exists($manifest_path)) {
+		 $manifest = json_decode(file_get_contents($manifest_path), true);
+ 
+		 // 3. If the CSS key exists in manifest, add it to the editor
+		 if (isset($manifest['css'])) {
+			 // Note: add_editor_style path is relative to the theme root
+			 add_editor_style( 'dist/css/' . $manifest['css'] );
+		 }
+	 }
+ }
+ add_action( 'after_setup_theme', 'trailhead_add_editor_styles' );
+
 
 
 
@@ -207,14 +227,14 @@ function trailhead_scripts() {
  * Enqueue Google Fonts.
  */
 wp_enqueue_style(
-	 'pmi-google-fonts',
-	 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:ital@0;1&display=swap',
+	 'trailhead-google-fonts',
+	 'https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&family=Archivo:ital,wght@0,300;0,500;1,300;1,500&display=swap',
 	 array(),
 	 null
  );
  
  function google_font_loader_tag_filter( $html, $handle ) {
-	 if ( $handle === 'pmi-google-fonts' ) {
+	 if ( $handle === 'trailhead-google-fonts' ) {
 		 $rel_preconnect = "rel='stylesheet preconnect'";
 		 return str_replace(
 			 "rel='stylesheet'",
@@ -281,9 +301,6 @@ require_once(get_template_directory().'/inc/comments.php');
 // Replace 'older/newer' post links with numbered navigation
 require_once(get_template_directory().'/inc/page-navi.php'); 
 
-// Adds site styles to the WordPress editor
-require_once(get_template_directory().'/inc/editor-styles.php'); 
-
 // ACF Options
 require_once(get_template_directory().'/inc/acf-json.php');
 
@@ -291,10 +308,13 @@ require_once(get_template_directory().'/inc/acf-json.php');
 require_once(get_template_directory().'/inc/acf-options.php');
 
 // ACF Block
-//require_once(get_template_directory().'/inc/acf-blocks.php');
+require_once(get_template_directory().'/inc/acf-blocks.php');
+
+// Gutenberg
+require_once(get_template_directory().'/inc/gutenberg.php'); 
 
 // Disable Gutenberg
-require_once(get_template_directory().'/inc/disable-gutenberg.php'); 
+// require_once(get_template_directory().'/inc/disable-gutenberg.php'); 
 
 // Add Page Slug to Body Class
 // require_once(get_template_directory().'/inc/page-slug-body-class.php');

@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "settings": {
+	"color": {
+	  "custom": false,
+	  "customGradient": false,
+	  "defaultPalette": false,
+	  "defaultGradients": false,
+	  "palette": [
+		{ "slug": "bith-white", "color": "#FFFFFF", "name": "White" },
+		{ "slug": "bith-onyx", "color": "#0A0B0B", "name": "Onyx" },
+		{ "slug": "bith-slate", "color": "#1B2634", "name": "Slate" },
+		{ "slug": "bith-blue-10", "color": "#EAEFF5", "name": "Blue 10" },
+		{ "slug": "bith-blue-100", "color": "#184275", "name": "Blue 100" },
+		{ "slug": "bith-green-100", "color": "#9DC03B", "name": "Green 100" }
+	  ],
+	  "gradients": [
+		{
+		  "name": "Bith Radial",
+		  "slug": "bith-radial",
+		  "gradient": "radial-gradient(50% 50% at 50% 50%, #FFF 0%, #E2F0B9 100%)"
+		},
+		{
+		  "name": "Cube to White",
+		  "slug": "bith-cube-to-white",
+		  "gradient": "linear-gradient(180deg, #F4F7E5 0%, #FFF 100%)"
+		},
+		{
+		  "name": "White to Cube",
+		  "slug": "bith-white-to-cube",
+		  "gradient": "linear-gradient(180deg, #FFF 0%, #F4F7E5 100%)"
+		},
+		{
+		  "name": "Blue",
+		  "slug": "bith-blue",
+		  "gradient": "linear-gradient(180deg, #184275 0%, #1B2634 100%)"
+		}
+	  ]
+	},
+	"typography": {
+	  "defaultFontSizes": false,
+	  "fontSizes": [
+		{ "name": "Small", "slug": "small", "size": "1rem" },
+		{ "name": "Medium", "slug": "medium", "size": "1.125rem" },
+		{ "name": "Large", "slug": "large", "size": "1.25rem" }
+	  ]
+	}
+  },
+  "styles": {
+	"typography": {
+	  "fontSize": "var(--wp--preset--font-size--large)"
+	},
+	"elements": {
+	  "link": {
+		"typography": { "fontSize": "var(--wp--preset--font-size--large)" }
+	  }
+	},
+	"blocks": {
+	  "core/list": {
+		"typography": { "fontSize": "var(--wp--preset--font-size--large)" }
+	  }
+	}
+  }
+}
+
+

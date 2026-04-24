@@ -1,16 +1,11 @@
 @charset "UTF-8";
 
-// 1. MODULES (No CSS output yet)
-// 1. MODULES
 @import "foundation-sites/scss/vendor/normalize";
 @import "foundation-sites/scss/foundation";
 @import "motion-ui/motion-ui";
 
-// 2. SETTINGS (Your overrides)
 @import "foundation-settings"; 
 
-
-// 3. GENERATE FOUNDATION (The "Vendor" logic)
 // Global styles
 @include foundation-global-styles;
 @include foundation-forms;
@@ -69,9 +64,12 @@
 // Import Motion-UI from vendor files
 //import "motion-ui";
 
-// 4. THEME CUSTOM STYLES
+// Theme Styles
 @import "variables";
 @import "global";
 @import "typography";
 @import "header";
 @import "footer";
+
+// Blocks
+@import "blocks/section";

@@ -35,6 +35,7 @@ export function styles() {
   return gulp.src(paths.scss.src, { sourcemaps: !isProd })
     .pipe(sass({
       includePaths: [
+        'source/scss',
         'node_modules', 
         'node_modules/foundation-sites/scss',
         'node_modules/motion-ui'

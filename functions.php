@@ -172,7 +172,7 @@ function trailhead_scripts() {
 	 if (isset($manifest['css'])) {
 		 wp_enqueue_style(
 			 'bundle-css', 
-			 get_template_directory_uri() . '/dist/css/' . $manifest['css'], 
+			 get_template_directory_uri() . '/dist/' . $manifest['css'], 
 			 [], 
 			 null 
 		 );
@@ -181,7 +181,7 @@ function trailhead_scripts() {
 	 if (isset($manifest['js'])) {
 		 wp_enqueue_script(
 			 'bundle-js', 
-			 get_template_directory_uri() . '/dist/js/' . $manifest['js'], 
+			 get_template_directory_uri() . '/dist/' . $manifest['js'], 
 			 ['jquery'], 
 			 null, 
 			 true // Load in footer

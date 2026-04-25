@@ -1,6 +1,4 @@
-/**
- * Trailhead Theme Build System
- */
+/** * Trailhead Theme Build System */
 import gulp from 'gulp';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -16,12 +14,19 @@ const sass = gulpSass(dartSass);
 const server = browserSync.create();
 const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
-// Flag to check if we are running 'build' or 'default/watch'
 const isProd = process.argv.includes('build');
 
 const paths = {
-  scss: { src: 'source/scss/style.scss', watch: 'source/scss/**/*.scss', dest: 'dist/css/' },
-  js: { src: 'source/js/app.js', watch: 'source/js/**/*.js', dest: 'dist/js/' },
+  scss: {
+    src: 'source/scss/style.scss',
+    watch: 'source/scss/**/*.scss',
+    dest: 'dist' // Pointing directly to dist
+  },
+  js: {
+    src: 'source/js/app.js',
+    watch: 'source/js/**/*.js',
+    dest: 'dist' // Pointing directly to dist
+  },
   php: '**/*.php',
   dist: 'dist'
 };
@@ -29,39 +34,38 @@ const paths = {
 export const clean = () => rimraf(paths.dist);
 
 /**
- * Optimized Styles Task
+ * Styles Task - Consolidated
  */
 export function styles() {
-   return gulp.src(paths.scss.src, { sourcemaps: !isProd })
-     .pipe(sass({
-       includePaths: [
-         'source/scss',
-         'node_modules',
-         'node_modules/foundation-sites/scss',
-         'node_modules/motion-ui'
-       ],
-       outputStyle: isProd ? 'compressed' : 'expanded'
-     }).on('error', sass.logError))
-     .pipe(postcss([autoprefixer()]))
-     .pipe(rename(`bundle.${pkg.version}.min.css`))
-     .pipe(gulp.dest(paths.scss.dest, { sourcemaps: '.' }))
-     .pipe(server.stream());
- }
-
-
-export function scripts() {
-  return gulp.src(paths.js.src)
-    .pipe(esbuild({
-      outfile: `bundle.${pkg.version}.min.js`,
-      bundle: true,
-      minify: isProd, // Only minify JS in production
-      sourcemap: true,
-      target: 'es2015',
-      loader: { '.js': 'js' },
-    }))
-    .pipe(gulp.dest(paths.js.dest))
+  return gulp.src(paths.scss.src, { sourcemaps: !isProd })
+    .pipe(sass({
+      // includePaths simplified
+      includePaths: ['node_modules', 'source/scss'], 
+      outputStyle: isProd ? 'compressed' : 'expanded'
+    }).on('error', sass.logError))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(rename(`bundle.${pkg.version}.min.css`))
+    // Removed the {sourcemaps: '.'} conflict, let gulp handle it via src options
+    .pipe(gulp.dest(paths.scss.dest, { sourcemaps: !isProd ? '.' : false }))
     .pipe(server.stream());
 }
+
+/**
+ * Scripts Task - With CSS Loader for Swiper
+ */
+export function scripts() {
+   return gulp.src(paths.js.src)
+     .pipe(esbuild({
+       outfile: `bundle.${pkg.version}.min.js`,
+       bundle: true,
+       minify: isProd,
+       sourcemap: true,
+       target: 'es2015',
+       loader: { '.js': 'js' } // Removed CSS loader
+     }))
+     .pipe(gulp.dest(paths.js.dest))
+     .pipe(server.stream());
+ }
 
 export function bumpWP(cb) {
   const stylePath = './style.css';
@@ -77,14 +81,17 @@ export function manifest(cb) {
   if (!fs.existsSync(paths.dist)) { fs.mkdirSync(paths.dist); }
   const data = {
     js: `bundle.${pkg.version}.min.js`,
-    css: `bundle.${pkg.version}.min.css`
+    css: `bundle.${pkg.version}.min.css` // One name to rule them all
   };
   fs.writeFileSync(`${paths.dist}/manifest.json`, JSON.stringify(data, null, 2));
   cb();
 }
-
 export function watch() {
-  server.init({ proxy: "http://trailhead.local", notify: false, open: false });
+  server.init({
+    proxy: "http://trailhead.local",
+    notify: false,
+    open: false
+  });
   gulp.watch(paths.scss.watch, styles);
   gulp.watch(paths.js.watch, scripts);
   gulp.watch(paths.php).on('change', server.reload);

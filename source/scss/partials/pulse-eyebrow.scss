@@ -1,0 +1,64 @@
+// Variables
+$pulse-size: 8px;
+$pulse-color: #9DC03B;
+$pulse-duration: 4s;
+
+.pulse-eyebrow {
+	display: block;
+	text-align: center;
+
+	.pulse {
+		position: relative;
+		display: inline-block;
+		width: $pulse-size;
+		height: $pulse-size;
+		transform: translateY(-.10em);
+		margin-right: 8px;
+		span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $pulse-color;
+			border-radius: 100%;
+		}
+
+		.pulse-dot {
+			animation: pulse-bounce $pulse-duration ease-in-out infinite;
+		}
+
+		.pulse-spread {
+			opacity: 0;
+			animation: pulse-spread-expand $pulse-duration ease-out infinite;
+		}
+	}
+}
+
+@keyframes pulse-spread-expand {
+	0% {
+		transform: scale(1);
+		opacity: 0.6;
+	}
+	/* Expand to 6000% and fade out during the dot's growth phase */
+	15% {
+		transform: scale(60);
+		opacity: 0;
+	}
+	/* Stay invisible for the rest of the 3s loop */
+	100% {
+		transform: scale(60);
+		opacity: 0;
+	}
+}
+
+@keyframes pulse-bounce {
+	0% { transform: scale(1); }
+	6.6% { transform: scale(1.3); }
+	33.3% { transform: scale(1.3); }
+	38% { transform: scale(0.75); }
+	45% { transform: scale(1); }
+	50% { transform: scale(0.75); }
+	57% { transform: scale(1); }
+	100% { transform: scale(1); }
+}

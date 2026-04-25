@@ -74,7 +74,7 @@ add_filter('admin_footer_text', 'trailhead_custom_admin_footer');
 	function theme_editor_style() {
 		add_editor_style( get_template_directory_uri() . '/assets/styles/style.min.css' );
 	}
-	add_action('init', 'theme_editor_style');
+	//add_action('init', 'theme_editor_style');
 
 
 	// remove revisions meta box and recreate on right side for all post types

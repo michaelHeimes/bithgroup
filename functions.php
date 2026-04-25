@@ -228,7 +228,7 @@ function trailhead_scripts() {
  */
 wp_enqueue_style(
 	 'trailhead-google-fonts',
-	 'https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&family=Archivo:ital,wght@0,300;0,500;1,300;1,500&display=swap',
+	 'https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&family=Archivo:ital,wght@0,300;0,500;1,300;1,500&family=JetBrains+Mono&display=swap',
 	 array(),
 	 null
  );

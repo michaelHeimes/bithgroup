@@ -9,7 +9,7 @@ function my_acf_init_block_types() {
             'name'            => 'section',
             'title'           => __('Section wrapper for all blocks'),
             'description'     => __('Section wrapper for all blocks.'),
-            'render_template' => 'template-parts/blocks/section.php',
+            'render_template' => 'blocks/section-block-wrapper.php',
             'category'        => 'layout',
             'keywords'        => array( 'section', 'container', 'bith', 'propr' ),
             'supports'        => array(
@@ -31,6 +31,24 @@ function my_acf_init_block_types() {
                         array( 'slug' => 'bith-blue-100', 'color' => '#184275', 'name' => 'Blue 100' ),
                         array( 'slug' => 'bith-green-100', 'color' => '#9DC03B', 'name' => 'Green 100' ),
                     ),
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
+        
+        acf_register_block_type(array(
+            'name'            => 'home-hero-img-services',
+            'title'           => __('Home Hero, Image, and Services'),
+            'description'     => __('Home Hero, Image, and Services.'),
+            'render_template' => 'blocks/home-hero-img-services.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'home', 'hero', 'banner', 'services', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'color' => array(
+                    'background' => false,
+                    'text'       => false,
+                    'gradients'  => false,
                 ),
                 'align' => array( 'wide', 'full' ),
             ),

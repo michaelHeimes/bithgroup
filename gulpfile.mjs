@@ -32,22 +32,22 @@ export const clean = () => rimraf(paths.dist);
  * Optimized Styles Task
  */
 export function styles() {
-  return gulp.src(paths.scss.src, { sourcemaps: !isProd })
-    .pipe(sass({
-      includePaths: [
-        'source/scss',
-        'node_modules', 
-        'node_modules/foundation-sites/scss',
-        'node_modules/motion-ui'
-      ],
-      // 'expanded' is much faster for development than 'compressed'
-      outputStyle: isProd ? 'compressed' : 'expanded' 
-    }).on('error', sass.logError))
-    .pipe(postcss([autoprefixer()]))
-    .pipe(rename(`bundle.${pkg.version}.min.css`))
-    .pipe(gulp.dest(paths.scss.dest, { sourcemaps: '.' }))
-    .pipe(server.stream());
-}
+   return gulp.src(paths.scss.src, { sourcemaps: !isProd })
+     .pipe(sass({
+       includePaths: [
+         'source/scss',
+         'node_modules',
+         'node_modules/foundation-sites/scss',
+         'node_modules/motion-ui'
+       ],
+       outputStyle: isProd ? 'compressed' : 'expanded'
+     }).on('error', sass.logError))
+     .pipe(postcss([autoprefixer()]))
+     .pipe(rename(`bundle.${pkg.version}.min.css`))
+     .pipe(gulp.dest(paths.scss.dest, { sourcemaps: '.' }))
+     .pipe(server.stream());
+ }
+
 
 export function scripts() {
   return gulp.src(paths.js.src)

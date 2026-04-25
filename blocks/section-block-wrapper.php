@@ -5,11 +5,11 @@
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
 $className = 'section-block-wrapper';
 
-// 1. Standard Block Classes
+// Standard Block Classes
 if (!empty($block['className'])) { $className .= ' ' . $block['className']; }
 if (!empty($block['align'])) { $className .= ' align' . $block['align']; }
 
-// 2. Background & Gradient Classes
+// Background & Gradient Classes
 if (!empty($block['backgroundColor'])) {
     $className .= ' has-' . $block['backgroundColor'] . '-background-color';
 }
@@ -17,7 +17,7 @@ if (!empty($block['gradient'])) {
     $className .= ' has-' . $block['gradient'] . '-gradient-background';
 }
 
-// 3. 💡 Automatic Text Color Logic
+// Automatic Text Color Logic
 $bg_color = $block['backgroundColor'] ?? '';
 $gradient = $block['gradient'] ?? '';
 
@@ -31,11 +31,11 @@ if ( in_array($bg_color, $light_backgrounds) || in_array($gradient, $light_backg
     $className .= ' has-bith-white-color';
 }
 
-// 4. ACF Padding Classes
+// ACF Padding Classes
 if (get_field('remove_top_padding')) { $className .= ' no-top-padding'; }
 if (get_field('remove_bottom_padding')) { $className .= ' no-bottom-padding'; }
 
-// 5. Container Style
+// Container Style
 $content_maxwidth = get_field('content_maxwidth');
 $container_style = !empty($content_maxwidth) ? ' style="max-width: ' . esc_attr($content_maxwidth) . 'px;"' : '';
 ?>

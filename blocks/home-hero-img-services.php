@@ -84,31 +84,15 @@ $service_cards = get_field('service_cards') ?? null;
 		<?php endif;?>
 		<?php if($service_cards_heading || $service_cards_text || $service_cards_button_link || $service_cards):?>
 			<div class="services grid-container position-relative">
-				<div class="section-header grid-x grid-padding-x align-middle">
-					<?php if($service_cards_heading || $service_cards_text ):?>
-						<div class="cell auto heading-text has-bith-onyx-color">
-							<?php if($service_cards_heading):?>
-								<h2>
-									<?=wp_kses_post( $service_cards_heading );?>
-								</h2>
-							<?php endif;?>
-							<?php if($service_cards_text):?>
-								<p>
-									<?=wp_kses_post( $service_cards_text);?>
-								</p>
-							<?php endif;?>
-						</div>
-					<?php endif;?>
-					<?php if($service_cards_button_link) {
-						get_template_part('template-parts/part', 'button-link',
-							array(
-								'link' => $service_cards_button_link,
-								'container-classes' => 'small-12 medium-shrink show-for-medium',
-								'btn-classes' => 'blue-100 has-bith-white-color',
-							)
-						);
-					};?>
-				</div>
+				<?php get_template_part('template-parts/part', 'section-header-h2-text-btn-link',
+					array(
+						'heading' => $service_cards_heading,
+						'text' => $service_cards_text,
+						'text-color' => 'black',
+						'link' => $service_cards_button_link,
+						'btn-classes' => 'blue-100 has-bith-white-color'
+					),
+				);?>
 				<?php if($service_cards):?>
 					<div class="services-slider">
 						<div class="inner">
@@ -121,29 +105,28 @@ $service_cards = get_field('service_cards') ?? null;
 										$service_page = $service_card['service_page'] ?? null;
 										if($service_page || $service_name):
 									?>
-										<div class="swiper-slide">
-											<a href="<?=esc_url($service_page );?>" class="has-bith-onyx-color">
-												<?php if($icon):?>
-													<div class="icon-wrap text-center">
-														<?=wp_get_attachment_image( $icon['id'], 'full' );?>
+										<div class="swiper-slide has-bith-onyx-color d-flex flex-dir-column">
+											<a href="<?=esc_url($service_page );?>" class="display-block">											</a>
+											<?php if($icon):?>
+												<div class="icon-wrap grid-x align-middle align-center position-relative overflow-hidden">
+													<?=wp_get_attachment_image( $icon['id'], 'full', false, array( 'class' => 'style-svg position-relative z-1' ) );?>
+												</div>
+											<?php endif;?>
+											<?php if($service_name):?>
+												<div class="grid-x gap-x position-relative">
+													<div class="cell auto">
+														<h3 class="weight-500"><?=wp_kses_post($service_name);?></h3>
 													</div>
-												<?php endif;?>
-												<?php if($service_name):?>
-													<div class="grid-x gap-x">
-														<div class="cell auto">
-															<h3><?=wp_kses_post($service_name);?></h3>
-														</div>
-														<div class="cell shrink">
-															<img src="<?=get_template_directory_uri();?>/assets/svgs/service-card-arrow-icon.svg"/>
-														</div>
+													<div class="cell shrink">
+														<img src="<?=get_template_directory_uri();?>/assets/svgs/service-card-arrow-icon.svg"/>
 													</div>
-												<?php endif;?>
-												<?php if($service_description):?>
-													<div class="description">
-														<p class="md-p"><?=wp_kses_post($service_description);?></p>
-													</div>
-												<?php endif;?>
-											</a>
+												</div>
+											<?php endif;?>
+											<?php if($service_description):?>
+												<div class="description position-relative">
+													<p class="md-p"><?=wp_kses_post($service_description);?></p>
+												</div>
+											<?php endif;?>
 										</div>
 									<?php endif; endforeach;?>
 								</div>

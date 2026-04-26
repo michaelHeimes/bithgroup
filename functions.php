@@ -202,23 +202,40 @@ function trailhead_scripts() {
  add_action('wp_enqueue_scripts', 'trailhead_scripts');
  
  function trailhead_add_editor_styles() {
-	 // 1. Enable support for editor styles
 	 add_theme_support( 'editor-styles' );
  
-	 // 2. Locate the manifest
 	 $manifest_path = get_template_directory() . '/dist/manifest.json';
 	 
 	 if (file_exists($manifest_path)) {
 		 $manifest = json_decode(file_get_contents($manifest_path), true);
  
-		 // 3. If the CSS key exists in manifest, add it to the editor
 		 if (isset($manifest['css'])) {
 			 // Note: add_editor_style path is relative to the theme root
-			 add_editor_style( 'dist/css/' . $manifest['css'] );
+			 add_editor_style( 'dist/' . $manifest['css'] );
 		 }
 	 }
  }
  add_action( 'after_setup_theme', 'trailhead_add_editor_styles' );
+
+function trailhead_add_editor_js() {
+	 $manifest_path = get_template_directory() . '/dist/manifest.json';
+ 
+	 if (file_exists($manifest_path)) {
+		 $manifest = json_decode(file_get_contents($manifest_path), true);
+ 
+		 if (isset($manifest['js'])) {
+			 wp_enqueue_script(
+				 'trailhead-editor-js',
+				 get_template_directory_uri() . '/dist/' . $manifest['js'],
+				 array('jquery'), // Foundation & your modules need jQuery
+				 null, // Version is handled by the manifest filename
+				 true
+			 );
+		 }
+	 }
+ }
+ add_action( 'enqueue_block_editor_assets', 'trailhead_add_editor_js' );
+
 
 
 
@@ -314,7 +331,7 @@ require_once(get_template_directory().'/inc/acf-blocks.php');
 require_once(get_template_directory().'/inc/gutenberg.php'); 
 
 // Disable Gutenberg
-// require_once(get_template_directory().'/inc/disable-gutenberg.php'); 
+require_once(get_template_directory().'/inc/disable-gutenberg.php'); 
 
 // Add Page Slug to Body Class
 // require_once(get_template_directory().'/inc/page-slug-body-class.php');

@@ -10,19 +10,22 @@ GLOBAL ELEMENTS
 .header-spacer {
 	height: var(--header-height);
 }
-.has-bg {
-	position: relative;
-	> .bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
+.page-section {
+	padding-top: clamp(3.75rem, 3.036rem + 3.571vw, 6.25rem);
+	padding-bottom: clamp(3.75rem, 3.036rem + 3.571vw, 6.25rem);
+}
+.off-canvas.position-top {
+	height: 100vh;
+	transform: translateY(-100vh);
+	&.is-open {
+		transform: translate(0, 0);
 	}
 }
-
+.off-canvas-content.is-open-top.has-transition-push {
+	transform: translateY(100vh);
+}
 .swiper-scrollbar {
+	margin-top: 34px;
 	.swiper-horizontal > &, &.swiper-scrollbar-horizontal {
 		position: relative;
 		width: calc(100% + 20px);

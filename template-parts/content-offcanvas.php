@@ -7,10 +7,10 @@
 ?>
 
 <div class="off-canvas position-top" id="off-canvas" data-off-canvas>
-
+	<div class="header-spacer"></div>
 	<div class="inner">
 	
-		<?php trailhead_off_canvas_nav(); ?>
+		<?php trailhead_top_nav(); ?>
 				
 	</div>
 

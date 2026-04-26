@@ -3,7 +3,7 @@
  * Section wrapper with Automatic Text Contrast
  */
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
-$className = 'section-block-wrapper';
+$className = 'section-block-wrapper page-section';
 
 // Standard Block Classes
 if (!empty($block['className'])) { $className .= ' ' . $block['className']; }

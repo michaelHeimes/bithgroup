@@ -37,19 +37,21 @@ import { ResponsiveMenu } from 'foundation-sites/js/foundation.responsiveMenu';
 
 // --- Third Party & Modules ---
 import 'what-input';
-// import Swiper from 'swiper/bundle';
-// import 'swiper/css/bundle';
+
 import hasScrolled from './modules/has-scrolled.js';
+import offCanvasModifications from './modules/off-canvas-modifications.js';
 import headerHeight from './modules/header-height.js';
-import { init321Sliders } from './modules/swiper-3-2-1.js';
+import init321Sliders from './modules/swiper-3-2-1.js';
 
 // ---------------------------------------------------------
 // 2. REGISTRATION & GLOBALS
 // ---------------------------------------------------------
-window.jQuery = $;
-window.$ = $;
 
-Foundation.addToJquery($);
+// Use the existing WordPress jQuery if available, otherwise fallback to the import
+const jQueryInstance = window.jQuery || $;
+
+// Attach Foundation to the "Official" jQuery
+Foundation.addToJquery(jQueryInstance);
 
 // Add Utilities to Foundation Object
 Foundation.Box = Box;
@@ -88,13 +90,22 @@ Foundation.plugin(ResponsiveMenu, 'ResponsiveMenu');
 // 3. INITIALIZATION
 // ---------------------------------------------------------
 
-// Required Initializations
-MediaQuery._init();
-Triggers.init($, Foundation);
 
 $(function() {
     'use strict';
+        
+    MediaQuery._init();
+    
+    // Check if we are in the WordPress Editor
+    const isEditor = $('body').hasClass('block-editor-page') || $('body').hasClass('wp-admin');
+    
+    if (!isEditor) {
+        Triggers.init($, Foundation);
+    }
+    
     $(document).foundation();    
     hasScrolled();
+    offCanvasModifications();
     headerHeight();
+    init321Sliders();
 });

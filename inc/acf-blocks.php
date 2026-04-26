@@ -7,13 +7,15 @@ function my_acf_init_block_types() {
 
         acf_register_block_type(array(
             'name'            => 'section',
-            'title'           => __('Section wrapper for all blocks'),
-            'description'     => __('Section wrapper for all blocks.'),
+            'title'           => __('Section wrapper for native blocks'),
+            'api_version'     => 2,
+            'description'     => __('Section wrapper for native blocks.'),
             'render_template' => 'blocks/section-block-wrapper.php',
             'category'        => 'layout',
-            'keywords'        => array( 'section', 'container', 'bith', 'propr' ),
+            'keywords'        => array( 'custom', 'section', 'container', 'bith', 'propr' ),
             'supports'        => array(
                 'jsx'   => true,
+                'mode' => true,
                 'color' => array(
                     'background' => true,
                     'text'       => false,
@@ -39,12 +41,34 @@ function my_acf_init_block_types() {
         acf_register_block_type(array(
             'name'            => 'home-hero-img-services',
             'title'           => __('Home Hero, Image, and Services'),
+            'api_version'     => 2,
             'description'     => __('Home Hero, Image, and Services.'),
             'render_template' => 'blocks/home-hero-img-services.php',
             'category'        => 'layout',
-            'keywords'        => array( 'home', 'hero', 'banner', 'services', 'bith', 'propr' ),
+            'keywords'        => array( 'custom', 'home', 'hero', 'banner', 'services', 'bith', 'propr' ),
             'supports'        => array(
                 'jsx'   => false,
+                'mode' => true,
+                'color' => array(
+                    'background' => false,
+                    'text'       => false,
+                    'gradients'  => false,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
+        
+        acf_register_block_type(array(
+            'name'            => 'testimonials',
+            'title'           => __('Testimonials'),
+            'api_version'     => 2,
+            'description'     => __('Testimonials block that shows the Testimonial posts.'),
+            'render_template' => 'blocks/testimonial-slider.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'custom', 'testimonial', 'slider', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode' => true,
                 'color' => array(
                     'background' => false,
                     'text'       => false,

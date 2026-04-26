@@ -47,7 +47,7 @@
 		<div class="menu-toggle-wrap top-bar-right float-right hide-for-tablet">
 			<ul class="menu">
 				<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-				<li><a href="#" id="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
+				<li><button id="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></button></li>
 			</ul>
 		</div>
 	</div>

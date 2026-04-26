@@ -29,14 +29,14 @@
 		}
 	}
 	&.blue-100 {
-		background-color: var(--wp--preset--color--bith-blue-100);
+		background-color: $blue-100;
 		&:before {
-			background-color: var(--wp--preset--color--bith-blue-100);
+			background-color: $blue-100;
 		}
 		&:hover {
 			background-color: $primary-color;
 			span {
-				color: var(--wp--preset--color--bith-onyx) !important;
+				color: $onyx !important;
 			}
 			&:before { 
 				background-color: $primary-color;	

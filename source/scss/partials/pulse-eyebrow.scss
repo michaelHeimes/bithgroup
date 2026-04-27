@@ -5,10 +5,13 @@ $pulse-duration: 4s;
 
 .pulse-eyebrow {
 	display: block;
-	text-align: center;
+	@include breakpoint(medium) {
+		text-align: center;
+	}
 
 	.pulse {
 		position: relative;
+		z-index: 0;
 		display: inline-block;
 		width: $pulse-size;
 		height: $pulse-size;

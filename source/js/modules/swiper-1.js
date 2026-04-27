@@ -7,14 +7,15 @@ export default function init1Sliders() {
 
 	sliderContainers.forEach((container) => {
 		let swiperInstance = null;
-		const wrapper = container.querySelector('.swiper-wrapper');
+		const wrapper = container.querySelector('.wrapper');
 		const slides = wrapper.querySelectorAll('.slide-1');
 
 		const manageSwiper = () => {
 			if (breakpoint.matches) {
 				console.log(swiperInstance );
 				if (swiperInstance === null) {
-
+					// 1. Prepare HTML for Swiper
+					wrapper.classList.add('swiper-wrapper');
 					slides.forEach(slide => slide.classList.add('swiper-slide'));
 
 					// 2. Init Swiper
@@ -33,6 +34,11 @@ export default function init1Sliders() {
 					// 1. Destroy Swiper
 					swiperInstance.destroy(true, true);
 					swiperInstance = null;
+					
+					// 2. Restore Foundation Grid
+					wrapper.classList.remove('swiper-wrapper');
+					slides.forEach(slide => slide.classList.remove('swiper-slide'));
+					
 				}
 			}
 		};

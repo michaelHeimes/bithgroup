@@ -48,7 +48,7 @@ if( $page_link || $icon || $title || $additional_links || $text ):?>
 								</div>
 							<?php endif;?>
 							<?php if( $title || $additional_links || $text ):?>
-								<div class="cell small-12 tablet-auto text-links">
+								<div class="cell small-12 tablet-auto text-links<?php if($background_color == 'transparent') { echo ' has-underline-arrow-link'; };?>">
 									<?php if($page_link):?>
 										<div class="grid-x grid-padding-x align-middle">
 									<?php endif;?>

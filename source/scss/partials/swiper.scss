@@ -1,0 +1,58 @@
+.swiper-scrollbar {
+	margin-top: rem-calc(34);
+	margin-bottom: 1.875rem;
+	.swiper-horizontal > &, 
+	&.swiper-scrollbar-horizontal {
+		position: relative;
+		height: 8px;
+		border-radius: 8px;
+		background: rgba($white, .5);
+		@include breakpoint(medium) {
+			width: calc(100% + 40px);
+		}
+		@include breakpoint(large) {
+			width: 100%;
+		}
+		.swiper-scrollbar-drag {
+			background-color: $onyx;
+		}
+	}
+	&.has-overflowing-slides {
+		.swiper-horizontal > &, 
+		&.swiper-scrollbar-horizontal {
+			width: calc(100% + 10px);
+		}
+	}
+}
+.swiper-btn {
+	svg path {
+		transition: all .3s ease;
+	}
+	&:hover {
+		svg path:nth-child(1) {
+			fill: $green-100;
+		}
+		svg path:nth-child(2) {
+			stroke: $onyx;
+		}
+	}
+}
+.swiper-pagination {
+	position: static;
+	.swiper-pagination-bullet {
+		margin: 6px;
+		opacity: 1;
+		background-color: $black-30;
+		&.swiper-pagination-bullet-active {
+			background-color: $blue-100;
+		}
+	}
+}
+.has-bith-onyx-color {
+	.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+		background-color: $black-20;	
+		.swiper-scrollbar-drag {
+			background-color: $blue-100;
+		}
+	}
+}

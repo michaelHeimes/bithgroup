@@ -1,0 +1,12 @@
+.editor-styles-wrapper {
+	.button, .button-primary, .button-secondary {
+		all: unset; // Wipes out the 13px font, borders, and line-height
+		display: inline-block;
+		cursor: pointer;
+		box-sizing: border-box;
+		
+		// Re-apply your custom styles here
+		@extend .button; 
+		
+	}
+}

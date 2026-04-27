@@ -18,7 +18,6 @@
 		font-size: rem-calc(18); 
 		font-weight: 500; 
 		border-radius: 1rem; 
-		overflow: hidden; 
 		position: relative; 
 		cursor: pointer; 
 		pointer-events: auto !important; 
@@ -31,7 +30,7 @@
 		> a {
 			width: calc(100% - 48px);
 			@extend .button;
-			color: $onyx;
+			@extend .green-100;
 		}
 	}
 	ul.submenu {

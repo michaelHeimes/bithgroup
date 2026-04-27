@@ -19,7 +19,7 @@
 		}
 	}
 	.hero-gradient-section {
-		padding-top: 110px;
+		padding-top: clamp(1.188rem, -0.438rem + 8.125vw, 6.875rem);
 		padding-bottom: clamp(4rem, 3rem + 5vw, 7.5rem);
 		.hero-gradient {
 			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #EFF2E0 32.69%, #E7F2C7 67%, #C4D989 100%);

@@ -18,6 +18,20 @@ h3,
 .h3 {
 	
 }
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+p,
+.p,
+ul,
+ol {
+	@include breakpoint( small down) {
+		text-align: left !important;
+	}
+}
 u {
 	text-decoration-thickness: 1px;
 	text-underline-offset: .22em;
@@ -47,8 +61,8 @@ p.md-p,
 .p-md ol {
 	font-size: var(--wp--preset--font-size--medium);
 }
-p.sm-p,
-.sm-p,
+p.p-sm,
+.p-sm,
 .p-sm p,
 .p-sm a,
 .p-sm ul,

@@ -64,7 +64,7 @@ $service_cards = get_field('service_cards') ?? null;
 						array(
 							'link' => $button_link,
 							'container-classes' => 'small-12',
-							'btn-classes' => 'wide-mw-btn',
+							'btn-classes' => 'wide-mw-btn green-100',
 						)
 					);
 				};?>
@@ -90,7 +90,7 @@ $service_cards = get_field('service_cards') ?? null;
 						'text' => $service_cards_text,
 						'text-color' => 'black',
 						'link' => $service_cards_button_link,
-						'btn-classes' => 'blue-100 has-bith-white-color'
+						'btn-classes' => 'has-bith-white-color green-100'
 					),
 				);?>
 				<?php if($service_cards):?>
@@ -140,7 +140,7 @@ $service_cards = get_field('service_cards') ?? null;
 						array(
 							'link' => $service_cards_button_link,
 							'container-classes' => 'small-12 medium-shrink hide-for-medium services-mobile-btn-wrap',
-							'btn-classes' => 'blue-100 has-bith-white-color wide-mw-btn',
+							'btn-classes' => 'has-bith-white-color wide-mw-btn',
 						)
 					);
 				};?>

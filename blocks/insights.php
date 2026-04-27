@@ -1,6 +1,6 @@
 <?php
 /**
- * Section wrapper with Automatic Text Contrast
+ * Insights posts
  */
  
 global $bith_block_order;
@@ -56,16 +56,14 @@ if ( $insights_to_show === 'latest' ) {
         );?>
         <?php if ( ! empty($insights) ) : ?>
             <div class="swiper swiper-1">
-                <div class="swiper-wrapper">
+                <div class="wrapper">
                     <?php 
                     global $post;
                     foreach ( $insights as $post ) :
                         setup_postdata($post);
                         $post_id = $post->ID;
                     ?>
-                        <div class="insight-item slide-1 swiper-slide">
-                            <?php get_template_part('template-parts/loop', 'insight');?>
-                        </div>
+                        <?php get_template_part('template-parts/loop', 'insight');?>
                     <?php endforeach; wp_reset_postdata(); ?>
                 </div>
                 <div class="swiper-scrollbar hide-for-medium"></div>

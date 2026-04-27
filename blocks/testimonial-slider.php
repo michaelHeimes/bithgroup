@@ -14,7 +14,7 @@ global $bith_block_order;
  }
  
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
-$className = 'content-section testimonial-slider';
+$className = 'content-section testimonial-slider has-bith-onyx-color';
 
 $eyebrow_heading = get_field('eyebrow_heading') ?? null;
 $testimonials_to_show = get_field('testimonials_to_show') ?? null;

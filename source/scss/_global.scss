@@ -13,6 +13,20 @@ GLOBAL ELEMENTS
 .content-section {
 	padding-top: clamp(3.75rem, 3.036rem + 3.571vw, 6.25rem);
 	padding-bottom: clamp(3.75rem, 3.036rem + 3.571vw, 6.25rem);
+	&.no-top-padding {
+		padding-top: 0;
+	}
+	&.no-botton-padding {
+		padding-bottom: 0;
+	}
+	> .grid-container {
+		&.extra-top-padding_40px {
+			padding-top: clamp(0rem, -0.714rem + 3.571vw, 2.5rem);
+		}
+		&.extra-botton-padding_40px {
+			padding-bottom: clamp(0rem, -0.714rem + 3.571vw, 2.5rem);
+		}	
+	}
 }
 .off-canvas.position-top {
 	height: 100vh;
@@ -24,45 +38,6 @@ GLOBAL ELEMENTS
 .off-canvas-content.is-open-top.has-transition-push {
 	transform: translateY(100vh);
 }
-.swiper-scrollbar {
-	margin-top: rem-calc(34);
-	margin-bottom: 1.875rem;
-	.swiper-horizontal > &, 
-	&.swiper-scrollbar-horizontal {
-		position: relative;
-		height: 8px;
-		border-radius: 8px;
-		background: rgba($white, .5);
-		@include breakpoint(medium) {
-			width: calc(100% + 40px);
-		}
-		@include breakpoint(large) {
-			width: 100%;
-		}
-		.swiper-scrollbar-drag {
-			background-color: $onyx;
-		}
-	}
-	&.has-overflowing-slides {
-		.swiper-horizontal > &, 
-		&.swiper-scrollbar-horizontal {
-			width: calc(100% + 10px);
-		}
-	}
-}
-
-.swiper-pagination {
-	position: static;
-	.swiper-pagination-bullet {
-		margin: 6px;
-		opacity: 1;
-		background-color: $black-30;
-		&.swiper-pagination-bullet-active {
-			background-color: $blue-100;
-		}
-	}
-}
-
 .section-header {
 	margin-bottom: clamp(1rem, 0.429rem + 2.857vw, 3rem);
 	h2 {

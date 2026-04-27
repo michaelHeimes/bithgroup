@@ -26,24 +26,6 @@
             "append": ""
         },
         {
-            "key": "field_69ea5f8987a4f",
-            "label": "Background",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
             "key": "field_69ea75ad11e1a",
             "label": "Spacing",
             "name": "",
@@ -102,6 +84,48 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_69efaf2869235",
+            "label": "Extra Top Padding (40px)",
+            "name": "extra_top_padding_40px",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_69efaf5e69236",
+            "label": "Extra Bottom Padding (40px)",
+            "name": "extra_bottom_padding_40px",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -123,5 +147,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1777034097
+    "modified": 1777315711
 }

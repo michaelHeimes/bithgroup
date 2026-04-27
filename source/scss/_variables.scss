@@ -4,6 +4,20 @@ $font-sans: "Archivo", sans-serif;
 $font-mono: "JetBrains Mono", monospace;
 
 // Colors
+// :root {
+// 	--wp--preset--color--bith-white: #FFFFFF;
+// 	--wp--preset--color--bith-onyx: #0A0B0B;
+// 	--wp--preset--color--bith-slate: #1B2634;
+// 	--wp--preset--color--bith-blue-10: #EAEFF5;
+// 	--wp--preset--color--bith-blue-100: #184275;
+// 	--wp--preset--color--bith-green-30: #E2F0B9;
+// 	--wp--preset--color--bith-green-100: #9DC03B;
+// 	--wp--preset--gradient--bith-radial: radial-gradient(50% 50% at 50% 50%, #FFF 0%, #E2F0B9 100%);
+// 	--wp--preset--gradient--bith-cube-to-white: linear-gradient(180deg, #F4F7E5 0%, #FFF 100%);
+// 	--wp--preset--gradient--bith-white-to-cube: linear-gradient(180deg, #FFF 0%, #F4F7E5 100%);
+// 	--wp--preset--gradient--bith-blue: linear-gradient(180deg, #184275 0%, #1B2634 100%);
+// }
+
 $onyx: var(--wp--preset--color--bith-onyx);
 $fishburne: #9D9D9D;
 $slate: var(--wp--preset--color--bith-slate);
@@ -11,10 +25,12 @@ $blue-10: var(--wp--preset--color--bith-blue-10);
 $blue-100: var(--wp--preset--color--bith-blue-100);
 $green-30: var(--wp--preset--color--bith-green-30);
 $green-100: var(--wp--preset--color--bith-green-100);
+$green-60: #E2F0B9;
 $green-80: #C4D989;
 $cube: #F4F7E5;
 
 $white-20: rgba(255,255,255,0.2);
+$black-20: rgba(0,0,0,0.20);
 $black-30: rgba(0,0,0,0.30);
 
 // gradients

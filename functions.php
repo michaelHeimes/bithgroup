@@ -201,6 +201,34 @@ function trailhead_scripts() {
  }
  add_action('wp_enqueue_scripts', 'trailhead_scripts');
  
+ add_action('admin_head', function() {
+	 $screen = get_current_screen();
+	 if ( $screen && $screen->is_block_editor() ) {
+		 echo '<style id="bith-pre-editor-reset">
+			 /* Kill the Core UI button styles before they even load */
+			.editor-styles-wrapper .button, .button-primary, .button-secondary {
+					 all: unset; // Wipes out the 13px font, borders, and line-height
+					 display: inline-block;
+					 cursor: pointer;
+					 box-sizing: border-box;
+				 }
+			 
+
+		 </style>';
+	 }
+ }, 0); // Priority 0 is the absolute earliest
+
+ 
+ // add_action('admin_head', function() {
+	//    ob_start(function($html) {
+	// 	   return str_replace('wp-core-ui', '', $html);
+	//    });
+  //  });
+  //  
+  //  add_action('admin_footer', function() {
+	//    ob_end_flush();
+  //  });
+ 
  function trailhead_add_editor_styles() {
 	 add_theme_support( 'editor-styles' );
  
@@ -216,6 +244,20 @@ function trailhead_scripts() {
 	 }
  }
  add_action( 'after_setup_theme', 'trailhead_add_editor_styles' );
+ 
+ // add_action('enqueue_block_editor_assets', function() {
+	//  wp_add_inline_script('wp-blocks', "
+	// 	 wp.blocks.registerBlockVariation('acf/section', {
+	// 		 name: 'section',
+	// 		 title: 'Section wrapper for native blocks',
+	// 		 isDefault: true,
+	// 		 attributes: {
+	// 			 backgroundColor: 'bith-white'
+	// 		 }
+	// 	 });
+	//  ");
+ // });
+
 
 function trailhead_add_editor_js() {
 	 $manifest_path = get_template_directory() . '/dist/manifest.json';
@@ -325,6 +367,9 @@ require_once(get_template_directory().'/inc/acf-json.php');
 require_once(get_template_directory().'/inc/acf-options.php');
 
 // ACF Block
+require_once(get_template_directory().'/inc/acf-blocks.php');
+
+// ACF PAtterns
 require_once(get_template_directory().'/inc/acf-blocks.php');
 
 // ACF Repeater Collapse

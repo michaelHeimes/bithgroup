@@ -16,6 +16,7 @@
 		{ "slug": "bith-slate", "color": "#1B2634", "name": "Slate" },
 		{ "slug": "bith-blue-10", "color": "#EAEFF5", "name": "Blue 10" },
 		{ "slug": "bith-blue-100", "color": "#184275", "name": "Blue 100" },
+		{ "slug": "bith-green-30", "color": "#E2F0B9", "name": "Green 30" },
 		{ "slug": "bith-green-100", "color": "#9DC03B", "name": "Green 100" }
 	  ],
 	  "gradients": [

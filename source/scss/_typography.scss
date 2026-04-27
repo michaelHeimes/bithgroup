@@ -18,10 +18,14 @@ h3,
 .h3 {
 	
 }
+u {
+	text-decoration-thickness: 1px;
+	text-underline-offset: .22em;
+}
 .eyebrow,
 h1.eyebrow,
 h2.eyebrow,
-h3,.eyebrow {
+h3.eyebrow {
 	font-family: $font-mono;
 	font-size: rem-calc(17);
 	font-style: normal;
@@ -36,6 +40,7 @@ ol {
 	font-size: var(--wp--preset--font-size--large);
 }
 p.md-p,
+.p-md,
 .p-md p,
 .p-md a,
 .p-md ul,
@@ -43,6 +48,7 @@ p.md-p,
 	font-size: var(--wp--preset--font-size--medium);
 }
 p.sm-p,
+.sm-p,
 .p-sm p,
 .p-sm a,
 .p-sm ul,

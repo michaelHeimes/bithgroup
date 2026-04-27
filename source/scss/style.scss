@@ -70,6 +70,8 @@
 // Import Swiper Styles
 @import "swiper/swiper";
 @import "swiper/modules/scrollbar";
+@import "swiper/modules/navigation";
+@import "swiper/modules/pagination";
 
 
 // Theme Styles
@@ -82,6 +84,7 @@
 // Partials
 @import "partials/pulse-eyebrow";
 @import "partials/button";
+@import "partials/icon-link-text-card";
 
 // Blocks
 @import "blocks/testimonial-slider";

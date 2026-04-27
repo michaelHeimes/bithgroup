@@ -22,9 +22,9 @@ $heading = get_field('heading') ?? null;
 $copy = get_field('copy') ?? null;
 $button_link = get_field('button_link') ?? null;
 $image = get_field('image') ?? null;
-$service_cards_heading = get_field('service_cards_heading') ?? null;
-$service_cards_text = get_field('service_cards_text') ?? null;
-$service_cards_button_link = get_field('service_cards_button_link') ?? null;
+$service_cards_heading = get_field('sh_heading') ?? null;
+$service_cards_text = get_field('sh_text') ?? null;
+$service_cards_button_link = get_field('sh_button_link') ?? null;
 $service_cards = get_field('service_cards') ?? null;
 
 ?>
@@ -118,7 +118,7 @@ $service_cards = get_field('service_cards') ?? null;
 														<h3 class="weight-500"><?=wp_kses_post($service_name);?></h3>
 													</div>
 													<div class="cell shrink">
-														<img src="<?=get_template_directory_uri();?>/assets/svgs/service-card-arrow-icon.svg"/>
+														<img class="service-card-arrow-icon" src="<?=get_template_directory_uri();?>/assets/svgs/service-card-arrow-icon.svg" alt="arrow icon"/>
 													</div>
 												</div>
 											<?php endif;?>
@@ -130,8 +130,7 @@ $service_cards = get_field('service_cards') ?? null;
 										</div>
 									<?php endif; endforeach;?>
 								</div>
-								<div class="swiper-scrollbar"></div>
-
+								<div class="swiper-scrollbar has-overflowing-slides"></div>
 							</div>
 						</div>
 					</div>

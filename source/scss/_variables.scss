@@ -7,10 +7,21 @@ $font-mono: "JetBrains Mono", monospace;
 $onyx: var(--wp--preset--color--bith-onyx);
 $fishburne: #9D9D9D;
 $slate: var(--wp--preset--color--bith-slate);
+$blue-10: var(--wp--preset--color--bith-blue-10);
 $blue-100: var(--wp--preset--color--bith-blue-100);
+$green-30: var(--wp--preset--color--bith-green-30);
 $green-100: var(--wp--preset--color--bith-green-100);
 $green-80: #C4D989;
 $cube: #F4F7E5;
 
+$white-20: rgba(255,255,255,0.2);
+$black-30: rgba(0,0,0,0.30);
+
+// gradients
+$bg-gradient-bith-blue: var(--wp--preset--gradient--bith-blue);
+
 // Box shadows
-$green-80-shadow: 0 6px 30px 0 rgba(157, 192, 59, 0.50);
+$glow-on-light-pre-hover: 0 0 0 0 rgba(157, 192, 59, 0.50);
+$glow-on-light: 0 6px 30px 0 rgba(157, 192, 59, 0.50);
+$glow-on-dark-pre-hover: 0 0 0 0 #69A0E1;
+$glow-on-dark: 0 6px 140px 0 #69A0E1;

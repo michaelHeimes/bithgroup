@@ -327,6 +327,9 @@ require_once(get_template_directory().'/inc/acf-options.php');
 // ACF Block
 require_once(get_template_directory().'/inc/acf-blocks.php');
 
+// ACF Repeater Collapse
+// require_once(get_template_directory().'/inc/acf-repeater-collapse.php');
+
 // Gutenberg
 require_once(get_template_directory().'/inc/gutenberg.php'); 
 

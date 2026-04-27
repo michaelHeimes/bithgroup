@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Scrollbar, Navigation } from 'swiper/modules';
+import { Scrollbar } from 'swiper/modules';
 
 /**
  * Initialize Swiper 3-2-1 Sliders
@@ -52,9 +52,3 @@ export default function init321Sliders() {
 	}
 	
 };
-
-// Auto-init if preferred, or export to your main entry file
-document.addEventListener('DOMContentLoaded', init321Sliders);
-
-
-

@@ -189,11 +189,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_69ebe978bbcf9",
-            "label": "Heading",
-            "name": "service_cards_heading",
+            "key": "field_69ee304d21a81",
+            "label": "Section Header",
+            "name": "clone-section_header",
             "aria-label": "",
-            "type": "text",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -202,50 +202,13 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_69ebe989bbcfa",
-            "label": "Text",
-            "name": "service_cards_text",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_69ebe98fbbcfb",
-            "label": "Button Link",
-            "name": "service_cards_button_link",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "allow_in_bindings": 0
+            "clone": [
+                "group_69ee2ff887b08"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_69eb8a0bd320f",
@@ -389,5 +352,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1777074034
+    "modified": 1777218417
 }

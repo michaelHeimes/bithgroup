@@ -38,7 +38,7 @@
 		border-radius: 1rem;
 		padding: 12px;
 		background-color: $white;
-		box-shadow: $green-80-shadow;
+		box-shadow: $glow-on-light;
 		li {
 			a {
 				display: inline-flex;
@@ -266,7 +266,7 @@ header.site-header {
 				height: 100%;
 				width: 100%;
 				border-width: 1px;
-				border-color: $fishburne;
+				border-color: $black-30;
 				transition: border-width .2s ease, width .4s ease, height .4s ease .1s;
 			}
 		}

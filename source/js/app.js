@@ -41,7 +41,10 @@ import 'what-input';
 import hasScrolled from './modules/has-scrolled.js';
 import offCanvasModifications from './modules/off-canvas-modifications.js';
 import headerHeight from './modules/header-height.js';
+import init1Sliders from './modules/swiper-1.js';
+import init21Sliders from './modules/swiper-2-1.js';
 import init321Sliders from './modules/swiper-3-2-1.js';
+import swiperOneArrowDots from './modules/swiper-1-arrow-dots.js';
 
 // ---------------------------------------------------------
 // 2. REGISTRATION & GLOBALS
@@ -107,5 +110,8 @@ $(function() {
     hasScrolled();
     offCanvasModifications();
     headerHeight();
+    init1Sliders();
+    init21Sliders();
     init321Sliders();
+    swiperOneArrowDots();
 });

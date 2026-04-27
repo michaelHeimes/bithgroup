@@ -1,4 +1,4 @@
-.button:not(.acf-button) {
+.button:not(.acf-button):not([data-name='add']) {
 	span {
 		transition: color .35s ease;
 	}

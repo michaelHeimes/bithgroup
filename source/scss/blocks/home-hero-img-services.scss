@@ -59,12 +59,17 @@
 					width: 100%;
 					height: 100%;
 					border-radius: rem-calc(48);
-					border: 1px solid rgba(0, 0, 0, 0.30);
-					background: rgba(255, 255, 255, 0.20);margin-bottom: rem-calc(32);
-					box-shadow: 0 0px 0px 0 $green-100;
+					border: 1px solid $black-30;
+					background: rgba(255, 255, 255, 0.20);
+					margin-bottom: rem-calc(32);
+					box-shadow: $glow-on-light-pre-hover;
 					transform: scale(1);
 					transition: transform .4s ease, box-shadow .4s ease, background-color .4s ease;
 					
+				}
+				.service-card-arrow-icon {
+					transform: scale(1);
+					transition: transform .4s ease;
 				}
 				.icon-wrap {
 					border-radius: rem-calc(32);
@@ -100,6 +105,9 @@
 						transform: scale(1.025);
 						box-shadow: 0 6px 140px 0 $green-100;
 					}
+					.service-card-arrow-icon {
+						transform: scale(1.15);
+					}
 					.icon-wrap {
 						background-color: $slate;
 						&:before {
@@ -117,9 +125,6 @@
 					}
 				}
 			}
-		}
-		.services-mobile-btn-wrap {
-			margin-top: rem-calc(30);
 		}
 	}
 }

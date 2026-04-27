@@ -12,8 +12,8 @@ if ( $text_color == 'black' ) {
 
 $link = $args['link'] ?? null;
 $btn_classes = $args['btn-classes'] ?? null;
-if($heading):?>
-	<div class="section-header grid-x grid-padding-x align-middle">
+if($heading || $text || $link ):?>
+	<div class="section-header grid-x grid-padding-x align-middle position-relative z-1">
 		<?php if($heading || $text ):?>
 			<div class="cell auto heading-text <?=$className;?>">
 				<?php if($heading):?>

@@ -10,7 +10,7 @@ GLOBAL ELEMENTS
 .header-spacer {
 	height: var(--header-height);
 }
-.page-section {
+.content-section {
 	padding-top: clamp(3.75rem, 3.036rem + 3.571vw, 6.25rem);
 	padding-bottom: clamp(3.75rem, 3.036rem + 3.571vw, 6.25rem);
 }
@@ -25,10 +25,11 @@ GLOBAL ELEMENTS
 	transform: translateY(100vh);
 }
 .swiper-scrollbar {
-	margin-top: 34px;
-	.swiper-horizontal > &, &.swiper-scrollbar-horizontal {
+	margin-top: rem-calc(34);
+	margin-bottom: 1.875rem;
+	.swiper-horizontal > &, 
+	&.swiper-scrollbar-horizontal {
 		position: relative;
-		width: calc(100% + 20px);
 		height: 8px;
 		border-radius: 8px;
 		background: rgba($white, .5);
@@ -41,6 +42,35 @@ GLOBAL ELEMENTS
 		.swiper-scrollbar-drag {
 			background-color: $onyx;
 		}
+	}
+	&.has-overflowing-slides {
+		.swiper-horizontal > &, 
+		&.swiper-scrollbar-horizontal {
+			width: calc(100% + 10px);
+		}
+	}
+}
+
+.swiper-pagination {
+	position: static;
+	.swiper-pagination-bullet {
+		margin: 6px;
+		opacity: 1;
+		background-color: $black-30;
+		&.swiper-pagination-bullet-active {
+			background-color: $blue-100;
+		}
+	}
+}
+
+.section-header {
+	margin-bottom: clamp(1rem, 0.429rem + 2.857vw, 3rem);
+	h2 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
 	}
 }
 

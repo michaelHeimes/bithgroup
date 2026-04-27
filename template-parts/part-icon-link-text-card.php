@@ -16,7 +16,7 @@ $text = $args['text'] ?? null;
 
 if( $page_link || $icon || $title || $additional_links || $text ):?>
 	<div class="cell slide-2-1 icon-link-text-card position-relative<?=$card_class;?>">
-		<div class="inner <?php if($page_link):?> has-link<?php endif;?> <?=esc_attr($background_color);?>">
+		<div class="inner <?php if($page_link):?> has-link border-white-20<?php endif;?> <?=esc_attr($background_color);?>">
 			<?php if($page_link):?>
 				<a class="page-link" href="<?=esc_url($page_link);?>"
 					<?php if($title):?>

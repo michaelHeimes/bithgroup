@@ -63,7 +63,7 @@ $service_cards = get_field('service_cards') ?? null;
 					get_template_part('template-parts/part', 'button-link',
 						array(
 							'link' => $button_link,
-							'container-classes' => 'small-12',
+							'container-classes' => 'small-12 text-center',
 							'btn-classes' => 'wide-mw-btn green-100',
 						)
 					);
@@ -90,7 +90,7 @@ $service_cards = get_field('service_cards') ?? null;
 						'text' => $service_cards_text,
 						'text-color' => 'black',
 						'link' => $service_cards_button_link,
-						'btn-classes' => 'has-bith-white-color green-100'
+						'btn-classes' => 'has-bith-onyx-color green-100'
 					),
 				);?>
 				<?php if($service_cards):?>
@@ -106,7 +106,7 @@ $service_cards = get_field('service_cards') ?? null;
 										if($service_page || $service_name):
 									?>
 										<div class="swiper-slide has-bith-onyx-color d-flex flex-dir-column">
-											<a href="<?=esc_url($service_page );?>" class="display-block">											</a>
+											<a href="<?=esc_url($service_page );?>" class="display-block border-black-30">											</a>
 											<?php if($icon):?>
 												<div class="icon-wrap grid-x align-middle align-center position-relative overflow-hidden">
 													<?=wp_get_attachment_image( $icon['id'], 'full', false, array( 'class' => 'style-svg position-relative z-1' ) );?>

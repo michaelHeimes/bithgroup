@@ -31,7 +31,6 @@
 		height: auto;
 	}
 	.inner {
-		border: 1px solid $white-20;
 		border-radius: rem-calc(32);
 		padding: 2rem 1rem;
 		@include breakpoint(medium) {

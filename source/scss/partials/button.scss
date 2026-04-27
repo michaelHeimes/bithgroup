@@ -18,12 +18,17 @@
 	@extend .button;
 	position: relative;
 }
+.wp-block-button__link,
+.wp-block-buttons a {
+	span {
+		color: $white;
+	}
+}
 .button:not(.acf-button):not([data-name='add']),
 .wp-block-button__link,
 .wp-block-buttons a {
 	position: relative;
 	span {
-		color: $white;
 		transition: color .35s ease;
 	}
 	&:before {

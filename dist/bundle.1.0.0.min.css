@@ -7065,6 +7065,18 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   color: var(--wp--preset--color--bith-green-30);
 }
 
+.border-white-20 {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.border-white-30 {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.border-black-30 {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 /************************************************
 
 Stylesheet: Global Stylesheet
@@ -7649,14 +7661,14 @@ p.md-p,
 
 p.p-sm,
 .p-sm,
-footer#colophon .menu a,
+footer#colophon .menu:not(.social-links) a,
 .p-sm p,
-footer#colophon .menu a p,
+footer#colophon .menu:not(.social-links) a p,
 .p-sm a,
 .p-sm ul,
-footer#colophon .menu a ul,
+footer#colophon .menu:not(.social-links) a ul,
 .p-sm ol,
-footer#colophon .menu a ol {
+footer#colophon .menu:not(.social-links) a ol {
   font-size: var(--wp--preset--font-size--small);
 }
 
@@ -7927,9 +7939,22 @@ header.site-header #top-bar-menu .menu-toggle-wrap #menu-toggle.clicked span:nth
   fill: #fff;
 }
 
+footer#colophon {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 footer#colophon .bg {
   background-repeat: repeat;
   mix-blend-mode: overlay;
+}
+footer#colophon .logo-wrap {
+  margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+}
+footer#colophon .address {
+  margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+}
+footer#colophon .contact-methods {
+  margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
 }
 footer#colophon .contact-methods a {
   padding: 0;
@@ -7940,17 +7965,12 @@ footer#colophon .contact-methods a {
 footer#colophon .contact-methods a:hover {
   color: #E2F0B9;
 }
-@media print, screen and (max-width: 62.49875em) {
-  footer#colophon .left .bottom {
-    padding-bottom: 4.1rem;
-  }
-}
-footer#colophon .menu a {
+footer#colophon .menu:not(.social-links) a {
   color: #E2F0B9;
   position: relative;
   padding: 0.4em 0;
 }
-footer#colophon .menu a:before {
+footer#colophon .menu:not(.social-links) a:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -7960,18 +7980,43 @@ footer#colophon .menu a:before {
   background-color: #E2F0B9;
   transition: opacity 0.3s ease, height 0.3s ease;
 }
-footer#colophon .menu a:hover:before {
+footer#colophon .menu:not(.social-links) a:hover:before {
   height: 0.5px;
   opacity: 0;
   transition: opacity 0.6s ease, height 0.6s ease;
 }
 footer#colophon ul#footer-links {
   gap: 2rem;
+  margin-bottom: clamp(2.938rem, 2.509rem + 2.143vw, 4.438rem);
 }
-@media print, screen and (max-width: 62.49875em) {
-  footer#colophon ul#footer-links {
-    padding-bottom: 4.08rem;
+footer#colophon ul.social-links {
+  gap: 1rem;
+}
+footer#colophon ul.social-links li a {
+  aspect-ratio: 1/1;
+  display: inline-flex;
+  padding: 0.5625rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+footer#colophon ul.social-links li a svg path {
+  transition: 0.4s ease;
+}
+footer#colophon ul.social-links li a:hover {
+  background-color: var(--wp--preset--color--bith-green-100);
+  border-color: var(--wp--preset--color--bith-green-100);
+}
+footer#colophon ul.social-links li a:hover svg path {
+  stroke: var(--wp--preset--color--bith-blue-100);
+}
+@media screen and (max-width: 79.99875em) {
+  footer#colophon .footer-cta {
+    margin-bottom: 3rem;
   }
+}
+footer#colophon .footer-cta .cta-inner {
+  border-radius: clamp(1rem, 0.429rem + 2.857vw, 3rem);
+  padding: clamp(1.5rem, 1.071rem + 2.143vw, 3rem);
 }
 footer#colophon .site-info .menu.subfooter-links {
   display: inline-flex;
@@ -8076,6 +8121,11 @@ footer#colophon .site-info .menu.subfooter-links li {
   position: relative;
 }
 
+.wp-block-button__link span,
+.wp-block-buttons a span {
+  color: #fff;
+}
+
 .button:not(.acf-button):not([data-name=add]), .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]), .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]), #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]),
 .wp-block-button__link,
 .wp-block-buttons a {
@@ -8084,7 +8134,6 @@ footer#colophon .site-info .menu.subfooter-links li {
 .button:not(.acf-button):not([data-name=add]) span, .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]) span, .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]) span, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]) span,
 .wp-block-button__link span,
 .wp-block-buttons a span {
-  color: #fff;
   transition: color 0.35s ease;
 }
 .button:not(.acf-button):not([data-name=add]):before, .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):before, .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):before, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):before,
@@ -8249,7 +8298,6 @@ footer#colophon .site-info .menu.subfooter-links li {
   }
 }
 .icon-link-text-card .inner {
-  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 2rem;
   padding: 2rem 1rem;
 }
@@ -8547,7 +8595,6 @@ a.underline-arrow-link:hover:after,
   width: 100%;
   height: 100%;
   border-radius: 3rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.2);
   margin-bottom: 2rem;
   box-shadow: 0 0 0 0 rgba(157, 192, 59, 0.5);

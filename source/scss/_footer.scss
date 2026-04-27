@@ -1,9 +1,18 @@
 footer#colophon {
+	padding-top: rem-calc(64);
+	padding-bottom: rem-calc(64);
 	.bg {
 		background-repeat: repeat;
 		mix-blend-mode: overlay;
 	}
+	.logo-wrap {
+		margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+	}
+	.address {
+		margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+	}
 	.contact-methods {
+		margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
 		a {
 			padding: 0;
 			display: inline;
@@ -13,23 +22,8 @@ footer#colophon {
 				color: $green-60;
 			}
 		}
-	}
-	
-	
-	
-	.site-info {
-
-	}
-	
-	.left {
-		.bottom {
-			@include breakpoint(medium down) {
-				padding-bottom: 4.1rem;
-			}
-		}
-	}
-	
-	.menu a {
+	}	
+	.menu:not(.social-links) a {
 		color: $green-60;
 		@extend .p-sm;
 		position: relative;
@@ -55,12 +49,37 @@ footer#colophon {
 		
 	ul#footer-links {
 		gap: 2rem;
-		@include breakpoint(medium down) {
-			padding-bottom: 4.08rem;
-		}
-		li {
-			a {
+		margin-bottom: clamp(2.938rem, 2.509rem + 2.143vw, 4.438rem);
+	}
+	
+	ul.social-links {
+		gap: 1rem;
+		li a {
+			aspect-ratio: 1/1;
+			display: inline-flex;
+			padding: .5625rem;
+			border-radius: rem-calc(12);
+			transition: background-color .4s ease, border-color .4s ease;
+			svg path {
+				transition: .4s ease;
 			}
+			&:hover {
+				background-color: $green-100;
+				border-color: $green-100;
+				svg path {
+					stroke: $blue-100;
+				}
+			}
+		}
+	}
+	
+	.footer-cta {
+		@include breakpoint(tablet down) {
+			margin-bottom: rem-calc(48);
+		}
+		.cta-inner {
+			border-radius: clamp(1rem, 0.429rem + 2.857vw, 3rem);
+			padding: clamp(1.5rem, 1.071rem + 2.143vw, 3rem);
 		}
 	}
 	

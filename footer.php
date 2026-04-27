@@ -14,15 +14,43 @@ $contact_methods = get_field('contact_methods', 'option') ?? null;
 $copyright_text = get_field('copyright_text', 'option') ?? null;
 $subfooter_links = get_field('subfooter_links', 'option') ?? null;
 $footer_cta = get_field('footer_cta', 'option') ?? null;
-
+$footer_social_links = get_field('footer_social_links', 'option') ?? null;
 ?>
 
 				<footer id="colophon" class="site-footer bg-transition-bith-blue has-bg has-bith-white-color">
 					<div class="bg" style="background-image: url('<?= get_template_directory_uri(); ?>/assets/svgs/footer-pattern.svg');"></div>
 					<div class="footer-main position-relative">
 						<div class="grid-container">
-							<div class="grid-x grid-padding-x">
-								<div class="cell small-12 medium-8 tablet-6">
+							<div class="grid-x grid-padding-x tablet-flex-dir-row-reverse">
+								<?php if($footer_cta):
+									$heading = $footer_cta['heading'] ?? null;
+									$copy = $footer_cta['copy'] ?? null;
+									$button_link = $footer_cta['button_link'] ?? null;
+									if($heading || $copy || $button_link):
+								?>
+									<div class="footer-cta cell small-12 tablet-6">
+										<div class="cta-inner border-white-30 h-100 grid-x flex-dir-column align-justify">
+											<div>
+												<?php if($heading):?>
+													<h2><?=wp_kses_post($heading);?></h2>
+												<?php endif;?>
+												<?php if($copy):?>
+													<h2><?=wp_kses_post($copy);?></h2>
+												<?php endif;?>
+											</div>
+											<?php if($button_link) {
+												get_template_part('template-parts/part', 'button-link',
+													array(
+														'link' => $button_link,
+														'container-classes' => 'small-12 medium-shrink',
+														'btn-classes' => 'green-100 has-bith-onyx-color wide-mw-btn',
+													)
+												);
+											};?>
+										</div>
+									</div>
+								<?php endif; endif;?>
+								<div class="cell small-12 tablet-6">
 									<?php if($footer_logo):?>
 										<div class="logo-wrap">
 											<?=wp_get_attachment_image( $footer_logo['id'], 'full' );?>
@@ -33,7 +61,7 @@ $footer_cta = get_field('footer_cta', 'option') ?? null;
 											<?=wp_kses_post( $footer_address );?>
 										</div>
 									<?php endif;?>
-									<?php if($contact_methods):?>
+									<?php if( !empty($contact_methods) ):?>
 										<div class="contact-methods">
 											<ul class="menu vertical">
 												<?php foreach($contact_methods as $contact_method):
@@ -99,6 +127,33 @@ $footer_cta = get_field('footer_cta', 'option') ?? null;
 										</ul>
 									<?php endif;?>
 								</div>
+								<?php if( !empty($footer_social_links) ):?>
+									<div class="cell shrink">
+										<ul class="menu social-links horizontal no-link-padding">
+											<?php foreach($footer_social_links as $footer_social_link):
+												$icon = $footer_social_link['icon'] ?? null;	
+												$link = $footer_social_link['link'] ?? null;	
+												if($link):
+													$link_url = $link['url'];
+													$link_title = $link['title'];
+													$link_target = $link['target'] ? $link['target'] : '_self';	
+											?>
+												<li>
+													<a class="align-middle align-center bg-black-30 border-white-30" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+														<span class="show-for-sr">
+															<?php echo esc_html( $link_title ); ?>
+														</span>
+														<?php if($icon):?>
+															<div class="icon-wrap grid-x align-middle align-center">
+																<?=wp_get_attachment_image($icon['id'], 'full', false, ['class' => 'style-svg']);?>
+															</div>
+														<?php endif;?>
+													</a>
+												</li>
+											<?php endif; endforeach;?>
+										</ul>
+									</div>
+								<?php endif;?>
 							</div>
 						</div>
 					</div><!-- .site-info -->

@@ -1,0 +1,8 @@
+.wp-block-post-featured-image {
+	img {
+		border-radius: 32px;
+	}
+}
+.wp-block-post-date {
+	@extend .p-sm;
+}

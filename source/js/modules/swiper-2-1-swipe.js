@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
 import { Scrollbar } from 'swiper/modules';
 
-export default function init21Sliders() {
-	const sliderContainers = document.querySelectorAll('.swiper-2-1');
+export default function init21SwipeSliders() {
+	const sliderContainers = document.querySelectorAll('.swiper-2-1-swipe');
 	const breakpoint = window.matchMedia('(max-width: 639px)');
 
 	sliderContainers.forEach((container) => {

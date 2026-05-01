@@ -51,14 +51,16 @@ $footer_social_links = get_field('footer_social_links', 'option') ?? null;
 									</div>
 								<?php endif; endif;?>
 								<div class="cell small-12 tablet-6">
-									<?php if($footer_logo):?>
-										<div class="logo-wrap">
-											<?=wp_get_attachment_image( $footer_logo['id'], 'full' );?>
-										</div>
-									<?php endif;?>
-									<?php if($footer_address):?>
-										<div class="address">
-											<?=wp_kses_post( $footer_address );?>
+									<?php if($footer_logo || $footer_address):?>
+										<div class="logo-address-wrap grid-x grid-padding-x flex-dir-column medium-flex-dir-row tablet-flex-dir-column ">
+											<div class="cell medium-shrink tablet-12 logo-wrap">
+												<?=wp_get_attachment_image( $footer_logo['id'], 'full' );?>
+											</div>
+											<?php if($footer_address):?>
+												<div class="cell medium-auto tablet-12 address">
+													<?=wp_kses_post( $footer_address );?>
+												</div>
+											<?php endif;?>
 										</div>
 									<?php endif;?>
 									<?php if( !empty($contact_methods) ):?>
@@ -103,7 +105,7 @@ $footer_social_links = get_field('footer_social_links', 'option') ?? null;
 					<div class="site-info position-relative">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
-								<div class="cell auto p-sm">
+								<div class="copyright cell small-12 medium-auto p-sm">
 									© <?=date("Y");?>
 									<?php if($copyright_text):?>
 										<?=wp_kses_post($copyright_text);?>
@@ -128,7 +130,7 @@ $footer_social_links = get_field('footer_social_links', 'option') ?? null;
 									<?php endif;?>
 								</div>
 								<?php if( !empty($footer_social_links) ):?>
-									<div class="cell shrink">
+									<div class="cell small-12 medium-shrink">
 										<ul class="menu social-links horizontal no-link-padding">
 											<?php foreach($footer_social_links as $footer_social_link):
 												$icon = $footer_social_link['icon'] ?? null;	

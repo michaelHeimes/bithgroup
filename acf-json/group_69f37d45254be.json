@@ -1,9 +1,9 @@
 {
-    "key": "group_69eead7f47b7b",
-    "title": "BLOCK: Post Rows",
+    "key": "group_69f37d45254be",
+    "title": "BLOCK: Post Rows (copy)",
     "fields": [
         {
-            "key": "field_69eeb0e333bd2",
+            "key": "field_69f37d45265c5",
             "label": "Section Header",
             "name": "",
             "aria-label": "",
@@ -21,7 +21,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_69eeb0f033bd3",
+            "key": "field_69f37d45265c8",
             "label": "Section Header",
             "name": "section_header_copy",
             "aria-label": "",
@@ -43,7 +43,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_69eeb0d633bd1",
+            "key": "field_69f37d45265cb",
             "label": "Posts",
             "name": "",
             "aria-label": "",
@@ -61,7 +61,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_69f3753eac0c5",
+            "key": "field_69f37d45265cd",
             "label": "Post Type",
             "name": "post_type",
             "aria-label": "",
@@ -90,7 +90,7 @@
             "save_options": 0
         },
         {
-            "key": "field_69eead7f838c0",
+            "key": "field_69f37d45265cf",
             "label": "Posts to Show",
             "name": "posts_to_show",
             "aria-label": "",
@@ -119,7 +119,7 @@
             "save_options": 0
         },
         {
-            "key": "field_69eeb06f838c1",
+            "key": "field_69f37d45265d2",
             "label": "Insights",
             "name": "select_insights_to_show",
             "aria-label": "",
@@ -129,12 +129,12 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_69f3753eac0c5",
+                        "field": "field_69f37d45265cd",
                         "operator": "==",
                         "value": "post"
                     },
                     {
-                        "field": "field_69eead7f838c0",
+                        "field": "field_69f37d45265cf",
                         "operator": "==",
                         "value": "select"
                     }
@@ -166,7 +166,7 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_69f375b1ac0c7",
+            "key": "field_69f37d45265d4",
             "label": "Case Studies",
             "name": "select_case_studies_to_show",
             "aria-label": "",
@@ -176,12 +176,12 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_69f3753eac0c5",
+                        "field": "field_69f37d45265cd",
                         "operator": "==",
                         "value": "case-study"
                     },
                     {
-                        "field": "field_69eead7f838c0",
+                        "field": "field_69f37d45265cf",
                         "operator": "==",
                         "value": "select"
                     }
@@ -218,7 +218,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/post-rows"
+                "value": "acf\/explore-more-posts-cards"
             }
         ]
     ],
@@ -232,5 +232,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1777564180
+    "modified": 1777565020
 }

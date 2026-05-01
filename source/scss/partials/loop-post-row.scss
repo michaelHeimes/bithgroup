@@ -1,12 +1,17 @@
-.loop-insight {
-	margin-bottom: 4rem;
+.loop-post-row {
+	margin-bottom: 1rem;
 	box-sizing: border-box;
+	@include breakpoint(tablet) {
+		margin-bottom: 3rem;
+	}
 	> .grid-x {
 		margin-left: -1rem;
 		margin-right: -1rem;
 	}
 	.thumb-wrap {
-		margin-bottom: 2rem;
+		@include breakpoint(tablet down) {
+			margin-bottom: 2rem;
+		}
 		@include breakpoint(tablet) {
 			max-width: 400px;
 			margin-bottom: 0;

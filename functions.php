@@ -370,7 +370,7 @@ require_once(get_template_directory().'/inc/acf-options.php');
 require_once(get_template_directory().'/inc/acf-blocks.php');
 
 // ACF PAtterns
-require_once(get_template_directory().'/inc/acf-blocks.php');
+require_once(get_template_directory().'/inc/acf-patterns.php');
 
 // ACF Repeater Collapse
 // require_once(get_template_directory().'/inc/acf-repeater-collapse.php');

@@ -88,11 +88,18 @@
 @import "partials/button";
 @import "partials/swiper";
 @import "partials/icon-link-text-card";
-@import "partials/loop-insights";
+@import "partials/loop-post-row";
+@import "partials/loop-post-card";
 @import "partials/underline-arrow-link";
 
 // Blocks
+@import "blocks/native-block-mods";
 @import "blocks/section";
 @import "blocks/testimonial-slider";
 @import "blocks/home-hero-img-services";
-@import "blocks/insights";
+@import "blocks/post-rows";
+@import "blocks/breadcrumbs";
+@import "blocks/child-page-banner";
+
+// Pages/Posts
+@import "pages/posts";

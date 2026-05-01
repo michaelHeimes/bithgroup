@@ -2,10 +2,10 @@
   "version": 3,
   "settings": {
 	"color": {
-	  "custom": false,
-	  "text": false,
 	  "background": false,
+	  "text": false,
 	  "link": false,
+	  "custom": false,
 	  "customGradient": false,
 	  "defaultPalette": false,
 	  "defaultGradients": false,
@@ -35,11 +35,13 @@
 	},
 	"blocks": {
 	  "acf/section": {
-		"color": {
-		  "background": true,
-		  "gradients": true,
-		  "customGradient": false
-		}
+		"color": { "background": true, "gradients": true }
+	  },
+	  "acf/breadcrumbs": {
+		"color": { "background": true, "gradients": [] }
+	  },
+	  "acf/child-page-banner": {
+		"color": { "background": true, "gradients": [] }
 	  }
 	}
   },

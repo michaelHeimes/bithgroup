@@ -1,0 +1,17 @@
+.content-section.post-rows {
+	.loop-post-row {
+		max-width: 560px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include breakpoint(tablet) {
+		.wrapper {
+			.loop-post-row {
+				max-width: none;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

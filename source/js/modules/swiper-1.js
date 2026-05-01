@@ -3,7 +3,7 @@ import { Scrollbar } from 'swiper/modules';
 
 export default function init1Sliders() {
 	const sliderContainers = document.querySelectorAll('.swiper-1');
-	const breakpoint = window.matchMedia('(max-width: 639px)');
+	const breakpoint = window.matchMedia('(max-width: 999px)');
 
 	sliderContainers.forEach((container) => {
 		let swiperInstance = null;
@@ -12,7 +12,6 @@ export default function init1Sliders() {
 
 		const manageSwiper = () => {
 			if (breakpoint.matches) {
-				console.log(swiperInstance );
 				if (swiperInstance === null) {
 					// 1. Prepare HTML for Swiper
 					wrapper.classList.add('swiper-wrapper');
@@ -26,6 +25,12 @@ export default function init1Sliders() {
 						scrollbar: {
 							el: container.querySelector('.swiper-scrollbar'),
 							draggable: true,
+						},
+						breakpoints: {
+							640: {
+								slidesPerView: 2,
+								spaceBetween: 20,
+							},
 						},
 					});
 				}

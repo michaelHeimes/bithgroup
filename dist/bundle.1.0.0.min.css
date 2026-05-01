@@ -1169,10 +1169,32 @@ small {
 }
 
 h1, .h1,
-h2, .h2,
-h3, .h3,
+h2, .h2, .single-post h1.wp-block-post-title,
+.single-post :where(.editor-styles-wrapper) h1,
+.single-post h2.wp-block-post-title,
+.single-post :where(.editor-styles-wrapper) h2,
+.wp-admin.post-type-post h1.wp-block-post-title,
+.wp-admin.post-type-post :where(.editor-styles-wrapper) h1,
+.wp-admin.post-type-post h2.wp-block-post-title,
+.wp-admin.post-type-post :where(.editor-styles-wrapper) h2, .single-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2,
+h3, .h3, .single-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title),
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title),
 h4, .h4,
-h5, .h5,
+h5, .h5, .single-post .section-block-wrapper:not(.custom-section-pattern) h3,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h4,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h3,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h4,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4,
 h6, .h6 {
   font-family: "Archivo", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
@@ -1181,10 +1203,32 @@ h6, .h6 {
   text-rendering: optimizeLegibility;
 }
 h1 small, .h1 small,
-h2 small, .h2 small,
-h3 small, .h3 small,
+h2 small, .h2 small, .single-post h1.wp-block-post-title small,
+.single-post :where(.editor-styles-wrapper) h1 small,
+.single-post h2.wp-block-post-title small,
+.single-post :where(.editor-styles-wrapper) h2 small,
+.wp-admin.post-type-post h1.wp-block-post-title small,
+.wp-admin.post-type-post :where(.editor-styles-wrapper) h1 small,
+.wp-admin.post-type-post h2.wp-block-post-title small,
+.wp-admin.post-type-post :where(.editor-styles-wrapper) h2 small, .single-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title small,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1 small,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title small,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2 small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1 small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2 small,
+h3 small, .h3 small, .single-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title) small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title) small,
 h4 small, .h4 small,
-h5 small, .h5 small,
+h5 small, .h5 small, .single-post .section-block-wrapper:not(.custom-section-pattern) h3 small,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3 small,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h4 small,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4 small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h3 small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3 small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h4 small,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4 small,
 h6 small, .h6 small {
   line-height: 0;
   color: #cacaca;
@@ -1197,14 +1241,29 @@ h1, .h1 {
   margin-bottom: 0.5rem;
 }
 
-h2, .h2 {
+h2, .h2, .single-post h1.wp-block-post-title,
+.single-post :where(.editor-styles-wrapper) h1,
+.single-post h2.wp-block-post-title,
+.single-post :where(.editor-styles-wrapper) h2,
+.wp-admin.post-type-post h1.wp-block-post-title,
+.wp-admin.post-type-post :where(.editor-styles-wrapper) h1,
+.wp-admin.post-type-post h2.wp-block-post-title,
+.wp-admin.post-type-post :where(.editor-styles-wrapper) h2, .single-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2 {
   font-size: 1.875rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-h3, .h3 {
+h3, .h3, .single-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title),
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title) {
   font-size: 1.4375rem;
   line-height: 1.4;
   margin-top: 0;
@@ -1218,7 +1277,14 @@ h4, .h4 {
   margin-bottom: 0.5rem;
 }
 
-h5, .h5 {
+h5, .h5, .single-post .section-block-wrapper:not(.custom-section-pattern) h3,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h4,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h3,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h4,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4 {
   font-size: 1.0625rem;
   line-height: 1.4;
   margin-top: 0;
@@ -1236,20 +1302,42 @@ h6, .h6 {
   h1, .h1 {
     font-size: 4.25rem;
   }
-  h2, .h2 {
+  h2, .h2, .single-post h1.wp-block-post-title,
+  .single-post :where(.editor-styles-wrapper) h1,
+  .single-post h2.wp-block-post-title,
+  .single-post :where(.editor-styles-wrapper) h2,
+  .wp-admin.post-type-post h1.wp-block-post-title,
+  .wp-admin.post-type-post :where(.editor-styles-wrapper) h1,
+  .wp-admin.post-type-post h2.wp-block-post-title,
+  .wp-admin.post-type-post :where(.editor-styles-wrapper) h2, .single-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2 {
     font-size: 2.25rem;
   }
-  h3, .h3 {
+  h3, .h3, .single-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title),
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title) {
     font-size: 1.4375rem;
   }
   h4, .h4 {
     font-size: 1.375rem;
   }
-  h5, .h5 {
-    font-size: 1.125rem;
+  h5, .h5, .single-post .section-block-wrapper:not(.custom-section-pattern) h3,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) h4,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h3,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h4,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4 {
+    font-size: 1.0625rem;
   }
   h6, .h6 {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 a {
@@ -1267,7 +1355,7 @@ a img {
 
 hr {
   clear: both;
-  max-width: 84rem;
+  max-width: 85.75rem;
   height: 0;
   margin: 1.25rem auto;
   border-top: 0;
@@ -1541,7 +1629,7 @@ ul.no-bullet, ol.no-bullet {
   }
 }
 .grid-container {
-  max-width: 84rem;
+  max-width: 85.75rem;
   margin-left: auto;
   margin-right: auto;
   padding-right: 1rem;
@@ -6982,6 +7070,10 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   overflow: hidden;
 }
 
+.overflow-visible {
+  overflow: visible;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -7045,6 +7137,10 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   z-index: 1;
 }
 
+.z-2 {
+  z-index: 2;
+}
+
 .bg-bith-blue-10 {
   background-color: var(--wp--preset--color--bith-blue-10);
 }
@@ -7075,6 +7171,14 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .border-black-30 {
   border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.br-32 {
+  border-radius: 2rem;
+}
+
+.br-48 {
+  border-radius: 3rem;
 }
 
 /************************************************
@@ -7607,8 +7711,31 @@ h1.editor-post-title,
 }
 
 h2,
-.h2 {
+.h2,
+.single-post h1.wp-block-post-title,
+.single-post :where(.editor-styles-wrapper) h1,
+.single-post h2.wp-block-post-title,
+.single-post :where(.editor-styles-wrapper) h2,
+.wp-admin.post-type-post h1.wp-block-post-title,
+.wp-admin.post-type-post :where(.editor-styles-wrapper) h1,
+.wp-admin.post-type-post h2.wp-block-post-title,
+.wp-admin.post-type-post :where(.editor-styles-wrapper) h2,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2 {
   font-size: clamp(1.875rem, 1.768rem + 0.536vw, 2.25rem);
+}
+
+h3,
+.h3,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title),
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title) {
+  font-weight: 500;
 }
 
 @media print, screen and (max-width: 39.99875em) {
@@ -7616,8 +7743,26 @@ h2,
   .h1,
   h2,
   .h2,
+  .single-post h1.wp-block-post-title,
+  .single-post :where(.editor-styles-wrapper) h1,
+  .single-post h2.wp-block-post-title,
+  .single-post :where(.editor-styles-wrapper) h2,
+  .wp-admin.post-type-post h1.wp-block-post-title,
+  .wp-admin.post-type-post :where(.editor-styles-wrapper) h1,
+  .wp-admin.post-type-post h2.wp-block-post-title,
+  .wp-admin.post-type-post :where(.editor-styles-wrapper) h2,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h1.wp-block-post-title,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h1,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2.wp-block-post-title,
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h2,
   h3,
   .h3,
+  .single-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title),
+  .wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title),
   p,
   .p,
   ul,
@@ -7661,13 +7806,18 @@ p.md-p,
 
 p.p-sm,
 .p-sm,
+.wp-block-post-date,
 footer#colophon .menu:not(.social-links) a,
 .p-sm p,
+.wp-block-post-date p,
 footer#colophon .menu:not(.social-links) a p,
 .p-sm a,
+.wp-block-post-date a,
 .p-sm ul,
+.wp-block-post-date ul,
 footer#colophon .menu:not(.social-links) a ul,
 .p-sm ol,
+.wp-block-post-date ol,
 footer#colophon .menu:not(.social-links) a ol {
   font-size: var(--wp--preset--font-size--small);
 }
@@ -7684,10 +7834,10 @@ footer#colophon .menu:not(.social-links) a ol {
   margin-left: 0.7rem;
   transform: translateY(-0.1em);
   background-image: url("../assets/svgs/dropdown-chev-white-icon.svg");
-  transition: background-image 0.3s ease;
+  transition: background-image 0.3s ease, transform 0.3s ease;
+  transform-origin: center;
 }
 #main-nav a {
-  color: #fff;
   font-size: 1.125rem;
   font-weight: 500;
   border-radius: 1rem;
@@ -7695,6 +7845,11 @@ footer#colophon .menu:not(.social-links) a ol {
   cursor: pointer;
   pointer-events: auto !important;
   transition: background-color 0.3s ease, color 0.3s ease 0s;
+}
+@media print, screen and (max-width: 62.49875em) {
+  #main-nav a {
+    color: #fff;
+  }
 }
 #main-nav > li.menu-button {
   margin-top: 1.5rem;
@@ -7726,6 +7881,10 @@ footer#colophon .menu:not(.social-links) a ol {
 }
 #main-nav ul.submenu li a:hover .arrow {
   opacity: 1;
+}
+#main-nav .is-accordion-submenu-parent .submenu-toggle[aria-expanded=true]::after,
+#main-nav .is-dropdown-submenu-parent.is-active > a::after {
+  transform: rotateX(180deg) translateY(0.1em);
 }
 
 #main-nav.accordion-menu {
@@ -7806,9 +7965,6 @@ header.site-header #top-bar-menu #main-nav > li {
 header.site-header #top-bar-menu #main-nav > li > a {
   background: transparent;
 }
-header.site-header #top-bar-menu #main-nav > li > a:hover {
-  background: var(--wp--preset--color--bith-onyx);
-}
 header.site-header #top-bar-menu #main-nav > li.menu-button {
   margin-top: 0;
   width: auto;
@@ -7881,6 +8037,38 @@ header.site-header #top-bar-menu .menu-toggle-wrap #menu-toggle.clicked span:nth
   bottom: 4px;
   transform: translate(0px, -12px) rotate(45deg);
 }
+header.site-header.has-bith-white-color #top-bar-menu #main-nav > li > a {
+  color: #fff;
+}
+header.site-header.has-bith-white-color #top-bar-menu #main-nav > li > a:hover {
+  background: var(--wp--preset--color--bith-onyx);
+}
+header.site-header.has-bith-blue-color #top-bar-menu .logo .bith-logo-text, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu .logo .bith-logo-text {
+  fill: var(--wp--preset--color--bith-blue-100);
+}
+header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li > a, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li > a {
+  color: var(--wp--preset--color--bith-blue-100);
+}
+header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li > a:hover, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li > a:hover {
+  background: #E2F0B9;
+}
+header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li.is-dropdown-submenu-parent > a::after, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li.is-dropdown-submenu-parent > a::after {
+  background-image: url("../assets/svgs/dropdown-chev-blue-icon.svg");
+}
+header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li.menu-button a, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li.menu-button a {
+  background-color: var(--wp--preset--color--bith-blue-100);
+  color: #fff;
+}
+header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li.menu-button a:not(.acf-button):before, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li.menu-button a:not(.acf-button):before {
+  background-color: var(--wp--preset--color--bith-blue-100);
+}
+header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li.menu-button a:hover, header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li.menu-button a:focus, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li.menu-button a:hover, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li.menu-button a:focus {
+  background-color: var(--wp--preset--color--bith-green-100) !important;
+  color: var(--wp--preset--color--bith-blue-100);
+}
+header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li.menu-button a:hover:not(.acf-button):before, header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li.menu-button a:focus:not(.acf-button):before, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li.menu-button a:hover:not(.acf-button):before, header.site-header.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) #top-bar-menu #main-nav > li.menu-button a:focus:not(.acf-button):before {
+  background-color: var(--wp--preset--color--bith-green-100) !important;
+}
 
 .has-scrolled header.site-header {
   transform: translateY(12px);
@@ -7947,14 +8135,32 @@ footer#colophon .bg {
   background-repeat: repeat;
   mix-blend-mode: overlay;
 }
+footer#colophon .logo-address-wrap {
+  margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+}
+@media print, screen and (min-width: 40em) and (max-width: 62.49875em) {
+  footer#colophon .logo-address-wrap {
+    align-items: center;
+  }
+}
+@media print, screen and (min-width: 40em) and (max-width: 62.49875em) {
+  footer#colophon .logo-address-wrap .logo-address-wrap {
+    align-items: center;
+  }
+}
 footer#colophon .logo-wrap {
   margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
 }
-footer#colophon .address {
-  margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+@media print, screen and (min-width: 40em) and (max-width: 62.49875em) {
+  footer#colophon .logo-wrap {
+    margin-bottom: 0;
+  }
 }
 footer#colophon .contact-methods {
   margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+}
+footer#colophon .contact-methods > ul {
+  gap: 0.8125rem;
 }
 footer#colophon .contact-methods a {
   padding: 0;
@@ -8017,6 +8223,16 @@ footer#colophon ul.social-links li a:hover svg path {
 footer#colophon .footer-cta .cta-inner {
   border-radius: clamp(1rem, 0.429rem + 2.857vw, 3rem);
   padding: clamp(1.5rem, 1.071rem + 2.143vw, 3rem);
+}
+@media print, screen and (min-width: 40em) {
+  footer#colophon .site-info {
+    padding-top: clamp(2rem, 1.464rem + 2.679vw, 3.875rem);
+  }
+}
+@media print, screen and (max-width: 62.49875em) {
+  footer#colophon .site-info .copyright {
+    margin-bottom: 2rem;
+  }
 }
 footer#colophon .site-info .menu.subfooter-links {
   display: inline-flex;
@@ -8158,7 +8374,7 @@ footer#colophon .site-info .menu.subfooter-links li {
   background-color: var(--wp--preset--color--bith-green-100);
   transition: background-color 0.35s ease, transform 0.35s ease;
 }
-@media print, screen and (max-width: 39.99875em) {
+@media print, screen and (max-width: 62.49875em) {
   .button:not(.acf-button):not([data-name=add]).wide-mw-btn, .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]).wide-mw-btn, .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]).wide-mw-btn, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]).wide-mw-btn,
   .wp-block-button__link.wide-mw-btn,
   .wp-block-buttons a.wide-mw-btn {
@@ -8370,29 +8586,36 @@ footer#colophon .site-info .menu.subfooter-links li {
   text-decoration: none;
 }
 
-.loop-insight {
-  margin-bottom: 4rem;
+.loop-post-row {
+  margin-bottom: 1rem;
   box-sizing: border-box;
 }
-.loop-insight > .grid-x {
+@media screen and (min-width: 62.5em) {
+  .loop-post-row {
+    margin-bottom: 3rem;
+  }
+}
+.loop-post-row > .grid-x {
   margin-left: -1rem;
   margin-right: -1rem;
 }
-.loop-insight .thumb-wrap {
-  margin-bottom: 2rem;
+@media screen and (max-width: 79.99875em) {
+  .loop-post-row .thumb-wrap {
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (min-width: 62.5em) {
-  .loop-insight .thumb-wrap {
+  .loop-post-row .thumb-wrap {
     max-width: 400px;
     margin-bottom: 0;
   }
 }
-.loop-insight .thumb-wrap .img-wrap {
+.loop-post-row .thumb-wrap .img-wrap {
   border-radius: 2rem;
   overflow: hidden;
   padding-top: 56.25%;
 }
-.loop-insight .thumb-wrap .img-wrap img {
+.loop-post-row .thumb-wrap .img-wrap img {
   position: absolute;
   top: 0;
   left: 0;
@@ -8400,6 +8623,37 @@ footer#colophon .site-info .menu.subfooter-links li {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.loop-post-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.loop-post-card a {
+  padding: 2rem;
+  box-shadow: 0 0 0 0 #69A0E1;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+}
+.loop-post-card a:hover {
+  background-color: #fff;
+  color: var(--wp--preset--color--bith-onyx) !important;
+  box-shadow: 0 6px 140px 0 #69A0E1;
+}
+.loop-post-card .thumb-wrap {
+  margin-bottom: 1.875rem;
+}
+.loop-post-card .thumb-wrap .img-wrap {
+  aspect-ratio: 16/9;
+}
+.loop-post-card .thumb-wrap .img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.loop-post-card .post-date {
+  margin: 1rem 0;
 }
 
 a.underline-arrow-link,
@@ -8472,6 +8726,10 @@ a.underline-arrow-link:hover:after,
 .has-bith-white-color a.underline-arrow-link:hover:after,
 .has-bith-white-color .has-underline-arrow-link a:hover:after {
   opacity: 1;
+}
+
+.wp-block-post-featured-image img {
+  border-radius: 32px;
 }
 
 .section-block-wrapper .pulse-eyebrow {
@@ -8586,14 +8844,9 @@ a.underline-arrow-link:hover:after,
 .home-hero-img-services .hero-gradient-section .services-slider .swiper-slide {
   box-sizing: border-box;
   height: auto;
-  padding: 2rem;
 }
 .home-hero-img-services .hero-gradient-section .services-slider .swiper-slide a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  padding: 2rem;
   border-radius: 3rem;
   background: rgba(255, 255, 255, 0.2);
   margin-bottom: 2rem;
@@ -8633,33 +8886,174 @@ a.underline-arrow-link:hover:after,
 .home-hero-img-services .hero-gradient-section .services-slider .swiper-slide .icon-wrap svg path {
   transition: all 0.4s ease;
 }
-.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide:hover a {
+.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide a:hover {
   background-color: #fff;
   transform: scale(1.025);
   box-shadow: 0 6px 140px 0 var(--wp--preset--color--bith-green-100);
 }
-.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide:hover .service-card-arrow-icon {
+.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide a:hover .service-card-arrow-icon {
   transform: scale(1.15);
 }
-.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide:hover .icon-wrap {
+.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide a:hover .icon-wrap {
   background-color: var(--wp--preset--color--bith-slate);
 }
-.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide:hover .icon-wrap:before {
+.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide a:hover .icon-wrap:before {
   opacity: 1;
   transform: scale(1) translate(-50%, -50%);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
-.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide:hover .icon-wrap svg {
+.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide a:hover .icon-wrap svg {
   transform: scale(1.2);
   transition: transform 0.4s ease;
 }
-.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide:hover .icon-wrap svg path {
+.home-hero-img-services .hero-gradient-section .services-slider .swiper-slide a:hover .icon-wrap svg path {
   stroke: #fff;
 }
 
+.content-section.post-rows .loop-post-row {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media screen and (min-width: 62.5em) {
-  .content-section.insights .wrapper .loop-insight:last-child {
+  .content-section.post-rows .wrapper .loop-post-row {
+    max-width: none;
+  }
+  .content-section.post-rows .wrapper .loop-post-row:last-child {
     margin-bottom: 0;
   }
+}
+
+.breadcrumbs > .grid-container {
+  padding-top: 1.875rem;
+}
+.breadcrumbs ul li {
+  display: inline-flex;
+  align-items: center;
+}
+.breadcrumbs ul li:not(:only-child):not(:last-child):after {
+  content: "";
+  display: inline-block;
+  margin: 0 0.4rem;
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.breadcrumbs ul li a {
+  padding: 0;
+}
+.breadcrumbs ul li a.home-link svg path {
+  transition: all 0.4s ease;
+}
+.breadcrumbs ul li a:not(.home-link) {
+  position: relative;
+  padding: 0.4em 0;
+}
+.breadcrumbs ul li a:not(.home-link):before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  height: 1px;
+  background-color: var(--wp--preset--color--bith-blue-100);
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+.breadcrumbs ul li a:not(.home-link):hover:before {
+  height: 0.5px;
+  opacity: 0;
+  transition: opacity 0.6s ease, height 0.6s ease;
+}
+.breadcrumbs.has-bith-white-color li a:not(.home-link) {
+  color: #fff;
+}
+.breadcrumbs.has-bith-white-color li a:not(.home-link):hover {
+  background: #fff;
+}
+.breadcrumbs.has-bith-white-color li:not(:only-child):not(:last-child):after {
+  background-image: url("../assets/svgs/breadcrumb-sep-white-icon.svg");
+}
+.breadcrumbs.has-bith-onyx-color li a.home-link:hover .bg {
+  fill: var(--wp--preset--color--bith-green-100);
+}
+.breadcrumbs.has-bith-onyx-color li a.home-link:hover .house {
+  stroke: var(--wp--preset--color--bith-onyx);
+}
+.breadcrumbs.has-bith-onyx-color li a:not(.home-link) {
+  color: var(--wp--preset--color--bith-blue-100);
+}
+.breadcrumbs.has-bith-onyx-color li a:not(.home-link):hover {
+  color: var(--wp--preset--color--bith-blue-100);
+}
+.breadcrumbs.has-bith-onyx-color li:not(:only-child):not(:last-child):after {
+  background-image: url("../assets/svgs/breadcrumb-sep-onyx-icon.svg");
+}
+
+.child-page-banner {
+  padding-bottom: clamp(1.625rem, 0.982rem + 3.214vw, 3.875rem);
+}
+@media screen and (min-width: 62.5em) {
+  .child-page-banner {
+    padding-bottom: clamp(8.5rem, 10.375rem - 9.375vw, 1.938rem);
+  }
+}
+.child-page-banner .image-wrap {
+  margin-top: clamp(4rem, 3.143rem + 4.286vw, 7rem);
+  margin-bottom: clamp(1.875rem, 1.786rem + 0.446vw, 2.188rem);
+  max-width: 47%;
+}
+@media screen and (min-width: 62.5em) {
+  .child-page-banner .image-wrap {
+    max-width: none;
+  }
+}
+.child-page-banner .text {
+  margin-bottom: 1.25rem;
+}
+.child-page-banner .text h1 {
+  margin-bottom: 0.2em;
+}
+
+.single-post .section-block-wrapper:not(.custom-section-pattern) .wp-block-post-date,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) .wp-block-post-date {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.single-post .section-block-wrapper:not(.custom-section-pattern) h2,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h3,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h4,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h3,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h4 {
+  margin-top: 3.4rem;
+}
+.single-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title),
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h2:not(.wp-block-post-title) {
+  font-weight: 500;
+}
+.single-post .section-block-wrapper:not(.custom-section-pattern) h3,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3,
+.single-post .section-block-wrapper:not(.custom-section-pattern) h4,
+.single-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h3,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h3,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) h4,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) :where(.editor-styles-wrapper) h4 {
+  font-family: "JetBrains Mono", Consolas, "Liberation Mono", Courier, monospace;
+}
+.single-post .section-block-wrapper:not(.custom-section-pattern) p,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) p {
+  margin-bottom: 3.4rem;
+}
+.single-post .section-block-wrapper:not(.custom-section-pattern) .wp-block-post-featured-image,
+.wp-admin.post-type-post .section-block-wrapper:not(.custom-section-pattern) .wp-block-post-featured-image {
+  margin-top: 3.4rem;
+  margin-bottom: 3.4rem;
+}
+
+.block-editor-block-list__block:not(.wp-block-post-date) {
+  margin-top: 3.4rem;
+  margin-bottom: 3.4rem;
 }
 /*# sourceMappingURL=bundle.1.0.0.min.css.map */

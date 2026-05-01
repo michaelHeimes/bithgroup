@@ -11,10 +11,10 @@
 		margin-left: .7rem; 
 		transform: translateY(-.1em); 
 		background-image: url('../assets/svgs/dropdown-chev-white-icon.svg'); 
-		transition: background-image .3s ease; 
+		transition: background-image .3s ease, transform .3s ease; 
+		transform-origin: center;
 	}
 	a { 
-		color: $white; 
 		font-size: rem-calc(18); 
 		font-weight: 500; 
 		border-radius: 1rem; 
@@ -22,6 +22,9 @@
 		cursor: pointer; 
 		pointer-events: auto !important; 
 		transition: background-color .3s ease, color .3s ease 0s; 
+		@include breakpoint(medium down) {
+			color: $white; 
+		}
 	}
 	> li.menu-button {
 		margin-top: 1.5rem;
@@ -60,8 +63,11 @@
 			
 		}
 	}
+	.is-accordion-submenu-parent .submenu-toggle[aria-expanded="true"]::after,
+	.is-dropdown-submenu-parent.is-active > a::after {
+		transform: rotateX(180deg) translateY(0.1em);
+	}
 }
-
 
 #main-nav.accordion-menu {
 	padding: 2rem 0;
@@ -148,9 +154,6 @@ header.site-header {
 				margin: 0 .5rem 0rem;
 				> a {
 					background: transparent;
-					&:hover {
-						background: $onyx;
-					}
 				}	
 			&.menu-button {
 				margin-top: 0;
@@ -252,7 +255,56 @@ header.site-header {
 		}
 	
 	}
-	
+	&.has-bith-white-color {
+		#top-bar-menu #main-nav {
+			>li {
+				> a {
+					color: $white;
+					&:hover {
+						background: $onyx;
+					}
+				}	
+			}
+		}
+	}
+	&.has-bith-blue-color,
+	&.has-bith-blue-color:has(.entry-content > .section-block-wrapper.has-bith-white-color) {
+		#top-bar-menu {
+			.logo .bith-logo-text {
+				fill: $blue-100;
+			}
+			#main-nav {
+				>li {
+					> a {
+						color: $blue-100;
+						&:hover {
+							background: $green-60;
+						}
+					}	
+					&.is-dropdown-submenu-parent > a::after {
+						background-image: url('../assets/svgs/dropdown-chev-blue-icon.svg'); 
+					}
+					&.menu-button {
+						a {
+							background-color: $blue-100;
+							color: $white;
+							&:not(.acf-button):before {
+								background-color: $blue-100;
+							}
+							&:hover,
+							&:focus {
+								background-color: $green-100 !important;
+								color: $blue-100;
+								&:not(.acf-button):before {
+									background-color: $green-100 !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .has-scrolled {

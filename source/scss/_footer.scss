@@ -5,14 +5,31 @@ footer#colophon {
 		background-repeat: repeat;
 		mix-blend-mode: overlay;
 	}
+	.logo-address-wrap {
+		margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+		@include breakpoint(medium only) {
+			align-items: center;
+		}
+		.logo-address-wrap {
+			@include breakpoint(medium only) {
+				align-items: center;
+			}
+		}
+	}
 	.logo-wrap {
 		margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+		@include breakpoint(medium only) {
+			margin-bottom: 0;
+		}
 	}
-	.address {
-		margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
-	}
+	// .address {
+	// 	margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+	// }
 	.contact-methods {
 		margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
+		> ul {
+			gap: rem-calc(13);
+		}
 		a {
 			padding: 0;
 			display: inline;
@@ -84,6 +101,14 @@ footer#colophon {
 	}
 	
 	.site-info {
+		@include breakpoint(medium) {
+			padding-top: clamp(2rem, 1.464rem + 2.679vw, 3.875rem);
+		}
+		.copyright {
+			@include breakpoint(medium down) {
+				margin-bottom: 2rem;
+			}
+		}
 		.menu.subfooter-links {
 			display: inline-flex;
 			li {

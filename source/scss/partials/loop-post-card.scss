@@ -1,0 +1,29 @@
+.loop-post-card {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	a {
+		padding: 2rem;
+		box-shadow: $glow-on-dark-pre-hover;
+		transition: transform .4s ease, box-shadow .4s ease, background-color .4s ease, color .4s ease;
+		&:hover {
+			background-color: $white;
+			color : $onyx !important;
+			box-shadow: $glow-on-dark; 	
+		}
+	}
+	.thumb-wrap {
+		margin-bottom: rem-calc(30);
+		.img-wrap {
+			aspect-ratio: 16/9;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	.post-date {
+		margin: 1rem 0;
+	}
+}

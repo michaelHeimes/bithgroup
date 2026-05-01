@@ -52,7 +52,7 @@
 		}
 	}
 	&.wide-mw-btn {
-		@include breakpoint(small down) {
+		@include breakpoint(medium down) {
 			width: 100%;
 			max-width: 360px;
 		}

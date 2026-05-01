@@ -38,12 +38,13 @@ import { ResponsiveMenu } from 'foundation-sites/js/foundation.responsiveMenu';
 // --- Third Party & Modules ---
 import 'what-input';
 
+//import headerLinkColor from './modules/header-link-color.js';
 import hasScrolled from './modules/has-scrolled.js';
 import offCanvasModifications from './modules/off-canvas-modifications.js';
 import headerHeight from './modules/header-height.js';
 import init1Sliders from './modules/swiper-1.js';
-import init21Sliders from './modules/swiper-2-1.js';
-import init321Sliders from './modules/swiper-3-2-1.js';
+import init21SwipeSliders from './modules/swiper-2-1-swipe.js';
+import init32Swipe1SwipeSliders from './modules/swiper-3-2-swipe-1-swipe.js';
 import swiperOneArrowDots from './modules/swiper-1-arrow-dots.js';
 
 // ---------------------------------------------------------
@@ -107,11 +108,12 @@ $(function() {
     }
     
     $(document).foundation();    
+    //headerLinkColor();
     hasScrolled();
     offCanvasModifications();
     headerHeight();
     init1Sliders();
-    init21Sliders();
-    init321Sliders();
+    init21SwipeSliders();
+    init32Swipe1SwipeSliders();
     swiperOneArrowDots();
 });

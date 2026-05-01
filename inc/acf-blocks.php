@@ -4,6 +4,27 @@ add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types() {
 
     if( function_exists('acf_register_block_type') ) {
+        
+        acf_register_block_type(array(
+            'name'            => 'breadcrumbs',
+            'title'           => __('Breadcrumbs'),
+            'api_version'     => 2,
+            'description'     => __('Breadcrumb navigation.'),
+            'render_template' => 'blocks/breadcrumbs.php',
+            'category'        => 'layout',
+            'mode'            => 'preview', // Forces the block into preview mode immediately
+            'keywords'        => array( 'custom', 'breadcrumbs', 'navigation', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode'  => false, 
+                'color' => array(
+                    'background' => true,
+                    'text'       => false,
+                    'gradients'  => false,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
 
         acf_register_block_type(array(
             'name'            => 'section',
@@ -20,6 +41,26 @@ function my_acf_init_block_types() {
                     'background' => true,
                     'text'       => false,
                     'gradients'  => true,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
+        
+        acf_register_block_type(array(
+            'name'            => 'child-page-banner',
+            'title'           => __('Child Page Banner'),
+            'api_version'     => 2,
+            'description'     => __('The banenr for chld pages such as Service Detail and Industry Details pages.'),
+            'render_template' => 'blocks/child-page-banner.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'custom', 'child', 'page', 'banner', 'hero', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode'  => true, 
+                'color' => array(
+                    'background' => true,
+                    'text'       => false,
+                    'gradients'  => false,
                 ),
                 'align' => array( 'wide', 'full' ),
             ),
@@ -49,7 +90,7 @@ function my_acf_init_block_types() {
             'name'            => 'testimonials',
             'title'           => __('Testimonial Slider'),
             'api_version'     => 2,
-            'description'     => __('Testimonials block that shows the Testimonial posts.'),
+            'description'     => __('Shows the Testimonial posts.'),
             'render_template' => 'blocks/testimonial-slider.php',
             'category'        => 'layout',
             'keywords'        => array( 'custom', 'testimonial', 'slider', 'bith', 'propr' ),
@@ -69,7 +110,7 @@ function my_acf_init_block_types() {
             'name'            => 'our-industries',
             'title'           => __('Our Industries'),
             'api_version'     => 2,
-            'description'     => __('Our Industries block that shows the Industry Cards.'),
+            'description'     => __('Displays the Industry Cards.'),
             'render_template' => 'blocks/our-industries.php',
             'category'        => 'layout',
             'keywords'        => array( 'custom', 'our', 'industries', 'bith', 'propr' ),
@@ -86,13 +127,53 @@ function my_acf_init_block_types() {
         ));
         
         acf_register_block_type(array(
-            'name'            => 'insights',
-            'title'           => __('Insights'),
+            'name'            => 'sub-service-navigation-cards',
+            'title'           => __('Sub-service Navigation Cards'),
             'api_version'     => 2,
-            'description'     => __('Insights block that shows the posts.'),
-            'render_template' => 'blocks/insights.php',
+            'description'     => __('Displays the Sub-service Navigation Cards'),
+            'render_template' => 'blocks/sub-service-navigation-cards.php',
             'category'        => 'layout',
-            'keywords'        => array( 'custom', 'insights', 'bith', 'propr' ),
+            'keywords'        => array( 'custom', 'sub', 'service', 'cards', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode' => true,
+                'color' => array(
+                    'background' => false,
+                    'text'       => false,
+                    'gradients'  => false,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
+        
+        acf_register_block_type(array(
+            'name'            => 'post-rows',
+            'title'           => __('Post Rows'),
+            'api_version'     => 2,
+            'description'     => __('Displays the selected post time in a row format with the featured image.'),
+            'render_template' => 'blocks/post-rows.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'custom', 'insights', 'case', 'studies', 'post', 'rows', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode' => true,
+                'color' => array(
+                    'background' => false,
+                    'text'       => false,
+                    'gradients'  => false,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
+        
+        acf_register_block_type(array(
+            'name'            => 'explore-more-posts-cards',
+            'title'           => __('Explore More Posts Cards'),
+            'api_version'     => 2,
+            'description'     => __('Shows the selected post time in a card format with the featured image.'),
+            'render_template' => 'blocks/explore-more-posts-cards.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'custom', 'insights', 'case', 'studies', 'post', 'rows', 'bith', 'propr' ),
             'supports'        => array(
                 'jsx'   => false,
                 'mode' => true,

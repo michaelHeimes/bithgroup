@@ -1,6 +1,6 @@
 <?php
 /**
- * Insights posts
+ * Post Rows
  */
  
 global $bith_block_order;
@@ -14,29 +14,44 @@ global $bith_block_order;
  }
  
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
-$className = 'content-section insights';
+$className = 'content-section post-rows has-bith-onyx-color';
 
 $sh_heading = get_field('sh_heading') ?? null;
 $sh_text = get_field('sh_text') ?? null;
 $sh_button_link = get_field('sh_button_link') ?? null;
 
-$insights_to_show = get_field('insights_to_show') ?? null;
+$post_type = get_field('post_type');
+
+$posts_to_show = get_field('posts_to_show') ?? null;
+
 $select_insights_to_show = get_field('select_insights_to_show') ?? null;
+$select_case_studies_to_show = get_field('select_case_studies_to_show') ?? null;
 
+$posts = [];
 
-$insights = [];
-
-if ( $insights_to_show === 'latest' ) {
+if ( $posts_to_show === 'latest' && $post_type === 'post' ) {
     $args = array(
         'post_type'      => 'post',
         'posts_per_page' => 3,
         'post_status'    => 'publish',
     );
-    $insights = get_posts($args);
-} elseif ( $insights_to_show === 'select' && $select_insights_to_show ) {
-    // Fixed: used $select_insights_to_show instead of $selected_id
-    $insights = $select_insights_to_show;
+    $posts = get_posts($args);
+} elseif ( $posts_to_show === 'select' && $select_insights_to_show ) {
+    $posts = $select_insights_to_show;
 } 
+
+if ( $posts_to_show === 'latest' && $post_type === 'case-study' ) {
+    $args = array(
+        'post_type'      => 'case-study',
+        'posts_per_page' => 3,
+        'post_status'    => 'publish',
+    );
+    $posts = get_posts($args);
+} elseif ( $posts_to_show === 'select' && $select_case_studies_to_show ) {
+    $posts = $select_case_studies_to_show;
+} 
+
+
 ?>
 
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
@@ -54,20 +69,29 @@ if ( $insights_to_show === 'latest' ) {
                 'btn-classes' => 'blue-100 has-bith-white-color'
             ),
         );?>
-        <?php if ( ! empty($insights) ) : ?>
+        <?php if ( ! empty($posts) ) : ?>
             <div class="swiper swiper-1">
                 <div class="wrapper">
                     <?php 
                     global $post;
-                    foreach ( $insights as $post ) :
+                    foreach ( $posts as $post ) :
                         setup_postdata($post);
                         $post_id = $post->ID;
                     ?>
-                        <?php get_template_part('template-parts/loop', 'insight');?>
+                        <?php get_template_part('template-parts/loop', 'post-row');?>
                     <?php endforeach; wp_reset_postdata(); ?>
                 </div>
-                <div class="swiper-scrollbar hide-for-medium"></div>
+                <div class="swiper-scrollbar hide-for-large"></div>
             </div>
         <?php endif; ?>
+        <?php if($sh_button_link) {
+            get_template_part('template-parts/part', 'button-link',
+                array(
+                    'link' => $sh_button_link,
+                    'container-classes' => 'small-12 medium-shrink hide-for-medium',
+                    'btn-classes' => 'blue-100 has-bith-white-color wide-mw-btn',
+                )
+            );
+        };?>
     </div>
 </section>

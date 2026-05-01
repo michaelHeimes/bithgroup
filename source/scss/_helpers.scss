@@ -7,6 +7,9 @@
 .overflow-hidden {
 	overflow: hidden;
 }
+.overflow-visible {
+	overflow: visible;
+}
 .text-uppercase {
 	text-transform: uppercase;
 }
@@ -55,6 +58,9 @@
 .z-1 {
 	z-index: 1;
 }
+.z-2 {
+	z-index: 2;
+}
 .bg-bith-blue-10 {
 	background-color: $blue-10;
 }
@@ -78,4 +84,10 @@
 }
 .border-black-30 {
 	border: 1px solid $black-30;
+}
+.br-32 {
+	border-radius: rem-calc(32);
+}
+.br-48 {
+	border-radius: rem-calc(48);
 }

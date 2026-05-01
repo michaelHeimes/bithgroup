@@ -96,7 +96,7 @@ $service_cards = get_field('service_cards') ?? null;
 				<?php if($service_cards):?>
 					<div class="services-slider">
 						<div class="inner">
-							<div class="swiper swiper-3-2-1">
+							<div class="swiper swiper-3-2-swipe-1-swipe overflow-visible">
 								<div class="swiper-wrapper">
 									<?php foreach($service_cards as $service_card):
 										$icon = $service_card['icon'] ?? null;
@@ -106,27 +106,28 @@ $service_cards = get_field('service_cards') ?? null;
 										if($service_page || $service_name):
 									?>
 										<div class="swiper-slide has-bith-onyx-color d-flex flex-dir-column">
-											<a href="<?=esc_url($service_page );?>" class="display-block border-black-30">											</a>
-											<?php if($icon):?>
-												<div class="icon-wrap grid-x align-middle align-center position-relative overflow-hidden">
-													<?=wp_get_attachment_image( $icon['id'], 'full', false, array( 'class' => 'style-svg position-relative z-1' ) );?>
-												</div>
-											<?php endif;?>
-											<?php if($service_name):?>
-												<div class="grid-x gap-x position-relative">
-													<div class="cell auto">
-														<h3 class="weight-500"><?=wp_kses_post($service_name);?></h3>
+											<a href="<?=esc_url($service_page );?>" class="display-block border-black-30 z-1">
+												<?php if($icon):?>
+													<div class="icon-wrap grid-x align-middle align-center position-relative overflow-hidden z-2">
+														<?=wp_get_attachment_image( $icon['id'], 'full', false, array( 'class' => 'style-svg position-relative z-1' ) );?>
 													</div>
-													<div class="cell shrink">
-														<img class="service-card-arrow-icon" src="<?=get_template_directory_uri();?>/assets/svgs/service-card-arrow-icon.svg" alt="arrow icon"/>
+												<?php endif;?>
+												<?php if($service_name):?>
+													<div class="grid-x gap-x position-relative z-2">
+														<div class="cell auto">
+															<h3 class="weight-500"><?=wp_kses_post($service_name);?></h3>
+														</div>
+														<div class="cell shrink">
+															<img class="service-card-arrow-icon" src="<?=get_template_directory_uri();?>/assets/svgs/service-card-arrow-icon.svg" alt="arrow icon"/>
+														</div>
 													</div>
-												</div>
-											<?php endif;?>
-											<?php if($service_description):?>
-												<div class="description position-relative">
-													<p class="md-p"><?=wp_kses_post($service_description);?></p>
-												</div>
-											<?php endif;?>
+												<?php endif;?>
+												<?php if($service_description):?>
+													<div class="description position-relative">
+														<p class="md-p"><?=wp_kses_post($service_description);?></p>
+													</div>
+												<?php endif;?>
+											</a>
 										</div>
 									<?php endif; endforeach;?>
 								</div>

@@ -28,27 +28,21 @@ $select_case_studies_to_show = get_field('select_case_studies_to_show') ?? null;
 
 $posts = [];
 
-if ( $posts_to_show === 'latest' && $post_type === 'post' ) {
+if ( $posts_to_show === 'latest' ) {
     $args = array(
-        'post_type'      => 'post',
+        'post_type'      => $post_type,
         'posts_per_page' => 3,
         'post_status'    => 'publish',
     );
     $posts = get_posts($args);
-} elseif ( $posts_to_show === 'select' && $select_insights_to_show ) {
-    $posts = $select_insights_to_show;
 } 
-
-if ( $posts_to_show === 'latest' && $post_type === 'case-study' ) {
-    $args = array(
-        'post_type'      => 'case-study',
-        'posts_per_page' => 3,
-        'post_status'    => 'publish',
-    );
-    $posts = get_posts($args);
-} elseif ( $posts_to_show === 'select' && $select_case_studies_to_show ) {
-    $posts = $select_case_studies_to_show;
-} 
+elseif ( $posts_to_show === 'select' ) {
+    if ( $post_type === 'post' ) {
+        $posts = get_field('select_insights_to_show');
+    } elseif ( $post_type === 'case-studies' ) {
+        $posts = get_field('select_case_studies_to_show');
+    }
+}
 
 ?>
 

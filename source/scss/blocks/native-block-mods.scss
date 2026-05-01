@@ -1,3 +1,34 @@
+// Breakpoints variable for reference
+$tablet: 1000px;
+
+// This targets the front-end AND the editor canvas
+.wp-block-columns {
+	@media (max-width: #{$tablet}) {
+		flex-direction: column !important;
+
+		// Reset the individual column widths to 100%
+		> .wp-block-column {
+			flex-basis: 100% !important;
+			max-width: 100% !important;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+
+	// Handle your custom reverse logic here too
+	&.mobile-row-reverse {
+		@media (max-width: #{$tablet}) {
+			flex-direction: column-reverse !important;
+		}
+	}
+}
+
+@include breakpoint(medium down) {
+	.mobile-row-reverse {
+		flex-direction: column-reverse;
+	}
+}
+
 .wp-block-post-featured-image {
 	img {
 		border-radius: 32px;

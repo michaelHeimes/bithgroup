@@ -7095,6 +7095,17 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   }
 }
 
+.negative-x {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+@media print, screen and (min-width: 40em) {
+  .negative-x {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+
 .gap-x-24 {
   gap: 1.5rem;
 }
@@ -8728,6 +8739,28 @@ a.underline-arrow-link:hover:after,
   opacity: 1;
 }
 
+@media (max-width: 1000px) {
+  .wp-block-columns {
+    flex-direction: column !important;
+  }
+  .wp-block-columns > .wp-block-column {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 1000px) {
+  .wp-block-columns.mobile-row-reverse {
+    flex-direction: column-reverse !important;
+  }
+}
+
+@media print, screen and (max-width: 62.49875em) {
+  .mobile-row-reverse {
+    flex-direction: column-reverse;
+  }
+}
 .wp-block-post-featured-image img {
   border-radius: 32px;
 }

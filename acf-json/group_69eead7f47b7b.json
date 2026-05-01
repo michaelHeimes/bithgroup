@@ -76,7 +76,7 @@
             },
             "choices": {
                 "post": "Insight",
-                "case-study": "Case Study"
+                "case-studies": "Case Study"
             },
             "default_value": "post",
             "return_format": "value",
@@ -178,7 +178,7 @@
                     {
                         "field": "field_69f3753eac0c5",
                         "operator": "==",
-                        "value": "case-study"
+                        "value": "case-studies"
                     },
                     {
                         "field": "field_69eead7f838c0",
@@ -193,7 +193,7 @@
                 "id": ""
             },
             "post_type": [
-                "post"
+                "case-studies"
             ],
             "post_status": [
                 "publish"
@@ -232,5 +232,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1777564180
+    "modified": 1777648755
 }

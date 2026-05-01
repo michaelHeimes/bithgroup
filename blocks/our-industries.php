@@ -39,8 +39,10 @@ $industry_cards = get_field('industry_cards') ?? null;
 				'btn-classes' => 'green-100 has-bith-onyx-color'
 			),
 		);?>
+	</div>
+	<div class="grid-container">
 		<?php if($industry_cards):?>
-			<div class="industry-cards icon-link-text-card-swiper swiper-2-1-swipe">
+			<div class="industry-cards icon-link-text-card-swiper swiper-2-1-swiper negative-x">
 				<div class="swiper-wrapper grid-x grid-padding-x small-up-1 medium-up-2 gap-y-32">
 					<?php foreach($industry_cards as $industry_card) {
 						$page_link = $industry_card['card']['page_link'] ?? null;
@@ -51,7 +53,7 @@ $industry_cards = get_field('industry_cards') ?? null;
 						get_template_part('template-parts/part', 'icon-link-text-card',
 							array(
 								'layout' => 'flex-dir-row',
-								'background_color' => $background_color,
+								'background_color' => 'bg-black-30',
 								'page_link' => $page_link,
 								'icon' => $icon,
 								'title' => $title,

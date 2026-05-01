@@ -20,7 +20,7 @@ $sh_heading = get_field('sh_heading') ?? null;
 $sh_text = get_field('sh_text') ?? null;
 $sh_button_link = get_field('sh_button_link') ?? null;
 
-$industry_cards = get_field('industry_cards') ?? null;
+$navigation_cards = get_field('navigation_cards') ?? null;
 
 ?>
 
@@ -39,15 +39,15 @@ $industry_cards = get_field('industry_cards') ?? null;
 				'btn-classes' => 'green-100 has-bith-onyx-color'
 			),
 		);?>
-		<?php if($industry_cards):?>
+		<?php if($navigation_cards):?>
 			<div class="industry-cards icon-link-text-card-swiper swiper-2-1-swipe">
-				<div class="swiper-wrapper grid-x grid-padding-x small-up-1 medium-up-2 gap-y-32">
-					<?php foreach($industry_cards as $industry_card) {
-						$page_link = $industry_card['card']['page_link'] ?? null;
-						$background_color = $industry_card['card']['background_color'] ?? null;
-						$icon = $industry_card['card']['icon'] ?? null;
-						$title = $industry_card['card']['title'] ?? null;
-						$text = $industry_card['card']['text'] ?? null;
+				<div class="swiper-wrapper grid-x grid-padding-x small-up-1 medium-up-2 gap-y-32 negative-x">
+					<?php foreach($navigation_cards as $navigation_card) {
+						$page_link = $navigation_card['card']['page_link'] ?? null;
+						$background_color = $navigation_card['card']['background_color'] ?? null;
+						$icon = $navigation_card['card']['icon'] ?? null;
+						$title = $navigation_card['card']['title'] ?? null;
+						$text = $navigation_card['card']['text'] ?? null;
 						get_template_part('template-parts/part', 'icon-link-text-card',
 							array(
 								'layout' => 'flex-dir-row',

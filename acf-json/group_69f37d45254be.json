@@ -1,6 +1,6 @@
 {
     "key": "group_69f37d45254be",
-    "title": "BLOCK: Post Rows (copy)",
+    "title": "BLOCK: Explore More Posts Cards",
     "fields": [
         {
             "key": "field_69f37d45265c5",
@@ -76,7 +76,7 @@
             },
             "choices": {
                 "post": "Insight",
-                "case-study": "Case Study"
+                "case-studies": "Case Study"
             },
             "default_value": "post",
             "return_format": "value",
@@ -178,7 +178,7 @@
                     {
                         "field": "field_69f37d45265cd",
                         "operator": "==",
-                        "value": "case-study"
+                        "value": "case-studies"
                     },
                     {
                         "field": "field_69f37d45265cf",
@@ -232,5 +232,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1777565020
+    "modified": 1777648879
 }

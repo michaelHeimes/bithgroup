@@ -47,11 +47,11 @@ function my_acf_init_block_types() {
         ));
         
         acf_register_block_type(array(
-            'name'            => 'child-page-banner',
-            'title'           => __('Child Page Banner'),
+            'name'            => 'child-page-hero',
+            'title'           => __('Child Page Hero'),
             'api_version'     => 2,
-            'description'     => __('The banenr for chld pages such as Service Detail and Industry Details pages.'),
-            'render_template' => 'blocks/child-page-banner.php',
+            'description'     => __('The hero for child pages such as Service Detail and Industry Details pages.'),
+            'render_template' => 'blocks/child-page-hero.php',
             'category'        => 'layout',
             'keywords'        => array( 'custom', 'child', 'page', 'banner', 'hero', 'bith', 'propr' ),
             'supports'        => array(
@@ -61,6 +61,46 @@ function my_acf_init_block_types() {
                     'background' => true,
                     'text'       => false,
                     'gradients'  => false,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
+        
+        acf_register_block_type(array(
+            'name'            => 'services-page-hero',
+            'title'           => __('Services Page Hero'),
+            'api_version'     => 2,
+            'description'     => __('The hero for Services Landing Page.'),
+            'render_template' => 'blocks/services-page-hero.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'custom', 'service', 'page', 'banner', 'hero', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode'  => true, 
+                'color' => array(
+                    'background' => false,
+                    'text'       => false,
+                    'gradients'  => false,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
+        
+        acf_register_block_type(array(
+            'name'            => 'navigation-cards',
+            'title'           => __(' Navigation Cards'),
+            'api_version'     => 2,
+            'description'     => __('Displays the Navigation Cards'),
+            'render_template' => 'blocks/navigation-cards.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'custom', 'sub', 'navigation', 'cards', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode'  => true, 
+                'color' => array(
+                    'background' => true,
+                    'text'       => false,
+                    'gradients'  => true,
                 ),
                 'align' => array( 'wide', 'full' ),
             ),
@@ -114,26 +154,6 @@ function my_acf_init_block_types() {
             'render_template' => 'blocks/our-industries.php',
             'category'        => 'layout',
             'keywords'        => array( 'custom', 'our', 'industries', 'bith', 'propr' ),
-            'supports'        => array(
-                'jsx'   => false,
-                'mode' => true,
-                'color' => array(
-                    'background' => false,
-                    'text'       => false,
-                    'gradients'  => false,
-                ),
-                'align' => array( 'wide', 'full' ),
-            ),
-        ));
-        
-        acf_register_block_type(array(
-            'name'            => 'sub-service-navigation-cards',
-            'title'           => __('Sub-service Navigation Cards'),
-            'api_version'     => 2,
-            'description'     => __('Displays the Sub-service Navigation Cards'),
-            'render_template' => 'blocks/sub-service-navigation-cards.php',
-            'category'        => 'layout',
-            'keywords'        => array( 'custom', 'sub', 'service', 'cards', 'bith', 'propr' ),
             'supports'        => array(
                 'jsx'   => false,
                 'mode' => true,

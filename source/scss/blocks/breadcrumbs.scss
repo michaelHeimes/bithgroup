@@ -86,3 +86,40 @@
 		}
 	}
 }
+
+.home-link-only-breadcrumb {
+	padding-top: rem-calc(21);
+	padding-bottom: rem-calc(78);
+	.home-link-wrap {
+		padding-left: 1rem;
+	}
+	a {
+		padding: 0.4em 0;
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 4px;
+			height: 32px;
+			background-image: url('../assets/svgs/left-chevron-onyx-icon.svg');
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+			left: -1rem;
+		}
+	}
+	&.color-green-60 {
+	}
+	&.color-green-60 ul li a:not(.home-link) {
+		&:before {
+			background-color: $green-60;
+		}
+		&:after {
+			background-image: url('../assets/svgs/left-chevron-white-icon.svg');
+		}
+		&:hover {
+			color: $green-60;
+		}
+	}
+}

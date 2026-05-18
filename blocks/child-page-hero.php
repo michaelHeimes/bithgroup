@@ -8,18 +8,17 @@ if ( ! isset( $bith_block_order ) ) {
 	$bith_block_order++;
 	$is_first_block = false;
 }
-$className = 'child-page-banner';
+$className = 'child-page-hero';
 
-// Automatic Text Color Logic
-$bg_color = $block['backgroundColor'] ?? '';
+$bg_color = $block['backgroundColor'] ?? 'bith-blue-10'; 
 $gradient = $block['gradient'] ?? '';
 
 // Background & Gradient Classes
-if (!empty($block['backgroundColor'])) {
-	$className .= ' has-' . $block['backgroundColor'] . '-background-color';
+if (!empty($bg_color)) {
+	$className .= ' has-' . $bg_color . '-background-color';
 }
-if (!empty($block['gradient'])) {
-	$className .= ' has-' . $block['gradient'] . '-gradient-background';
+if (!empty($gradient)) {
+	$className .= ' has-' . $gradient . '-gradient-background';
 }
 
 // Define "Dark" backgrounds that should use White text
@@ -44,15 +43,15 @@ $image = get_field('image') ?? null;
 	<?php endif; ?>
 
 	<div class="grid-container">
-		<dix class="grid-x grid-padding-x align-bottom align-justify tablet-flex-dir-row-reverse">
+		<div class="grid-x grid-padding-x align-bottom align-justify tablet-flex-dir-row-reverse">
 			<?php if($image):?>
 				<div class="cell small-12 tablet-4">
 					<div class="image-wrap">
-						<?=wp_get_attachment_Image($image['id'], 'large');?>
+						<?=wp_get_attachment_image($image['id'], 'large');?>
 					</div>
 				</div>
 			<?php endif;?>
-			<div class="text cell small-12 tablet-8 large-7 d">
+			<div class="text cell small-12 tablet-8 large-7">
 				<h1>
 					<?=wp_kses_post( $title );?>
 				</h1>
@@ -60,6 +59,6 @@ $image = get_field('image') ?? null;
 					<p><?=wp_kses_post($text);?></p>
 				<?php endif;?>
 			</div>
-		</dix>
+		</div> <!-- Fixed HTML Typo here: changed </dix> to </div> -->
 	</div>
 </div>

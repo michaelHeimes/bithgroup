@@ -1,0 +1,15 @@
+.services-page-hero {
+	padding-bottom: rem-calc(100);
+	.bg {
+		mix-blend-mode: overlay;
+	}
+	.pulse-eyebrow {
+		text-align: left !important;
+	}
+	.image-wrap {
+		img {
+			border-radius: 64px;
+			box-shadow: $glow-on-dark;
+		}
+	}
+}

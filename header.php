@@ -14,6 +14,7 @@ $forced_dark_blocks = [
     'acf/home-hero-img-services',
     'acf/our-industries',
     'acf/explore-more-posts-cards',
+    'acf/services-page-hero',
 ];
 
 $all_blocks = parse_blocks( get_the_content() );

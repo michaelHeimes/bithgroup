@@ -40,9 +40,12 @@
 	  "acf/breadcrumbs": {
 		"color": { "background": true, "gradients": [] }
 	  },
-	  "acf/child-page-banner": {
+	  "acf/child-page-hero": {
 		"color": { "background": true, "gradients": [] }
-	  }
+	  },
+	  "acf/navigation-cards": {
+		  "color": { "background": true, "gradients": true }
+		}
 	}
   },
   "styles": {

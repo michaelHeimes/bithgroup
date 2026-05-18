@@ -1,9 +1,30 @@
 {
-    "key": "group_69f3ebff4f575",
-    "title": "BLOCK: Child Page Hero",
+    "key": "group_6a0a6bf4c6c60",
+    "title": "BLOCK: Services Page Hero",
     "fields": [
         {
-            "key": "field_69f3ebff87ea1",
+            "key": "field_6a0a6c09aaee7",
+            "label": "Pulse Eyebrow",
+            "name": "pulse_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a0a6bf4c903e",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -24,7 +45,7 @@
             "append": ""
         },
         {
-            "key": "field_69f3ec3087ea2",
+            "key": "field_6a0a6bf4c9042",
             "label": "Text",
             "name": "text",
             "aria-label": "",
@@ -45,7 +66,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_69f3ec4587ea3",
+            "key": "field_6a0a6bf4c9045",
             "label": "Image",
             "name": "image",
             "aria-label": "",
@@ -76,7 +97,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/child-page-hero"
+                "value": "acf\/services-page-hero"
             }
         ]
     ],
@@ -90,5 +111,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1779066597
+    "modified": 1779068655
 }

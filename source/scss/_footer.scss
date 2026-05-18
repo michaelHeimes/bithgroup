@@ -22,9 +22,6 @@ footer#colophon {
 			margin-bottom: 0;
 		}
 	}
-	// .address {
-	// 	margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
-	// }
 	.contact-methods {
 		margin-bottom: clamp(1.375rem, 0.946rem + 2.143vw, 2.875rem);
 		> ul {
@@ -45,30 +42,32 @@ footer#colophon {
 		@extend .p-sm;
 		position: relative;
 		padding: 0.4em 0;
+		display: inline;
+		text-decoration-line: underline;
+		text-decoration-color: $green-60;
+		text-decoration-style: solid;
+		text-decoration-thickness: 1px;
+		text-underline-offset: .5em;
+		transition: text-decoration-color .3s ease, color .3s ease;
 		&:before {
 			content: '';
 			display: inline-block;
 			position: absolute;
-			top: calc(100% - 1px);
+			top: 100%;
+			left: 0;
 			width: 100%;
-			height: 1px;
-			background-color: $green-60;
-			transition: opacity .3s ease, height .3s ease;
+			height: 0.5em;
 		}
 		&:hover {
-			&:before {
-				height: .5px;
-				opacity: 0;
-				transition: opacity .6s ease, height .6s ease;
-			}
+			color: $green-60;
+			text-decoration-color: transparent; 
+			transition: text-decoration-color .6s ease, color .6s ease;
 		}
-	}
-		
+	}	
 	ul#footer-links {
 		gap: 2rem;
 		margin-bottom: clamp(2.938rem, 2.509rem + 2.143vw, 4.438rem);
 	}
-	
 	ul.social-links {
 		gap: 1rem;
 		li a {

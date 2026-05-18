@@ -3,6 +3,11 @@
 		max-width: 560px;
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: 1rem;
+		box-sizing: border-box;
+		@include breakpoint(tablet) {
+			margin-bottom: 3rem;
+		}
 	}
 	@include breakpoint(tablet) {
 		.wrapper {

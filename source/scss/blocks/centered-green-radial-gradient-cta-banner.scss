@@ -1,0 +1,12 @@
+.centered-green-radial-gradient-cta-banner {
+	.pulse-eyebrow {
+		margin-bottom: clamp(1.5rem, 1.357rem + 0.714vw, 2rem) !important;
+	}
+	.grid-x {
+		padding-top: clamp(0rem, -0.714rem + 3.571vw, 2.5rem);
+		padding-bottom: clamp(0rem, -0.714rem + 3.571vw, 2.5rem);
+	}
+	.wp-block-buttons {
+		margin-top: clamp(1.938rem, 1.705rem + 1.161vw, 2.75rem);
+	}
+}

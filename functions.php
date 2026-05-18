@@ -421,9 +421,6 @@ require_once(get_template_directory().'/inc/page-navi.php');
 // ACF Options
 require_once(get_template_directory().'/inc/acf-json.php');
 
-// ACF json
-require_once(get_template_directory().'/inc/acf-options.php');
-
 // ACF Block
 require_once(get_template_directory().'/inc/acf-blocks.php');
 

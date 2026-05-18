@@ -21,7 +21,7 @@ import { ResponsiveMenu } from 'foundation-sites/js/foundation.responsiveMenu';
 // import { Abide } from 'foundation-sites/js/foundation.abide';
 // import { Accordion } from 'foundation-sites/js/foundation.accordion';
 // import { Drilldown } from 'foundation-sites/js/foundation.drilldown';
-// import { Dropdown } from 'foundation-sites/js/foundation.dropdown';
+import { Dropdown } from 'foundation-sites/js/foundation.dropdown';
 // import { Equalizer } from 'foundation-sites/js/foundation.equalizer';
 // import { Interchange } from 'foundation-sites/js/foundation.interchange';
 // import { Magellan } from 'foundation-sites/js/foundation.magellan';
@@ -71,12 +71,10 @@ Foundation.plugin(SmoothScroll, 'SmoothScroll');
 Foundation.plugin(DropdownMenu, 'DropdownMenu');
 Foundation.plugin(AccordionMenu, 'AccordionMenu');
 Foundation.plugin(ResponsiveMenu, 'ResponsiveMenu');
-
-// --- Inactive Plugin Registrations ---
 // Foundation.plugin(Abide, 'Abide');
 // Foundation.plugin(Accordion, 'Accordion');
 // Foundation.plugin(Drilldown, 'Drilldown');
-// Foundation.plugin(Dropdown, 'Dropdown');
+Foundation.plugin(Dropdown, 'Dropdown');
 // Foundation.plugin(Equalizer, 'Equalizer');
 // Foundation.plugin(Interchange, 'Interchange');
 // Foundation.plugin(Magellan, 'Magellan');

@@ -1,0 +1,112 @@
+.blog,
+.archive {
+	.blog-hero {
+		padding-bottom: rem-calc(44);
+		margin-bottom: rem-calc(48);
+		.breadcrumbs {
+			padding-top: rem-calc(21);
+			padding-bottom: rem-calc(78);
+			.home-link-wrap {
+				padding-left: 1rem;
+			}
+			a:after {
+				content: '';
+				display: inline-block;
+				width: 4px;
+				height: 32px;
+				background-image: url('../assets/svgs/left-chevron-icon.svg');
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 0;
+				left: -1rem;
+			}
+		}
+		.pulse-eyebrow {
+			margin-bottom: 1rem;
+		}
+		.heading {
+			padding-bottom: 1rem;
+		}
+		.copy {
+			padding-bottom: rem-calc(44);
+		}
+	}
+	.filter-wrap {
+		gap: 1rem;
+		margin-bottom: 2rem;
+		.filter-label {
+			font-family: $font-mono;
+			font-size: .875rem;
+			font-style: normal;
+			line-height: 1.5;
+			letter-spacing: .14em;
+			text-transform: uppercase;
+		}
+		.dropdown-button {
+			font-weight: 300;
+			border-radius: 1rem;
+			border: 1px solid #5D5D5D;
+			background-color: $white;
+			padding: .917em .915em;
+		}
+	}
+	.loop-post-row {
+		margin-bottom: clamp(4rem, 3.357rem + 3.214vw, 6.25rem);
+	}
+	.page-navigation {
+		padding-bottom: rem-calc(100);
+		.pagination-wrap {
+			@include breakpoint(small down) {
+				order: 1;
+			}
+		}
+		.pagination {
+			gap: 1rem;
+			padding-top: 2rem;
+			@include breakpoint(medium) {
+				padding-top: 0;
+			}
+		}
+		ul {
+			line-height: 1.5;
+		}
+		a,
+		.prev,
+		.next,
+		span:not(.dots) {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			min-width: rem-calc(46);
+			min-height: rem-calc(51);
+			background-color: $blue-100;
+			color: $white;
+			border-radius: 1rem;
+			padding: .617em 1.03em;
+			font-weight: 500;
+		}
+		.prev,
+		.next {
+			min-width: rem-calc(147);
+			line-height: 1.5;
+			svg {
+				margin-right: 10px;
+			}
+		}
+		.next-wrap {
+			svg {
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+		li.current span {
+			background-color: $green-60;
+			color: $onyx;
+		}
+		.disabled {
+			opacity: .5;
+		}
+	}
+}

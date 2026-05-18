@@ -205,6 +205,26 @@ function my_acf_init_block_types() {
                 'align' => array( 'wide', 'full' ),
             ),
         ));
+        
+        acf_register_block_type(array(
+            'name'            => 'centered-green-radial-gradient-cta-banner',
+            'title'           => __('Centered Green Radial Gradient CTA Banner'),
+            'api_version'     => 2,
+            'description'     => __('A centered CTA banner with a green radial gradient background.'),
+            'render_template' => 'blocks/centered-green-radial-gradient-cta-banner.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'custom', 'centered', 'green', 'radial', 'gradient', 'cta', 'banner', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode' => true,
+                'color' => array(
+                    'background' => false,
+                    'text'       => false,
+                    'gradients'  => false,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
 
     }
 }

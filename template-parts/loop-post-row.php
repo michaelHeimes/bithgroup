@@ -1,6 +1,13 @@
-<?php $post_id = get_the_ID();?>
+<?php 
+$post_id = get_the_ID();
+if( $args && $args['is_slide'] == false ) {
+	$classes = 'loop-post-row';
+} else {
+	$classes = 'loop-post-row slide-1 swiper-slide';
+}
+?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('loop-post-row slide-1 swiper-slide'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($classes); ?>>
 	<div class="grid-x grid-padding-x align-middle">
 		<?php if ( has_post_thumbnail() ) :?>
 		<div class="thumb-wrap cell small-12 tablet-5 large-4">

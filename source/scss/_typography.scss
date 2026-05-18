@@ -40,12 +40,12 @@ u {
 h1.eyebrow,
 h2.eyebrow,
 h3.eyebrow {
-	font-family: $font-mono;
-	font-size: rem-calc(17);
-	font-style: normal;
-	font-weight: 400;
-	line-height: 1.5;
-	letter-spacing: .1em;
+	font-family: $font-mono !important;
+	font-size: rem-calc(17) !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 1.5 !important;
+	letter-spacing: .1em !important;
 }
 p,
 .p,

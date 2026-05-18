@@ -20,11 +20,11 @@ export default function init21SwipeSliders() {
 					// 2. Init Swiper
 					swiperInstance = new Swiper(container, {
 						modules: [Scrollbar],
-						slidesPerView: 1,
+						slidesPerView: 1.1,
 						spaceBetween: 32,
 						scrollbar: {
 							el: container.querySelector('.swiper-scrollbar'),
-							draggable: true,
+							draggable: false,
 						},
 					});
 				}

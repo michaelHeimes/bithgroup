@@ -40,7 +40,18 @@ $sh_heading = get_field('sh_heading') ?? null;
 $sh_text = get_field('sh_text') ?? null;
 $sh_button_link = get_field('sh_button_link') ?? null;
 
-$navigation_cards = get_field('navigation_cards') ?? null;
+if( $sh_heading || $sh_text || $sh_button_link ) {
+	$className .= ' has-header';
+}
+
+$card_version = get_field('card_version');
+$convert_to_slider_on_mobile_devices = get_field('convert_to_slider_on_mobile_devices') ?? null;
+$cards = get_field('cards') ?? null;
+
+$grid_class = 'small-up-1 medium-up-2';
+if($card_version == 'column-additional-links' ) {
+	$grid_class = 'small-up-1 medium-up-3'; 
+}
 
 ?>
 
@@ -59,22 +70,25 @@ $navigation_cards = get_field('navigation_cards') ?? null;
 				'btn-classes' => 'green-100 has-bith-onyx-color'
 			),
 		);?>
-		<?php if($navigation_cards):?>
-			<div class="industry-cards icon-link-text-card-swiper swiper-2-1-swipe">
-				<div class="swiper-wrapper grid-x grid-padding-x small-up-1 medium-up-2 gap-y-32 negative-x">
-					<?php foreach($navigation_cards as $navigation_card) {
-						$page_link = $navigation_card['card']['page_link'] ?? null;
-						$background_color = $navigation_card['card']['background_color'] ?? null;
-						$icon = $navigation_card['card']['icon'] ?? null;
-						$title = $navigation_card['card']['title'] ?? null;
-						$text = $navigation_card['card']['text'] ?? null;
+		<?php if($cards):?>
+			<div class="n-cards icon-link-text-card-swiper<?php if( $convert_to_slider_on_mobile_devices ):?> swiper-2-1-swipe<?php endif;?>">
+				<div class="swiper-wrapper grid-x grid-padding-x <?=$grid_class;?> gap-y-32 negative-x">
+					<?php foreach($cards as $card) {
+						// var_dump($card);
+						$page_link = $card['page_link'] ?? null;
+						$background_color = $card['background_color'] ?? null;
+						$icon = $card['icon'] ?? null;
+						$title = $card['title'] ?? null;
+						$additional_links = $card['additional_links'] ?? null;
+						$text = $card['text'] ?? null;
 						get_template_part('template-parts/part', 'icon-link-text-card',
 							array(
-								'layout' => 'flex-dir-row',
+								'card_version' => $card_version,
 								'background_color' => $background_color,
 								'page_link' => $page_link,
 								'icon' => $icon,
 								'title' => $title,
+								'additional_links' => $additional_links,
 								'text' => $text,
 							),
 						);
@@ -88,7 +102,7 @@ $navigation_cards = get_field('navigation_cards') ?? null;
 				array(
 					'link' => $sh_button_link,
 					'container-classes' => 'small-12 medium-shrink hide-for-medium services-mobile-btn-wrap',
-					'btn-classes' => 'green-100 has-bith-onyx-color wide-mw-btn',
+					'btn-classes' => 'green-100 has-bith-onyx-color fw-wide-md-btn',
 				)
 			);
 		};?>

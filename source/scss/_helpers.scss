@@ -36,6 +36,11 @@
 		margin-left: -(map-get($grid-margin-gutters, "medium") * 0.5);
 		margin-right: -(map-get($grid-margin-gutters, "medium") * 0.5);
 	}
+	
+}
+.swiper-initialized > .negative-x {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 .gap-x-24 {
 	gap: rem-calc(24);

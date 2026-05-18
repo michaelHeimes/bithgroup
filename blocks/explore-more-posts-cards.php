@@ -95,7 +95,7 @@ elseif ( $posts_to_show === 'select' ) {
                 array(
                     'link' => $sh_button_link,
                     'container-classes' => 'small-12 medium-shrink hide-for-medium',
-                    'btn-classes' => 'green-100 has-bith-onyx-color wide-mw-btn',
+                    'btn-classes' => 'green-100 has-bith-onyx-color fw-wide-md-btn',
                 )
             );
         };?>

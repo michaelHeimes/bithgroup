@@ -89,7 +89,7 @@ elseif ( $posts_to_show === 'select' ) {
                 array(
                     'link' => $sh_button_link,
                     'container-classes' => 'small-12 medium-shrink hide-for-medium',
-                    'btn-classes' => 'blue-100 has-bith-white-color wide-mw-btn',
+                    'btn-classes' => 'blue-100 has-bith-white-color fw-wide-md-btn',
                 )
             );
         };?>

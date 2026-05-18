@@ -51,10 +51,14 @@
 			transition: background-color .35s ease, transform .35s ease;
 		}
 	}
-	&.wide-mw-btn {
+	&.wide-mw-btn,
+	&.fw-wide-md-btn {
 		@include breakpoint(medium down) {
+			display: block;
 			width: 100%;
 			max-width: 360px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	&.green-100 {

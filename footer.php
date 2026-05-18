@@ -43,7 +43,7 @@ $footer_social_links = get_field('footer_social_links', 'option') ?? null;
 													array(
 														'link' => $button_link,
 														'container-classes' => 'small-12 medium-shrink',
-														'btn-classes' => 'green-100 has-bith-onyx-color wide-mw-btn',
+														'btn-classes' => 'green-100 has-bith-onyx-color fw-wide-md-btn',
 													)
 												);
 											};?>

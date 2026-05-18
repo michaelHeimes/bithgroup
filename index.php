@@ -23,8 +23,8 @@ get_header();
 		<?php if($blog_hero_eyebrow || $blog_hero_heading || $blog_hero_copy):?>
 		<section id="<?php echo esc_attr($id); ?>" class="has-bith-white-to-cube-gradient-background has-bith-onyx-color blog-hero">
 			<div class="header-spacer"></div>
-			<div class="grid-container position-relative z-1">
-				<div class="breadcrumbs">
+			<div class="grid-container">
+				<div class="breadcrumbs position-relative z-1">
 					<ul class="menu horizontal align-middle p-md">
 						<li class="home-link-wrap">
 							<a href="<?=get_home_url();?>">

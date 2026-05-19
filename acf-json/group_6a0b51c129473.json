@@ -100,9 +100,9 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/navigation-cards"
+                "value": "post"
             }
         ]
     ],
@@ -116,5 +116,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1779126877
+    "modified": 1779204542
 }

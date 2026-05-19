@@ -61,16 +61,16 @@ get_header();
 		<div class="grid-container">
 
 			<?php
-			$current_orderby = isset($_GET['orderby']) ? sanitize_text_field($_GET['orderby']) : 'date';
-			$current_order   = isset($_GET['order']) ? sanitize_text_field($_GET['order']) : 'desc';
-			$current_sort    = $current_orderby . '-' . $current_order;
-			
-			$labels = array(
-				'date-desc'  => 'Newest to oldest',
-				'title-asc'  => 'Alphabetical (A-Z)',
-				'title-desc' => 'Alphabetical (Z-A)'
-			);
-			$active_label = isset($labels[$current_sort]) ? $labels[$current_sort] : 'Sort By';
+				$current_orderby = isset($_GET['orderby']) ? sanitize_text_field($_GET['orderby']) : 'date';
+				$current_order   = isset($_GET['order']) ? sanitize_text_field($_GET['order']) : 'desc';
+				$current_sort    = $current_orderby . '-' . $current_order;
+				
+				// Updated labels to reflect chronological options
+				$labels = array(
+					'date-desc' => 'Newest to oldest',
+					'date-asc'  => 'Oldest to newest'
+				);
+				$active_label = isset($labels[$current_sort]) ? $labels[$current_sort] : 'Newest to oldest';
 			?>
 			
 			<div class="filter-wrap grid-x align-middle align-right">
@@ -78,34 +78,29 @@ get_header();
 					Sort
 				</div>
 				<div class="cell shrink">
-					<button class="dropdown-button weight-300 p-md grid-x align-middle gap-x" type="button" data-toggle="archive-sort-dropdown">
+					<!-- Note: Kept data-v-offset="10" to preserve your Foundation dropdown spacing layout -->
+					<button class="dropdown-button weight-300 p-md grid-x align-middle gap-x" type="button" data-toggle="archive-sort-dropdown" data-v-offset="10">
 						<?php echo esc_html($active_label); ?>
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m5 7.5 5 5 5-5" stroke="#184275" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 					</button>
 				</div>
 			</div>
 			
-			<!-- The Dropdown Menu Panel -->
-			<div class="dropdown-pane" id="archive-sort-dropdown" data-dropdown data-dropdown data-auto-focus="true">
-				<ul class="menu vertical">
-					<!-- Newest First -->
+			<div class="dropdown-pane weight-500" id="archive-sort-dropdown" data-dropdown data-auto-focus="true">
+				<ul class="menu vertical p-md">
+					<!-- Option 1: Newest to Oldest -->
 					<li class="<?php echo $current_sort === 'date-desc' ? 'is-active' : ''; ?>">
+						<!-- Stripping query arguments defaults WP back to date DESC automatically -->
 						<a href="<?php echo esc_url(remove_query_arg(array('orderby', 'order'))); ?>">
-							Newest First
+							Newest to oldest
 						</a>
 					</li>
 					
-					<!-- Alphabetical (A-Z) -->
-					<li class="<?php echo $current_sort === 'title-asc' ? 'is-active' : ''; ?>">
-						<a href="<?php echo esc_url(add_query_arg(array('orderby' => 'title', 'order' => 'asc'))); ?>">
-							Alphabetical (A-Z)
-						</a>
-					</li>
-					
-					<!-- Alphabetical (Z-A) -->
-					<li class="<?php echo $current_sort === 'title-desc' ? 'is-active' : ''; ?>">
-						<a href="<?php echo esc_url(add_query_arg(array('orderby' => 'title', 'order' => 'desc'))); ?>">
-							Alphabetical (Z-A)
+					<!-- Option 2: Oldest to Newest -->
+					<li class="<?php echo $current_sort === 'date-asc' ? 'is-active' : ''; ?>">
+						<!-- Explicitly sets orderby=date and order=asc inside URL params -->
+						<a href="<?php echo esc_url(add_query_arg(array('orderby' => 'date', 'order' => 'asc'))); ?>">
+							Oldest to newest
 						</a>
 					</li>
 				</ul>

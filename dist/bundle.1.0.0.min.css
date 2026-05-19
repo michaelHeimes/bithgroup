@@ -4701,7 +4701,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   position: absolute;
   z-index: 10;
   display: none;
-  width: 300px;
+  width: 217px;
   padding: 1rem;
   visibility: hidden;
   border: 1px solid #cacaca;
@@ -7916,29 +7916,6 @@ footer#colophon .menu:not(.social-links) a ol {
 #main-nav > li.menu-button > a {
   width: calc(100% - 48px);
 }
-#main-nav ul.submenu {
-  border-radius: 1rem;
-  padding: 12px;
-  background-color: #fff;
-  box-shadow: 0 6px 30px 0 rgba(157, 192, 59, 0.5);
-}
-#main-nav ul.submenu li a {
-  display: inline-flex;
-  color: var(--wp--preset--color--bith-blue-100);
-}
-#main-nav ul.submenu li a .arrow {
-  display: inline-block !important;
-  flex: 0 0 12px;
-  margin-left: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-#main-nav ul.submenu li a:hover {
-  background-color: #C4D989;
-}
-#main-nav ul.submenu li a:hover .arrow {
-  opacity: 1;
-}
 #main-nav .is-accordion-submenu-parent .submenu-toggle[aria-expanded=true]::after,
 #main-nav .is-dropdown-submenu-parent.is-active > a::after {
   transform: rotateX(180deg) translateY(0.1em);
@@ -8168,6 +8145,26 @@ header.site-header.has-bith-blue-color #top-bar-menu #main-nav > li.menu-button 
   color: var(--wp--preset--color--bith-blue-100);
 }
 .has-scrolled header.site-header #top-bar-menu #main-nav.dropdown.menu > li.menu-button a:hover:not(.acf-button):before, .has-scrolled header.site-header #top-bar-menu #main-nav.dropdown.menu > li.menu-button a:focus:not(.acf-button):before {
+  background-color: var(--wp--preset--color--bith-green-100) !important;
+}
+.has-scrolled header.site-header.has-bith-blue-color #top-bar-menu #main-nav.dropdown.menu > li > a {
+  color: var(--wp--preset--color--bith-blue-100);
+}
+.has-scrolled header.site-header.has-bith-blue-color #top-bar-menu #main-nav.dropdown.menu > li.is-dropdown-submenu-parent > a:after {
+  background-image: url("../assets/svgs/dropdown-chev-blue-icon.svg");
+}
+.has-scrolled header.site-header.has-bith-blue-color #top-bar-menu #main-nav.dropdown.menu > li.menu-button a {
+  background-color: var(--wp--preset--color--bith-blue-100);
+  color: #fff;
+}
+.has-scrolled header.site-header.has-bith-blue-color #top-bar-menu #main-nav.dropdown.menu > li.menu-button a:not(.acf-button):before {
+  background-color: var(--wp--preset--color--bith-blue-100);
+}
+.has-scrolled header.site-header.has-bith-blue-color #top-bar-menu #main-nav.dropdown.menu > li.menu-button a:hover, .has-scrolled header.site-header.has-bith-blue-color #top-bar-menu #main-nav.dropdown.menu > li.menu-button a:focus {
+  background-color: var(--wp--preset--color--bith-green-100) !important;
+  color: var(--wp--preset--color--bith-blue-100);
+}
+.has-scrolled header.site-header.has-bith-blue-color #top-bar-menu #main-nav.dropdown.menu > li.menu-button a:hover:not(.acf-button):before, .has-scrolled header.site-header.has-bith-blue-color #top-bar-menu #main-nav.dropdown.menu > li.menu-button a:focus:not(.acf-button):before {
   background-color: var(--wp--preset--color--bith-green-100) !important;
 }
 
@@ -8812,6 +8809,57 @@ a.underline-arrow-link:hover:after,
   opacity: 1;
 }
 
+#main-nav ul.submenu,
+.dropdown-pane ul {
+  border-radius: 1rem;
+  background-color: #fff;
+}
+#main-nav ul.submenu li a,
+.dropdown-pane ul li a {
+  display: inline-flex;
+  color: var(--wp--preset--color--bith-blue-100);
+}
+#main-nav ul.submenu li a .arrow,
+.dropdown-pane ul li a .arrow {
+  display: inline-block !important;
+  flex: 0 0 12px;
+  margin-left: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#main-nav ul.submenu li a:hover,
+.dropdown-pane ul li a:hover {
+  background-color: #C4D989;
+}
+#main-nav ul.submenu li a:hover .arrow,
+.dropdown-pane ul li a:hover .arrow {
+  opacity: 1;
+}
+
+#main-nav ul.submenu {
+  padding: 12px;
+  box-shadow: 0 6px 30px 0 rgba(157, 192, 59, 0.5);
+}
+
+.dropdown-pane {
+  padding: 10px 0 0;
+  border: 0;
+}
+.dropdown-pane ul {
+  border: 1px solid var(--wp--preset--color--bith-blue-100);
+  padding: 12px;
+}
+.dropdown-pane ul a {
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  pointer-events: auto !important;
+  transition: background-color 0.3s ease, color 0.3s ease 0s;
+}
+.dropdown-pane ul .is-active a {
+  color: var(--wp--preset--color--bith-blue-100);
+}
+
 @media (max-width: 1000px) {
   .wp-block-columns {
     flex-direction: column !important;
@@ -9270,6 +9318,16 @@ a.underline-arrow-link:hover:after,
   border: 1px solid #5D5D5D;
   background-color: #fff;
   padding: 0.917em 0.915em;
+}
+.blog .filter-wrap .dropdown-button[aria-expanded=true],
+.archive .filter-wrap .dropdown-button[aria-expanded=true] {
+  color: var(--wp--preset--color--bith-blue-100);
+  border-color: var(--wp--preset--color--bith-blue-100);
+  background-color: #F4F7E5;
+}
+.blog .filter-wrap .dropdown-button[aria-expanded=true] svg,
+.archive .filter-wrap .dropdown-button[aria-expanded=true] svg {
+  transform: rotateX(180deg);
 }
 .blog .loop-post-row,
 .archive .loop-post-row {

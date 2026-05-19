@@ -30,6 +30,14 @@
 			border: 1px solid #5D5D5D;
 			background-color: $white;
 			padding: .917em .915em;
+			&[aria-expanded="true"] {
+				color: $blue-100;
+				border-color: $blue-100;
+				background-color: $cube;
+				svg {
+					transform: rotateX(180deg);
+				}
+			}
 		}
 	}
 	.loop-post-row {

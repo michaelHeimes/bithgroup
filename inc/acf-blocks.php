@@ -147,26 +147,6 @@ function my_acf_init_block_types() {
         ));
         
         acf_register_block_type(array(
-            'name'            => 'our-industries',
-            'title'           => __('Our Industries'),
-            'api_version'     => 2,
-            'description'     => __('Displays the Industry Cards.'),
-            'render_template' => 'blocks/our-industries.php',
-            'category'        => 'layout',
-            'keywords'        => array( 'custom', 'our', 'industries', 'bith', 'propr' ),
-            'supports'        => array(
-                'jsx'   => false,
-                'mode' => true,
-                'color' => array(
-                    'background' => false,
-                    'text'       => false,
-                    'gradients'  => false,
-                ),
-                'align' => array( 'wide', 'full' ),
-            ),
-        ));
-        
-        acf_register_block_type(array(
             'name'            => 'post-rows',
             'title'           => __('Post Rows'),
             'api_version'     => 2,

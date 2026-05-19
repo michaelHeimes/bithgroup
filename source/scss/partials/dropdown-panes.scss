@@ -1,0 +1,50 @@
+#main-nav ul.submenu,
+.dropdown-pane ul {
+	border-radius: 1rem;
+	background-color: $white;
+	li {
+		a {
+			display: inline-flex;
+			color: $blue-100;
+			.arrow {
+				display: inline-block !important;
+				flex: 0 0 12px;
+				margin-left: 1rem;
+				opacity: 0;
+				transition: opacity .3s ease;
+			}
+			&:hover {
+				background-color: $green-80;
+				.arrow {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+#main-nav ul.submenu {
+	padding: 12px;
+	box-shadow: $glow-on-light;
+}
+
+.dropdown-pane {
+	padding: 10px 0 0; 
+	border: 0;
+	ul {
+		border: 1px solid $blue-100;
+		padding: 12px;
+		a {
+			border-radius: 1rem;
+			position: relative;
+			cursor: pointer;
+			pointer-events: auto !important;
+			transition: background-color 0.3s ease, color 0.3s ease 0s;
+		}
+		.is-active {
+			a {
+				color: $blue-100;
+			}
+		}
+	}
+}

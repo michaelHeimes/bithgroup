@@ -36,33 +36,6 @@
 			@extend .green-100;
 		}
 	}
-	ul.submenu {
-		border-radius: 1rem;
-		padding: 12px;
-		background-color: $white;
-		box-shadow: $glow-on-light;
-		li {
-			a {
-				display: inline-flex;
-				color: $blue-100;
-				.arrow {
-					display: inline-block !important;
-					flex: 0 0 12px;
-					margin-left: 1rem;
-					opacity: 0;
-					transition: opacity .3s ease;
-				}
-				&:hover {
-					background-color: $green-80;
-					.arrow {
-						opacity: 1;
-					}
-				}
-				
-			}
-			
-		}
-	}
 	.is-accordion-submenu-parent .submenu-toggle[aria-expanded="true"]::after,
 	.is-dropdown-submenu-parent.is-active > a::after {
 		transform: rotateX(180deg) translateY(0.1em);
@@ -363,7 +336,37 @@ header.site-header {
 			}
 		}
 	}
+	header.site-header.has-bith-blue-color {
+		#top-bar-menu #main-nav.dropdown.menu > li {
+			> a {
+				color: $blue-100;
+			}
+			&.is-dropdown-submenu-parent > a {
+				&:after {
+					background-image: url('../assets/svgs/dropdown-chev-blue-icon.svg');
+				}
+			}
+			&.menu-button {
+				a {
+					background-color: $blue-100;
+					color: $white;
+					&:not(.acf-button):before {
+						background-color: $blue-100;
+					}
+					&:hover,
+					&:focus {
+						background-color: $green-100 !important;
+						color: $blue-100;
+						&:not(.acf-button):before {
+							background-color: $green-100 !important;
+						}
+					}
+				}
+			}
+		}
+	}
 }
+
 // .off-canvas-transitioning {
 // 	header.site-header .top-bar:before {
 // 		z-index: -1;

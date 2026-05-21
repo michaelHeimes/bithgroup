@@ -14,26 +14,26 @@ global $bith_block_order;
  }
  
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
-$className = 'content-section navigation-cards';
+$class_name = 'content-section navigation-cards';
 
 $bg_color = $block['backgroundColor'] ?? 'bith-slate'; 
 $gradient = $block['gradient'] ?? '';
 
 // Background & Gradient Classes
 if (!empty($bg_color)) {
-	$className .= ' has-' . $bg_color . '-background-color';
+	$class_name .= ' has-' . $bg_color . '-background-color';
 }
 if (!empty($gradient)) {
-	$className .= ' has-' . $gradient . '-gradient-background';
+	$class_name .= ' has-' . $gradient . '-gradient-background';
 }
 
 // Define "Dark" backgrounds that should use White text
 $dark_backgrounds = ['bith-onyx', 'bith-slate', 'bith-blue-100', 'bith-green-100', 'bith-blue'];
 
 if ( in_array($bg_color, $dark_backgrounds) || in_array($gradient, $dark_backgrounds) ) {
-	$className .= ' has-bith-white-color';
+	$class_name .= ' has-bith-white-color';
 } else {
-	$className .= ' has-bith-onyx-color';
+	$class_name .= ' has-bith-onyx-color';
 }
 
 $sh_heading = get_field('sh_heading') ?? null;
@@ -41,7 +41,7 @@ $sh_text = get_field('sh_text') ?? null;
 $sh_button_link = get_field('sh_button_link') ?? null;
 
 if( $sh_heading || $sh_text || $sh_button_link ) {
-	$className .= ' has-header';
+	$class_name .= ' has-header';
 }
 
 $card_version = get_field('card_version');
@@ -55,7 +55,7 @@ if($card_version == 'column-additional-links' ) {
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>">
 	<?php if ( $is_first_block ): ?>
 		<div class="header-spacer"></div>
 	<?php endif; ?>

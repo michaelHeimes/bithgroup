@@ -4,7 +4,7 @@
  */
  
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
-$className = 'content-section insights';
+$class_name = 'content-section insights';
 
 $text = get_field('text') ?? null;
 $tag = get_field('tag') ?? null;

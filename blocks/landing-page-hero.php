@@ -8,27 +8,6 @@ if ( ! isset( $bith_block_order ) ) {
 	$bith_block_order++;
 	$is_first_block = false;
 }
-$className = 'services-page-hero';
-
-$bg_color = $block['backgroundColor'] ?? 'bith-blue-10'; 
-$gradient = $block['gradient'] ?? '';
-
-// Background & Gradient Classes
-if (!empty($bg_color)) {
-	$className .= ' has-' . $bg_color . '-background-color';
-}
-if (!empty($gradient)) {
-	$className .= ' has-' . $gradient . '-gradient-background';
-}
-
-// Define "Dark" backgrounds that should use White text
-$dark_backgrounds = ['bith-onyx', 'bith-slate', 'bith-blue-100', 'bith-green-100', 'bith-blue'];
-
-if ( in_array($bg_color, $dark_backgrounds) || in_array($gradient, $dark_backgrounds) ) {
-	$className .= ' has-bith-white-color';
-} else {
-	$className .= ' has-bith-onyx-color';
-}
 
 // acf fields
 $pulse_eyebrow = get_field('pulse_eyebrow') ?: get_the_title();
@@ -38,7 +17,7 @@ $image = get_field('image') ?? null;
 
 ?>
 
-<div class="services-page-hero has-bith-blue-gradient-background has-bith-white-color has-bg">
+<div class="landing-page-hero has-bith-blue-gradient-background has-bith-white-color has-bg">
 	<div class="bg" style="background-image: url('<?=get_template_directory_uri();?>/assets/svgs/service-hero-bg-pattern.svg')"></div>
 	<?php if ( $is_first_block ): ?>
 		<div class="header-spacer"></div>

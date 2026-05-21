@@ -14,7 +14,7 @@ global $bith_block_order;
  }
  
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
-$className = 'content-section testimonial-slider has-bith-onyx-color';
+$class_name = 'content-section testimonial-slider has-bith-onyx-color';
 
 $eyebrow_heading = get_field('eyebrow_heading') ?? null;
 $testimonials_to_show = get_field('testimonials_to_show') ?? null;
@@ -37,7 +37,7 @@ if ( $testimonials_to_show === 'all' ) {
 } 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>">
     <?php if ( $is_first_block ): ?>
         <div class="header-spacer"></div>
     <?php endif; ?>

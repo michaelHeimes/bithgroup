@@ -24,6 +24,7 @@
 		color: $white;
 	}
 }
+
 .button:not(.acf-button):not([data-name='add']),
 .wp-block-button__link,
 .wp-block-buttons a {
@@ -40,14 +41,12 @@
 		width: 100%;
 		height: 100%;
 		border-radius: $button-radius;
-		background-color: $blue-100;
 		transform: scale(1);
 		transition: background-color .35s ease, transform .35s ease;
 	}
 	&:hover {
 		&:before {
 			transform: scale(1.06);
-			background-color: $green-100;
 			transition: background-color .35s ease, transform .35s ease;
 		}
 	}
@@ -61,7 +60,26 @@
 			margin-right: auto;
 		}
 	}
-	&.green-100 {
+}
+.is-style-blue-100 {
+	.button:not(.acf-button):not([data-name='add']),
+	a.wp-block-button__link {
+		background-color: $blue-100;
+		&:before {
+			background-color: $blue-100;
+		}
+		&:hover {
+			color: $onyx;
+			&:before {
+				background-color: $green-100;
+			}
+		}
+	}
+}
+.is-style-green-100 {
+	.button:not(.acf-button):not([data-name='add']),
+	a.wp-block-button__link {
+		color: $onyx;
 		background-color: $green-100;
 		&:before {
 			background-color: $green-100;
@@ -76,4 +94,16 @@
 			}
 		}
 	}
+}
+.wp-block-button.is-style-outline--1 a.wp-block-button__link {
+	background-color: transparent;
+	&:before {
+		background-color: transparent;
+	}
+}
+:where(.editor-styles-wrapper) .is-style-blue-100 .wp-element-button {
+	background-color: $blue-100;
+}
+:where(.editor-styles-wrapper) .is-style-green-100 .wp-element-button {
+	background-color: $green-100;
 }

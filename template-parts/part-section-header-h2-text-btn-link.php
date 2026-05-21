@@ -3,11 +3,14 @@ $heading = $args['heading'] ?? null;
 $text = $args['text'] ?? null;
 $text_color = $args['text-color'] ?? null;
 
-$className = '';
+$class_name = '';
+$btn_style = '';
 if ( $text_color == 'black' ) { 
-	$className .= ' has-bith-onyx-color'; 
+	$class_name .= ' has-bith-onyx-color'; 
+	$btn_style .= ' is-style-blue-100';
 } else { 
-	$className .= ' has-bith-white-color'; 
+	$class_name .= ' has-bith-white-color'; 
+	$btn_style .= ' is-style-green-100';
 }
 
 $link = $args['link'] ?? null;
@@ -15,7 +18,7 @@ $btn_classes = $args['btn-classes'] ?? null;
 if($heading || $text || $link ):?>
 	<div class="section-header grid-x grid-padding-x align-middle position-relative z-1">
 		<?php if($heading || $text ):?>
-			<div class="cell auto heading-text <?=$className;?>">
+			<div class="cell auto heading-text <?=$class_name;?>">
 				<?php if($heading):?>
 					<h2>
 						<?=wp_kses_post( $heading );?>
@@ -34,6 +37,7 @@ if($heading || $text || $link ):?>
 					'link' => $link,
 					'container-classes' => 'small-12 medium-shrink show-for-medium',
 					'btn-classes' => $btn_classes,
+					'btn-style' => $btn_style,
 				)
 			);
 		};?>

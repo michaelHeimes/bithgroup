@@ -30,6 +30,7 @@
 			border: 1px solid #5D5D5D;
 			background-color: $white;
 			padding: .917em .915em;
+			min-width: 240px;
 			&[aria-expanded="true"] {
 				color: $blue-100;
 				border-color: $blue-100;
@@ -63,7 +64,7 @@
 		a,
 		.prev,
 		.next,
-		span:not(.dots) {
+		span:not(.dots):not(.btn-title) {
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
@@ -75,12 +76,25 @@
 			padding: .617em 1.03em;
 			font-weight: 500;
 		}
+		svg,
+		.btn-title {
+			position: relative;
+			z-index: 1;
+		}
 		.prev,
 		.next {
 			min-width: rem-calc(147);
 			line-height: 1.5;
 			svg {
 				margin-right: 10px;
+				path {
+					transition: .3s ease;
+				}
+			}
+		}
+		li:not(.disabled) a:hover {
+			svg path {
+				stroke: $onyx;
 			}
 		}
 		.next-wrap {

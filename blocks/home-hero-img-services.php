@@ -13,7 +13,7 @@ if ( ! isset( $bith_block_order ) ) {
 }
 
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
-$className = 'home-hero-img-services';
+$class_name = 'home-hero-img-services';
 
 // ACF Fields
 $background_logo = get_field('background_logo') ?? null;
@@ -29,7 +29,7 @@ $service_cards = get_field('service_cards') ?? null;
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="has-bith-white-color <?php echo esc_attr($className); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="has-bith-white-color <?php echo esc_attr($class_name); ?>">
 	<?php if( $background_logo || $eyebrow || $heading_copy || $button_link ):?>
 	<div class="hero bg-bith-blue-100 has-bg">
 		<?php if ( $is_first_block ):?>
@@ -63,8 +63,8 @@ $service_cards = get_field('service_cards') ?? null;
 					get_template_part('template-parts/part', 'button-link',
 						array(
 							'link' => $button_link,
-							'container-classes' => 'small-12 text-center',
-							'btn-classes' => 'fw-wide-md-btn green-100',
+							'container-classes' => 'small-12 text-center is-style-green-100',
+							'btn-classes' => 'fw-wide-md-btn',
 						)
 					);
 				};?>
@@ -74,9 +74,9 @@ $service_cards = get_field('service_cards') ?? null;
 	<?php endif;?>
 	<?php if($image || $service_cards_heading || $service_cards_text || $service_cards_button_link || $service_cards):?>
 	<div class="hero-gradient-section position-relative has-bg bg-bith-blue-100">
-		<div class="hero-gradient bg"></div>
+		<div class="hero-gradient bg z-1"></div>
 		<?php if($image):?>
-			<div class="image position-relative z-1">
+			<div class="image position-relative z-2">
 				<div class="grid-container">
 					<?=wp_get_attachment_image( $image['id'], 'full' );?>
 				</div>
@@ -90,7 +90,7 @@ $service_cards = get_field('service_cards') ?? null;
 						'text' => $service_cards_text,
 						'text-color' => 'black',
 						'link' => $service_cards_button_link,
-						'btn-classes' => 'has-bith-onyx-color green-100'
+						'btn-style' => 'is-style-green-100',
 					),
 				);?>
 				<?php if($service_cards):?>

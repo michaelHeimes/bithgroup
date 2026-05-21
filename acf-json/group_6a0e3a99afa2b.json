@@ -1,9 +1,9 @@
 {
-    "key": "group_6a0a6bf4c6c60",
-    "title": "BLOCK: Landing Page Hero",
+    "key": "group_6a0e3a99afa2b",
+    "title": "BLOCK: Centered Page Hero",
     "fields": [
         {
-            "key": "field_6a0a6c09aaee7",
+            "key": "field_6a0e3a99b310b",
             "label": "Pulse Eyebrow",
             "name": "pulse_eyebrow",
             "aria-label": "",
@@ -24,7 +24,7 @@
             "append": ""
         },
         {
-            "key": "field_6a0a6bf4c903e",
+            "key": "field_6a0e3a99b3112",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -45,7 +45,7 @@
             "append": ""
         },
         {
-            "key": "field_6a0a6bf4c9042",
+            "key": "field_6a0e3a99b3115",
             "label": "Text",
             "name": "text",
             "aria-label": "",
@@ -64,32 +64,6 @@
             "rows": 4,
             "placeholder": "",
             "new_lines": ""
-        },
-        {
-            "key": "field_6a0a6bf4c9045",
-            "label": "Image",
-            "name": "image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
         }
     ],
     "location": [
@@ -97,7 +71,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/landing-page-hero"
+                "value": "acf\/centered-page-hero"
             }
         ]
     ],
@@ -113,5 +87,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1779318305
+    "modified": 1779318291
 }

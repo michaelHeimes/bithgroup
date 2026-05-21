@@ -8,26 +8,26 @@ if ( ! isset( $bith_block_order ) ) {
 	$bith_block_order++;
 	$is_first_block = false;
 }
-$className = 'child-page-hero';
+$class_name = 'child-page-hero';
 
 $bg_color = $block['backgroundColor'] ?? 'bith-blue-10'; 
 $gradient = $block['gradient'] ?? '';
 
 // Background & Gradient Classes
 if (!empty($bg_color)) {
-	$className .= ' has-' . $bg_color . '-background-color';
+	$class_name .= ' has-' . $bg_color . '-background-color';
 }
 if (!empty($gradient)) {
-	$className .= ' has-' . $gradient . '-gradient-background';
+	$class_name .= ' has-' . $gradient . '-gradient-background';
 }
 
 // Define "Dark" backgrounds that should use White text
 $dark_backgrounds = ['bith-onyx', 'bith-slate', 'bith-blue-100', 'bith-green-100', 'bith-blue'];
 
 if ( in_array($bg_color, $dark_backgrounds) || in_array($gradient, $dark_backgrounds) ) {
-	$className .= ' has-bith-white-color';
+	$class_name .= ' has-bith-white-color';
 } else {
-	$className .= ' has-bith-onyx-color';
+	$class_name .= ' has-bith-onyx-color';
 }
 
 // acf fields
@@ -37,7 +37,7 @@ $image = get_field('image') ?? null;
 
 ?>
 
-<div class="<?php echo esc_attr($className); ?>">
+<div class="<?php echo esc_attr($class_name); ?>">
 	<?php if ( $is_first_block ): ?>
 		<div class="header-spacer"></div>
 	<?php endif; ?>

@@ -23,17 +23,17 @@ function trailhead_page_navi() {
 	// 1. Build manual Previous link
 	if ( $current_page > 1 ) {
 		$prev_url  = esc_url( get_pagenum_link( $current_page - 1 ) );
-		$prev_link = '<li class="cell small-6 medium-shrink"><a href="' . $prev_url . '" class="prev weight-500" aria-label="Previous Page"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1 1 8l7 7M1 8h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</a></li>';
+		$prev_link = '<li class="cell small-6 medium-shrink is-style-blue-100"><a class="button prev" href="' . $prev_url . '" class="prev weight-500" aria-label="Previous Page"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1 1 8l7 7M1 8h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="btn-title">Previous</span></a></li>';
 	} else {
-		$prev_link = '<li class="disabled cell small-6 medium-shrink"><span class="prev weight-500" aria-disabled="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1 1 8l7 7M1 8h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</span></li>';
+		$prev_link = '<li class="disabled cell small-6 medium-shrink is-style-blue-100"><span class="prev weight-500" aria-disabled="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1 1 8l7 7M1 8h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span class="btn-title">Previous</span></span></li>';
 	}
 
 	// 2. Build manual Next link (Fixed: URLs and aria-labels corrected)
 	if ( $current_page < $total_pages ) {
 		$next_url  = esc_url( get_pagenum_link( $current_page + 1 ) );
-		$next_link = '<li class="next-wrap cell small-6 medium-shrink"><a href="' . $next_url . '" class="next weight-500" aria-label="Next Page">Next <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8h14m-7 7 7-7-7-7" stroke="#eaf3d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>';
+		$next_link = '<li class="next-wrap cell small-6 medium-shrink is-style-blue-100"><a class="button prev" href="' . $next_url . '" class="next weight-500" aria-label="Next Page"><span class="btn-title">Next</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8h14m-7 7 7-7-7-7" stroke="#eaf3d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>';
 	} else {
-		$next_link = '<li class="next-wrap disabled cell small-6 medium-shrink"><span class="next weight-500" aria-disabled="true">Next <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8h14m-7 7 7-7-7-7" stroke="#eaf3d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li>';
+		$next_link = '<li class="next-wrap disabled cell small-6 medium-shrink is-style-blue-100"><span class="next weight-500" aria-disabled="true"><span class="btn-title">Next</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8h14m-7 7 7-7-7-7" stroke="#eaf3d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li>';
 	}
 
 	// 3. Construct the clean layout wrapper
@@ -57,13 +57,22 @@ function trailhead_page_navi() {
 			} else {
 				// Remove native WordPress classes from standard links
 				$clean_link = preg_replace( '/\s*page-numbers/', '', $page_link );
-				echo '<li>' . $clean_link . '</li>';
+				
+				// Inject button class: Replaces '<a' with '<a class="button"'
+				$clean_link = str_replace( '<a ', '<a class="button" ', $clean_link );
+				
+				// WRAP INNER TEXT: Targets everything between > and </a> and wraps it
+				$clean_link = preg_replace( '/<a([^>]*)>(.*?)<\/a>/i', '<a$1><span class="btn-title">$2</span></a>', $clean_link );
+				
+				echo '<li class="is-style-blue-100">' . $clean_link . '</li>';
 			}
 		}
 	} else {
 		// Safe fallback for single page outputs
 		echo '<li class="current">1</li>';
 	}
+
+
 
 	echo '</ul></li>';
 	

@@ -22,7 +22,7 @@ function trailhead_top_nav() {
 		'fallback_cb'		=> false,						// Fallback function (see below)
 		'walker'			=> new Topbar_Menu_Walker(),
 		'link_before'		=> '<span class="position-relative">',
-		'link_after' => '</span><span class="arrow" style="display: none;"><img src="' . get_template_directory_uri() . '/assets/svgs/dropdown-link-arrow-icon.svg" alt="" /></span>',	
+		'link_after' => '</span><span class="icon" style="display: none;"><img src="' . get_template_directory_uri() . '/assets/svgs/dropdown-link-arrow-icon.svg" alt="" /></span>',	
 	));
 }
 

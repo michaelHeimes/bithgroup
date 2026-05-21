@@ -265,19 +265,8 @@ function trailhead_add_editor_js() {
 	if (file_exists($manifest_path)) {
 		$manifest = json_decode(file_get_contents($manifest_path), true);
 		
-		if (isset($manifest['js'])) {
-			wp_enqueue_script(
-				'trailhead-editor-js',
-				get_template_directory_uri() . '/dist/' . $manifest['js'],
-				array('jquery'),
-				null,
-				true
-			);
-		}
-
 		$js_code = "
 		(function(wp) {
-			// Safety check to ensure wp and blockEditor exist
 			if (!wp || !wp.blockEditor) return;
 
 			var el = wp.element.createElement;
@@ -288,20 +277,19 @@ function trailhead_add_editor_js() {
 			var PanelBody = wp.components.PanelBody;
 			var ToggleControl = wp.components.ToggleControl;
 
+			/* ==========================================
+			   COLUMN REVERSE EXTENSION (EXISTING)
+			   ========================================== */
 			addFilter('blocks.registerBlockType', 'bith/column-reverse', function(settings, name) {
 				if (name !== 'core/columns') return settings;
-				
-				// Ensure attributes object exists
 				settings.attributes = settings.attributes || {};
 				settings.attributes.reverseMobile = { type: 'boolean', default: false };
-				
 				return settings;
 			});
 
 			var withInspectorControl = createHigherOrderComponent(function(BlockEdit) {
 				return function(props) {
 					if (props.name !== 'core/columns') return el(BlockEdit, props);
-					
 					return el(Fragment, {},
 						el(BlockEdit, props),
 						el(InspectorControls, {},
@@ -319,7 +307,10 @@ function trailhead_add_editor_js() {
 
 			addFilter('editor.BlockEdit', 'bith/column-reverse-control', withInspectorControl);
 
-			addFilter('blocks.getSaveContent.extraProps', 'bith/column-reverse-class', function(extraProps, blockType, attributes) {
+			/* ==========================================
+			   COLUMNS FRONTEND WRAPPER INJECTION ONLY
+			   ========================================== */
+			addFilter('blocks.getSaveContent.extraProps', 'trailhead/shared-class-injection', function(extraProps, blockType, attributes) {
 				if (blockType.name === 'core/columns' && attributes.reverseMobile) {
 					extraProps.className = (extraProps.className || '') + ' mobile-row-reverse';
 				}
@@ -328,11 +319,61 @@ function trailhead_add_editor_js() {
 		})(window.wp);
 		";
 
-		// CHANGE THIS HANDLE TO 'wp-block-editor'
 		wp_add_inline_script('wp-block-editor', $js_code);
 	}
 }
 add_action( 'enqueue_block_editor_assets', 'trailhead_add_editor_js' );
+
+
+/**
+ * Register custom Gutenberg Block Styles for the Core Button link.
+ */
+function trailhead_register_button_styles() {
+	register_block_style(
+		'core/button',
+		array(
+			'name'         => 'blue-100',
+			'label'        => __( 'Blue Accent', 'trailhead' ),
+			'is_default'   => true, // Makes this style pre-selected on new buttons
+		)
+	);
+
+	register_block_style(
+		'core/button',
+		array(
+			'name'         => 'green-100',
+			'label'        => __( 'Green Accent', 'trailhead' ),
+			'is_default'   => false,
+		)
+	);
+}
+add_action( 'init', 'trailhead_register_button_styles' );
+
+
+
+/**
+ * 2. PHP RENDER FILTER POLYFILL (NEW)
+ * Targets the core/button rendering engine. Bypasses the outer div wrapper 
+ * and injects our class explicitly onto the inner <a> anchor tag.
+ */
+function trailhead_inject_class_to_button_link( $block_content, $block ) {
+	// Only execute if processing a core button block and our attribute exists
+	if ( 'core/button' === $block['blockName'] && ! empty( $block['attrs']['buttonColorToggle'] ) ) {
+		$target_class = esc_attr( $block['attrs']['buttonColorToggle'] );
+		
+		// Use WordPress's native tag processor to inspect HTML safely
+		$tags = new WP_HTML_Tag_Processor( $block_content );
+		
+		// Move past the outer <div> wrapper and search for the inner <a> anchor tag
+		if ( $tags->next_tag( 'a' ) ) {
+			$tags->add_class( $target_class );
+			$block_content = $tags->get_updated_html();
+		}
+	}
+	return $block_content;
+}
+add_filter( 'render_block', 'trailhead_inject_class_to_button_link', 10, 2 );
+
 
 
 

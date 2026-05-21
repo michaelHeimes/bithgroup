@@ -8,7 +8,7 @@ if ( ! isset( $bith_block_order ) ) {
 	$bith_block_order++;
 	$is_first_block = false;
 }
-$className = 'centered-green-radial-gradient-cta-banner content-section custom-section-pattern has-bith-radial-gradient-background has-bith-onyx-color';
+$class_name = 'centered-green-radial-gradient-cta-banner content-section custom-section-pattern has-bith-radial-gradient-background has-bith-onyx-color';
 
 // acf fields
 $use_global_values = get_field('use_global_values');
@@ -21,7 +21,7 @@ $button_link   = get_field($use_global_values ? 'ccrg_button_link'   : 'button_l
 get_template_part('template-parts/part', 'centered-green-radial-gradient-cta-banner',
 	array(
 		'is_first_block' => $is_first_block,
-		'class_name' => $className,
+		'class_name' => $class_name,
 		'pulse_eyebrow' => $pulse_eyebrow,
 		'eyebrow_tag'   => $eyebrow_tag,
 		'title'         => $title,

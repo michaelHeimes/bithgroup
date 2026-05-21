@@ -6,7 +6,7 @@
 		a {
 			display: inline-flex;
 			color: $blue-100;
-			.arrow {
+			.icon {
 				display: inline-block !important;
 				flex: 0 0 12px;
 				margin-left: 1rem;
@@ -44,6 +44,16 @@
 		.is-active {
 			a {
 				color: $blue-100;
+				.icon {
+					flex: 0 0 24px;
+					display: block !important; 
+					transition: opacity .3s ease;
+				}
+				&:hover {
+					.icon {
+						opacity: 1;	
+					}
+				}
 			}
 		}
 	}

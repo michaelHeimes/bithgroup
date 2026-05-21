@@ -37,8 +37,8 @@ if( $pulse_eyebrow || $title || $button_link ):
 					$link_title = $link['title'];
 					$link_target = $link['target'] ? $link['target'] : '_self';	
 				?>
-					<div class="wp-block-buttons">
-						<a class="button position-relative blue-100 has-bith-white-color" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+					<div class="wp-block-buttons is-style-blue-100">
+						<a class="button position-relative" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 							<span class="position-relative">
 								<?php echo esc_html( $link_title ); ?>
 							</span>

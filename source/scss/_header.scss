@@ -30,10 +30,10 @@
 		margin-top: 1.5rem;
 		width: 100%;
 		text-align: center;
+		@extend .is-style-green-100;
 		> a {
 			width: calc(100% - 48px);
 			@extend .button;
-			@extend .green-100;
 		}
 	}
 	.is-accordion-submenu-parent .submenu-toggle[aria-expanded="true"]::after,

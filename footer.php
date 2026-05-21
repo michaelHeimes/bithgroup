@@ -42,8 +42,8 @@ $footer_social_links = get_field('footer_social_links', 'option') ?? null;
 												get_template_part('template-parts/part', 'button-link',
 													array(
 														'link' => $button_link,
-														'container-classes' => 'small-12 medium-shrink',
-														'btn-classes' => 'green-100 has-bith-onyx-color fw-wide-md-btn',
+														'container-classes' => 'small-12 medium-shrink is-style-green-100',
+														'btn-classes' => 'fw-wide-md-btn',
 													)
 												);
 											};?>

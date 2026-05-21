@@ -8,7 +8,7 @@ if ( ! isset( $bith_block_order ) ) {
 	$bith_block_order++;
 	$is_first_block = false;
 }
-$className = 'breadcrumbs';
+$class_name = 'breadcrumbs';
 
 // Automatic Text Color Logic
 $bg_color = $block['backgroundColor'] ?? '';
@@ -16,26 +16,26 @@ $gradient = $block['gradient'] ?? '';
 
 // Background & Gradient Classes
 if (!empty($block['backgroundColor'])) {
-	$className .= ' has-' . $block['backgroundColor'] . '-background-color';
+	$class_name .= ' has-' . $block['backgroundColor'] . '-background-color';
 }
 if (!empty($block['gradient'])) {
-	$className .= ' has-' . $block['gradient'] . '-gradient-background';
+	$class_name .= ' has-' . $block['gradient'] . '-gradient-background';
 }
 
 // Define "Dark" backgrounds that should use White text
 $dark_backgrounds = ['bith-onyx', 'bith-slate', 'bith-blue-100', 'bith-green-100', 'bith-blue'];
 
 if ( in_array($bg_color, $dark_backgrounds) || in_array($gradient, $dark_backgrounds) ) {
-	$className .= ' has-bith-white-color';
+	$class_name .= ' has-bith-white-color';
 } else {
-	$className .= ' has-bith-onyx-color';
+	$class_name .= ' has-bith-onyx-color';
 }
 
 
 
 ?>
 
-<div class="<?php echo esc_attr($className); ?>">
+<div class="<?php echo esc_attr($class_name); ?>">
 	<?php if ( $is_first_block ): ?>
 		<div class="header-spacer"></div>
 	<?php endif; ?>

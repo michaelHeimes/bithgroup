@@ -1,0 +1,27 @@
+.landing-page-hero,
+.centered-page-hero {
+	padding-bottom: rem-calc(100);
+	.bg {
+		mix-blend-mode: overlay;
+	}
+	.pulse-eyebrow {
+		padding-bottom: 1.1rem;
+	}
+	.text-wrap {
+		margin-top: 1rem;
+	}
+	.image-wrap {
+		img {
+			border-radius: 64px;
+			box-shadow: $glow-on-dark;
+		}
+	}
+}
+.landing-page-hero {
+	.pulse-eyebrow {
+		text-align: left !important;
+	}
+}
+.centered-page-hero {
+	padding-top: rem-calc(110);
+}

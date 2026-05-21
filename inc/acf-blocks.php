@@ -67,13 +67,33 @@ function my_acf_init_block_types() {
         ));
         
         acf_register_block_type(array(
-            'name'            => 'services-page-hero',
-            'title'           => __('Services Page Hero'),
+            'name'            => 'landing-page-hero',
+            'title'           => __('Landing Page Hero'),
             'api_version'     => 2,
-            'description'     => __('The hero for Services Landing Page.'),
-            'render_template' => 'blocks/services-page-hero.php',
+            'description'     => __('The hero for Landing Pages.'),
+            'render_template' => 'blocks/landing-page-hero.php',
             'category'        => 'layout',
             'keywords'        => array( 'custom', 'service', 'page', 'banner', 'hero', 'bith', 'propr' ),
+            'supports'        => array(
+                'jsx'   => false,
+                'mode'  => true, 
+                'color' => array(
+                    'background' => false,
+                    'text'       => false,
+                    'gradients'  => false,
+                ),
+                'align' => array( 'wide', 'full' ),
+            ),
+        ));
+        
+        acf_register_block_type(array(
+            'name'            => 'centered-page-hero',
+            'title'           => __('Centered Page Hero'),
+            'api_version'     => 2,
+            'description'     => __('The hero for the Contact Page.'),
+            'render_template' => 'blocks/centered-page-hero.php',
+            'category'        => 'layout',
+            'keywords'        => array( 'custom', 'centered', 'page', 'banner', 'hero', 'bith', 'propr' ),
             'supports'        => array(
                 'jsx'   => false,
                 'mode'  => true, 

@@ -1,8 +1,9 @@
 <?php 
 $link = $args['link'] ?? null;
 $container_classes = $args['container-classes'] ?? null;
+$btn_style = $args['btn-style'] ?? '';
 $btn_classes = $args['btn-classes'] ?? null;
-
+$container_classes .= $btn_style;
 if($link):
 	$link_url = $link['url'];
 	$link_title = $link['title'];

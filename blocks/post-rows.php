@@ -14,7 +14,7 @@ global $bith_block_order;
  }
  
 $id = !empty($block['anchor']) ? $block['anchor'] : 'section-' . $block['id'];
-$className = 'content-section post-rows has-bith-onyx-color';
+$class_name = 'content-section post-rows has-bith-onyx-color';
 
 $sh_heading = get_field('sh_heading') ?? null;
 $sh_text = get_field('sh_text') ?? null;
@@ -54,7 +54,7 @@ elseif ( $posts_to_show === 'select' ) {
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>">
     <?php if ( $is_first_block ): ?>
         <div class="header-spacer"></div>
     <?php endif; ?>

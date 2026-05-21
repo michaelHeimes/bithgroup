@@ -4414,11 +4414,11 @@ ul.no-bullet, ol.no-bullet {
 }
 .button, .wp-block-buttons a, .editor-styles-wrapper .wp-block-buttons a, .wp-block-buttons .editor-styles-wrapper a, .wp-block-button__link, .editor-styles-wrapper .wp-block-button__link, #main-nav > li.menu-button > a, .editor-styles-wrapper .button, .editor-styles-wrapper .button-primary, .editor-styles-wrapper .button-secondary, .button.disabled, .button[disabled], .button.disabled:hover, .button[disabled]:hover, .button.disabled:focus, .button[disabled]:focus {
   background-color: #184275;
-  color: #0A0B0B;
+  color: #fff;
 }
 .button:hover, .wp-block-buttons a:hover, .wp-block-button__link:hover, #main-nav > li.menu-button > a:hover, .editor-styles-wrapper .button-primary:hover, .editor-styles-wrapper .button-secondary:hover, .button:focus, .wp-block-buttons a:focus, .wp-block-button__link:focus, #main-nav > li.menu-button > a:focus, .editor-styles-wrapper .button-primary:focus, .editor-styles-wrapper .button-secondary:focus {
   background-color: #F4F7E5;
-  color: #0A0B0B;
+  color: #fff;
 }
 .button.primary, .wp-block-buttons a.primary, .primary.wp-block-button__link, #main-nav > li.menu-button > a.primary, .editor-styles-wrapper .primary.button-primary, .editor-styles-wrapper .primary.button-secondary, .button.primary.disabled, .button.primary[disabled], .button.primary.disabled:hover, .button.primary[disabled]:hover, .button.primary.disabled:focus, .button.primary[disabled]:focus {
   background-color: #184275;
@@ -4438,19 +4438,19 @@ ul.no-bullet, ol.no-bullet {
 }
 .button.success, .wp-block-buttons a.success, .success.wp-block-button__link, #main-nav > li.menu-button > a.success, .editor-styles-wrapper .success.button-primary, .editor-styles-wrapper .success.button-secondary, .button.success.disabled, .button.success[disabled], .button.success.disabled:hover, .button.success[disabled]:hover, .button.success.disabled:focus, .button.success[disabled]:focus {
   background-color: #3adb76;
-  color: #0A0B0B;
+  color: #fff;
 }
 .button.success:hover, .wp-block-buttons a.success:hover, .success.wp-block-button__link:hover, #main-nav > li.menu-button > a.success:hover, .editor-styles-wrapper .success.button-primary:hover, .editor-styles-wrapper .success.button-secondary:hover, .button.success:focus, .wp-block-buttons a.success:focus, .success.wp-block-button__link:focus, #main-nav > li.menu-button > a.success:focus, .editor-styles-wrapper .success.button-primary:focus, .editor-styles-wrapper .success.button-secondary:focus {
   background-color: rgb(34.2386266094, 187.3613733906, 91.3030042918);
-  color: #0A0B0B;
+  color: #fff;
 }
 .button.warning, .wp-block-buttons a.warning, .warning.wp-block-button__link, #main-nav > li.menu-button > a.warning, .editor-styles-wrapper .warning.button-primary, .editor-styles-wrapper .warning.button-secondary, .button.warning.disabled, .button.warning[disabled], .button.warning.disabled:hover, .button.warning[disabled]:hover, .button.warning.disabled:focus, .button.warning[disabled]:focus {
   background-color: #ffae00;
-  color: #0A0B0B;
+  color: #fff;
 }
 .button.warning:hover, .wp-block-buttons a.warning:hover, .warning.wp-block-button__link:hover, #main-nav > li.menu-button > a.warning:hover, .editor-styles-wrapper .warning.button-primary:hover, .editor-styles-wrapper .warning.button-secondary:hover, .button.warning:focus, .wp-block-buttons a.warning:focus, .warning.wp-block-button__link:focus, #main-nav > li.menu-button > a.warning:focus, .editor-styles-wrapper .warning.button-primary:focus, .editor-styles-wrapper .warning.button-secondary:focus {
   background-color: rgb(204, 139.2, 0);
-  color: #0A0B0B;
+  color: #fff;
 }
 .button.alert, .wp-block-buttons a.alert, .alert.wp-block-button__link, #main-nav > li.menu-button > a.alert, .editor-styles-wrapper .alert.button-primary, .editor-styles-wrapper .alert.button-secondary, .button.alert.disabled, .button.alert[disabled], .button.alert.disabled:hover, .button.alert[disabled]:hover, .button.alert.disabled:focus, .button.alert[disabled]:focus {
   background-color: #cc4b37;
@@ -4701,7 +4701,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   position: absolute;
   z-index: 10;
   display: none;
-  width: 217px;
+  width: 240px;
   padding: 1rem;
   visibility: hidden;
   border: 1px solid #cacaca;
@@ -7369,11 +7369,11 @@ POSTS & CONTENT STYLES
 }
 .post-password-form input[type=submit], .post-password-form input[type=submit].disabled, .post-password-form input[type=submit][disabled], .post-password-form input[type=submit].disabled:hover, .post-password-form input[type=submit][disabled]:hover, .post-password-form input[type=submit].disabled:focus, .post-password-form input[type=submit][disabled]:focus {
   background-color: #184275;
-  color: #0A0B0B;
+  color: #fff;
 }
 .post-password-form input[type=submit]:hover, .post-password-form input[type=submit]:focus {
   background-color: #F4F7E5;
-  color: #0A0B0B;
+  color: #fff;
 }
 
 /*********************
@@ -8423,7 +8423,6 @@ footer#colophon .site-info .menu.subfooter-links li {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  background-color: var(--wp--preset--color--bith-blue-100);
   transform: scale(1);
   transition: background-color 0.35s ease, transform 0.35s ease;
 }
@@ -8431,7 +8430,6 @@ footer#colophon .site-info .menu.subfooter-links li {
 .wp-block-button__link:hover:before,
 .wp-block-buttons a:hover:before {
   transform: scale(1.06);
-  background-color: var(--wp--preset--color--bith-green-100);
   transition: background-color 0.35s ease, transform 0.35s ease;
 }
 @media print, screen and (max-width: 62.49875em) {
@@ -8447,40 +8445,64 @@ footer#colophon .site-info .menu.subfooter-links li {
     margin-right: auto;
   }
 }
-.button:not(.acf-button):not([data-name=add]).green-100, .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]).green-100, .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]).green-100, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]),
-.wp-block-button__link.green-100,
-#main-nav > li.menu-button > a.wp-block-button__link,
-.wp-block-buttons a.green-100,
-.wp-block-buttons #main-nav > li.menu-button > a {
+
+.is-style-blue-100 .button:not(.acf-button):not([data-name=add]), .is-style-blue-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]), .editor-styles-wrapper .is-style-blue-100 .button-primary:not(.acf-button):not([data-name=add]), .is-style-blue-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]), .editor-styles-wrapper .is-style-blue-100 .button-secondary:not(.acf-button):not([data-name=add]), .is-style-blue-100 #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]), .is-style-blue-100 .wp-block-button__link:not(.acf-button):not([data-name=add]), .is-style-blue-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]), .wp-block-buttons .is-style-blue-100 a:not(.acf-button):not([data-name=add]),
+.is-style-blue-100 a.wp-block-button__link {
+  background-color: var(--wp--preset--color--bith-blue-100);
+}
+.is-style-blue-100 .button:not(.acf-button):not([data-name=add]):before, .is-style-blue-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):before, .editor-styles-wrapper .is-style-blue-100 .button-primary:not(.acf-button):not([data-name=add]):before, .is-style-blue-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):before, .editor-styles-wrapper .is-style-blue-100 .button-secondary:not(.acf-button):not([data-name=add]):before, .is-style-blue-100 #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):before, .is-style-blue-100 .wp-block-button__link:not(.acf-button):not([data-name=add]):before, .is-style-blue-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]):before, .wp-block-buttons .is-style-blue-100 a:not(.acf-button):not([data-name=add]):before,
+.is-style-blue-100 a.wp-block-button__link:before {
+  background-color: var(--wp--preset--color--bith-blue-100);
+}
+.is-style-blue-100 .button:not(.acf-button):not([data-name=add]):hover, .is-style-blue-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):hover, .editor-styles-wrapper .is-style-blue-100 .button-primary:not(.acf-button):not([data-name=add]):hover, .is-style-blue-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):hover, .editor-styles-wrapper .is-style-blue-100 .button-secondary:not(.acf-button):not([data-name=add]):hover, .is-style-blue-100 #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):hover, .is-style-blue-100 .wp-block-button__link:not(.acf-button):not([data-name=add]):hover, .is-style-blue-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]):hover, .wp-block-buttons .is-style-blue-100 a:not(.acf-button):not([data-name=add]):hover,
+.is-style-blue-100 a.wp-block-button__link:hover {
+  color: var(--wp--preset--color--bith-onyx);
+}
+.is-style-blue-100 .button:not(.acf-button):not([data-name=add]):hover:before, .is-style-blue-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):hover:before, .editor-styles-wrapper .is-style-blue-100 .button-primary:not(.acf-button):not([data-name=add]):hover:before, .is-style-blue-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):hover:before, .editor-styles-wrapper .is-style-blue-100 .button-secondary:not(.acf-button):not([data-name=add]):hover:before, .is-style-blue-100 #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):hover:before, .is-style-blue-100 .wp-block-button__link:not(.acf-button):not([data-name=add]):hover:before, .is-style-blue-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]):hover:before, .wp-block-buttons .is-style-blue-100 a:not(.acf-button):not([data-name=add]):hover:before,
+.is-style-blue-100 a.wp-block-button__link:hover:before {
   background-color: var(--wp--preset--color--bith-green-100);
 }
-.button:not(.acf-button):not([data-name=add]).green-100:before, .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]).green-100:before, .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]).green-100:before, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):before,
-.wp-block-button__link.green-100:before,
-#main-nav > li.menu-button > a.wp-block-button__link:before,
-.wp-block-buttons a.green-100:before,
-.wp-block-buttons #main-nav > li.menu-button > a:before {
+
+.is-style-green-100 .button:not(.acf-button):not([data-name=add]), #main-nav > li.menu-button .button:not(.acf-button):not([data-name=add]), .is-style-green-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]), .editor-styles-wrapper .is-style-green-100 .button-primary:not(.acf-button):not([data-name=add]), #main-nav > li.menu-button .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]), .editor-styles-wrapper #main-nav > li.menu-button .button-primary:not(.acf-button):not([data-name=add]), .is-style-green-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]), .editor-styles-wrapper .is-style-green-100 .button-secondary:not(.acf-button):not([data-name=add]), #main-nav > li.menu-button .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]), .editor-styles-wrapper #main-nav > li.menu-button .button-secondary:not(.acf-button):not([data-name=add]), #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]), .is-style-green-100 .wp-block-button__link:not(.acf-button):not([data-name=add]), #main-nav > li.menu-button .wp-block-button__link:not(.acf-button):not([data-name=add]), .is-style-green-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]), .wp-block-buttons .is-style-green-100 a:not(.acf-button):not([data-name=add]), #main-nav > li.menu-button .wp-block-buttons a:not(.acf-button):not([data-name=add]), .wp-block-buttons #main-nav > li.menu-button a:not(.acf-button):not([data-name=add]),
+.is-style-green-100 a.wp-block-button__link,
+#main-nav > li.menu-button a.wp-block-button__link {
+  color: var(--wp--preset--color--bith-onyx);
   background-color: var(--wp--preset--color--bith-green-100);
 }
-.button:not(.acf-button):not([data-name=add]).green-100:hover, .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]).green-100:hover, .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]).green-100:hover, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):hover,
-.wp-block-button__link.green-100:hover,
-#main-nav > li.menu-button > a.wp-block-button__link:hover,
-.wp-block-buttons a.green-100:hover,
-.wp-block-buttons #main-nav > li.menu-button > a:hover {
+.is-style-green-100 .button:not(.acf-button):not([data-name=add]):before, #main-nav > li.menu-button .button:not(.acf-button):not([data-name=add]):before, .is-style-green-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):before, .editor-styles-wrapper .is-style-green-100 .button-primary:not(.acf-button):not([data-name=add]):before, #main-nav > li.menu-button .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):before, .editor-styles-wrapper #main-nav > li.menu-button .button-primary:not(.acf-button):not([data-name=add]):before, .is-style-green-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):before, .editor-styles-wrapper .is-style-green-100 .button-secondary:not(.acf-button):not([data-name=add]):before, #main-nav > li.menu-button .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):before, .editor-styles-wrapper #main-nav > li.menu-button .button-secondary:not(.acf-button):not([data-name=add]):before, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):before, .is-style-green-100 .wp-block-button__link:not(.acf-button):not([data-name=add]):before, #main-nav > li.menu-button .wp-block-button__link:not(.acf-button):not([data-name=add]):before, .is-style-green-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]):before, .wp-block-buttons .is-style-green-100 a:not(.acf-button):not([data-name=add]):before, #main-nav > li.menu-button .wp-block-buttons a:not(.acf-button):not([data-name=add]):before, .wp-block-buttons #main-nav > li.menu-button a:not(.acf-button):not([data-name=add]):before,
+.is-style-green-100 a.wp-block-button__link:before,
+#main-nav > li.menu-button a.wp-block-button__link:before {
+  background-color: var(--wp--preset--color--bith-green-100);
+}
+.is-style-green-100 .button:not(.acf-button):not([data-name=add]):hover, #main-nav > li.menu-button .button:not(.acf-button):not([data-name=add]):hover, .is-style-green-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):hover, .editor-styles-wrapper .is-style-green-100 .button-primary:not(.acf-button):not([data-name=add]):hover, #main-nav > li.menu-button .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):hover, .editor-styles-wrapper #main-nav > li.menu-button .button-primary:not(.acf-button):not([data-name=add]):hover, .is-style-green-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):hover, .editor-styles-wrapper .is-style-green-100 .button-secondary:not(.acf-button):not([data-name=add]):hover, #main-nav > li.menu-button .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):hover, .editor-styles-wrapper #main-nav > li.menu-button .button-secondary:not(.acf-button):not([data-name=add]):hover, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):hover, .is-style-green-100 .wp-block-button__link:not(.acf-button):not([data-name=add]):hover, #main-nav > li.menu-button .wp-block-button__link:not(.acf-button):not([data-name=add]):hover, .is-style-green-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]):hover, .wp-block-buttons .is-style-green-100 a:not(.acf-button):not([data-name=add]):hover, #main-nav > li.menu-button .wp-block-buttons a:not(.acf-button):not([data-name=add]):hover, .wp-block-buttons #main-nav > li.menu-button a:not(.acf-button):not([data-name=add]):hover,
+.is-style-green-100 a.wp-block-button__link:hover,
+#main-nav > li.menu-button a.wp-block-button__link:hover {
   background-color: #fff;
 }
-.button:not(.acf-button):not([data-name=add]).green-100:hover span, .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]).green-100:hover span, .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]).green-100:hover span, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):hover span,
-.wp-block-button__link.green-100:hover span,
-#main-nav > li.menu-button > a.wp-block-button__link:hover span,
-.wp-block-buttons a.green-100:hover span,
-.wp-block-buttons #main-nav > li.menu-button > a:hover span {
+.is-style-green-100 .button:not(.acf-button):not([data-name=add]):hover span, #main-nav > li.menu-button .button:not(.acf-button):not([data-name=add]):hover span, .is-style-green-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):hover span, .editor-styles-wrapper .is-style-green-100 .button-primary:not(.acf-button):not([data-name=add]):hover span, #main-nav > li.menu-button .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):hover span, .editor-styles-wrapper #main-nav > li.menu-button .button-primary:not(.acf-button):not([data-name=add]):hover span, .is-style-green-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):hover span, .editor-styles-wrapper .is-style-green-100 .button-secondary:not(.acf-button):not([data-name=add]):hover span, #main-nav > li.menu-button .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):hover span, .editor-styles-wrapper #main-nav > li.menu-button .button-secondary:not(.acf-button):not([data-name=add]):hover span, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):hover span, .is-style-green-100 .wp-block-button__link:not(.acf-button):not([data-name=add]):hover span, #main-nav > li.menu-button .wp-block-button__link:not(.acf-button):not([data-name=add]):hover span, .is-style-green-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]):hover span, .wp-block-buttons .is-style-green-100 a:not(.acf-button):not([data-name=add]):hover span, #main-nav > li.menu-button .wp-block-buttons a:not(.acf-button):not([data-name=add]):hover span, .wp-block-buttons #main-nav > li.menu-button a:not(.acf-button):not([data-name=add]):hover span,
+.is-style-green-100 a.wp-block-button__link:hover span,
+#main-nav > li.menu-button a.wp-block-button__link:hover span {
   color: var(--wp--preset--color--bith-onyx) !important;
 }
-.button:not(.acf-button):not([data-name=add]).green-100:hover:before, .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]).green-100:hover:before, .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]).green-100:hover:before, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):hover:before,
-.wp-block-button__link.green-100:hover:before,
-#main-nav > li.menu-button > a.wp-block-button__link:hover:before,
-.wp-block-buttons a.green-100:hover:before,
-.wp-block-buttons #main-nav > li.menu-button > a:hover:before {
+.is-style-green-100 .button:not(.acf-button):not([data-name=add]):hover:before, #main-nav > li.menu-button .button:not(.acf-button):not([data-name=add]):hover:before, .is-style-green-100 .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):hover:before, .editor-styles-wrapper .is-style-green-100 .button-primary:not(.acf-button):not([data-name=add]):hover:before, #main-nav > li.menu-button .editor-styles-wrapper .button-primary:not(.acf-button):not([data-name=add]):hover:before, .editor-styles-wrapper #main-nav > li.menu-button .button-primary:not(.acf-button):not([data-name=add]):hover:before, .is-style-green-100 .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):hover:before, .editor-styles-wrapper .is-style-green-100 .button-secondary:not(.acf-button):not([data-name=add]):hover:before, #main-nav > li.menu-button .editor-styles-wrapper .button-secondary:not(.acf-button):not([data-name=add]):hover:before, .editor-styles-wrapper #main-nav > li.menu-button .button-secondary:not(.acf-button):not([data-name=add]):hover:before, #main-nav > li.menu-button > a:not(.acf-button):not([data-name=add]):hover:before, .is-style-green-100 .wp-block-button__link:not(.acf-button):not([data-name=add]):hover:before, #main-nav > li.menu-button .wp-block-button__link:not(.acf-button):not([data-name=add]):hover:before, .is-style-green-100 .wp-block-buttons a:not(.acf-button):not([data-name=add]):hover:before, .wp-block-buttons .is-style-green-100 a:not(.acf-button):not([data-name=add]):hover:before, #main-nav > li.menu-button .wp-block-buttons a:not(.acf-button):not([data-name=add]):hover:before, .wp-block-buttons #main-nav > li.menu-button a:not(.acf-button):not([data-name=add]):hover:before,
+.is-style-green-100 a.wp-block-button__link:hover:before,
+#main-nav > li.menu-button a.wp-block-button__link:hover:before {
   background-color: #fff;
+}
+
+.wp-block-button.is-style-outline--1 a.wp-block-button__link {
+  background-color: transparent;
+}
+.wp-block-button.is-style-outline--1 a.wp-block-button__link:before {
+  background-color: transparent;
+}
+
+:where(.editor-styles-wrapper) .is-style-blue-100 .wp-element-button {
+  background-color: var(--wp--preset--color--bith-blue-100);
+}
+
+:where(.editor-styles-wrapper) .is-style-green-100 .wp-element-button, :where(.editor-styles-wrapper) #main-nav > li.menu-button .wp-element-button {
+  background-color: var(--wp--preset--color--bith-green-100);
 }
 
 .swiper-scrollbar {
@@ -8819,8 +8841,8 @@ a.underline-arrow-link:hover:after,
   display: inline-flex;
   color: var(--wp--preset--color--bith-blue-100);
 }
-#main-nav ul.submenu li a .arrow,
-.dropdown-pane ul li a .arrow {
+#main-nav ul.submenu li a .icon,
+.dropdown-pane ul li a .icon {
   display: inline-block !important;
   flex: 0 0 12px;
   margin-left: 1rem;
@@ -8858,6 +8880,14 @@ a.underline-arrow-link:hover:after,
 }
 .dropdown-pane ul .is-active a {
   color: var(--wp--preset--color--bith-blue-100);
+}
+.dropdown-pane ul .is-active a .icon {
+  flex: 0 0 24px;
+  display: block !important;
+  transition: opacity 0.3s ease;
+}
+.dropdown-pane ul .is-active a:hover .icon {
+  opacity: 1;
 }
 
 @media (max-width: 1000px) {
@@ -9220,18 +9250,34 @@ a.underline-arrow-link:hover:after,
   margin-top: clamp(1.938rem, 1.705rem + 1.161vw, 2.75rem);
 }
 
-.services-page-hero {
+.landing-page-hero,
+.centered-page-hero {
   padding-bottom: 6.25rem;
 }
-.services-page-hero .bg {
+.landing-page-hero .bg,
+.centered-page-hero .bg {
   mix-blend-mode: overlay;
 }
-.services-page-hero .pulse-eyebrow {
-  text-align: left !important;
+.landing-page-hero .pulse-eyebrow,
+.centered-page-hero .pulse-eyebrow {
+  padding-bottom: 1.1rem;
 }
-.services-page-hero .image-wrap img {
+.landing-page-hero .text-wrap,
+.centered-page-hero .text-wrap {
+  margin-top: 1rem;
+}
+.landing-page-hero .image-wrap img,
+.centered-page-hero .image-wrap img {
   border-radius: 64px;
   box-shadow: 0 6px 140px 0 #69A0E1;
+}
+
+.landing-page-hero .pulse-eyebrow {
+  text-align: left !important;
+}
+
+.centered-page-hero {
+  padding-top: 6.875rem;
 }
 
 .navigation-cards.has-header .n-cards {
@@ -9318,6 +9364,7 @@ a.underline-arrow-link:hover:after,
   border: 1px solid #5D5D5D;
   background-color: #fff;
   padding: 0.917em 0.915em;
+  min-width: 240px;
 }
 .blog .filter-wrap .dropdown-button[aria-expanded=true],
 .archive .filter-wrap .dropdown-button[aria-expanded=true] {
@@ -9361,11 +9408,11 @@ a.underline-arrow-link:hover:after,
 .blog .page-navigation a,
 .blog .page-navigation .prev,
 .blog .page-navigation .next,
-.blog .page-navigation span:not(.dots),
+.blog .page-navigation span:not(.dots):not(.btn-title),
 .archive .page-navigation a,
 .archive .page-navigation .prev,
 .archive .page-navigation .next,
-.archive .page-navigation span:not(.dots) {
+.archive .page-navigation span:not(.dots):not(.btn-title) {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -9376,6 +9423,13 @@ a.underline-arrow-link:hover:after,
   border-radius: 1rem;
   padding: 0.617em 1.03em;
   font-weight: 500;
+}
+.blog .page-navigation svg,
+.blog .page-navigation .btn-title,
+.archive .page-navigation svg,
+.archive .page-navigation .btn-title {
+  position: relative;
+  z-index: 1;
 }
 .blog .page-navigation .prev,
 .blog .page-navigation .next,
@@ -9389,6 +9443,16 @@ a.underline-arrow-link:hover:after,
 .archive .page-navigation .prev svg,
 .archive .page-navigation .next svg {
   margin-right: 10px;
+}
+.blog .page-navigation .prev svg path,
+.blog .page-navigation .next svg path,
+.archive .page-navigation .prev svg path,
+.archive .page-navigation .next svg path {
+  transition: 0.3s ease;
+}
+.blog .page-navigation li:not(.disabled) a:hover svg path,
+.archive .page-navigation li:not(.disabled) a:hover svg path {
+  stroke: var(--wp--preset--color--bith-onyx);
 }
 .blog .page-navigation .next-wrap svg,
 .archive .page-navigation .next-wrap svg {

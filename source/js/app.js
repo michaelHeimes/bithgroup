@@ -41,6 +41,7 @@ import 'what-input';
 //import headerLinkColor from './modules/header-link-color.js';
 import hasScrolled from './modules/has-scrolled.js';
 import offCanvasModifications from './modules/off-canvas-modifications.js';
+import pulseElementIndex from './modules/pulse-element-index.js';
 import headerHeight from './modules/header-height.js';
 import init1Sliders from './modules/swiper-1.js';
 import init21SwipeSliders from './modules/swiper-2-1-swipe.js';
@@ -110,6 +111,7 @@ $(function() {
     hasScrolled();
     offCanvasModifications();
     headerHeight();
+    pulseElementIndex();
     init1Sliders();
     init21SwipeSliders();
     init32Swipe1SwipeSliders();

@@ -61,6 +61,7 @@
 		}
 	}
 }
+.wp-block-button__link,
 .is-style-blue-100 {
 	.button:not(.acf-button):not([data-name='add']),
 	a.wp-block-button__link {
@@ -95,15 +96,88 @@
 		}
 	}
 }
-.wp-block-button.is-style-outline--1 a.wp-block-button__link {
+.wp-block-button.is-style-outline-1 a.wp-block-button__link {
 	background-color: transparent;
+	border: 1px solid $black-30;
+	span {
+		color: $onyx;
+	}
 	&:before {
 		background-color: transparent;
 	}
+	&:hover {
+		background-color: $blue-100;
+		span {
+			color: $white;
+		}
+		&:before { 
+			background-color: $blue-100;	
+		}
+	}
+	&[target="_blank"] {
+		span {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background-image: url('../assets/svgs/new-tab-slate-icon.svg');
+				background-size: contain;
+				transition: background-image .3s ease;
+			}
+		}
+		&:hover {
+			span:after {
+				background-image: url('../assets/svgs/new-tab-white-icon.svg');
+			}
+		}
+	}
 }
-:where(.editor-styles-wrapper) .is-style-blue-100 .wp-element-button {
-	background-color: $blue-100;
+
+/* 1. Base / Default Button Style Rule (Forces Blue Layout automatically) */
+.editor-styles-wrapper .wp-block-button .wp-block-button__link,
+.editor-styles-wrapper .is-style-blue-100 .wp-block-button__link {
+	background-color: $blue-100 !important;
+	border: 0 !important;
+	color: $white !important;
 }
-:where(.editor-styles-wrapper) .is-style-green-100 .wp-element-button {
-	background-color: $green-100;
+
+.editor-styles-wrapper .wp-block-button .wp-block-button__link span,
+.editor-styles-wrapper .is-style-blue-100 .wp-block-button__link span {
+	color: $white !important;
 }
+
+/* 2. Explicit Green Style Variant Override */
+.editor-styles-wrapper .is-style-green-100 .wp-block-button__link {
+	background-color: $green-100 !important; 
+	border: 0 !important;
+	color: $white !important;
+}
+
+.editor-styles-wrapper .is-style-green-100 .wp-block-button__link span {
+	color: $white !important;
+}
+
+/* 3. Explicit Outline Style Variant Override */
+.editor-styles-wrapper .is-style-outline-1 .wp-block-button__link {
+	background-color: transparent !important;
+	border: 1px solid $black-30 !important; 
+	color: $onyx !important;
+}
+
+.editor-styles-wrapper .is-style-outline-1 .wp-block-button__link span {
+	color: $onyx !important;
+}
+
+.editor-styles-wrapper .is-style-outline-1 .wp-block-button__link::before {
+	background-color: transparent !important;
+}
+
+/* 4. Layout fixes */
+.wp-block-buttons > .wp-block-button.has-custom-width .wp-block-button__link {
+	width: auto !important;
+}
+

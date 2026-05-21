@@ -4,6 +4,7 @@ Stylesheet: Global Stylesheet
 
 *************************************************/
 
+
 /*********************
 GLOBAL ELEMENTS
 *********************/
@@ -48,6 +49,10 @@ GLOBAL ELEMENTS
 		margin-top: 0.5rem;
 		margin-bottom: 0;
 	}
+}
+
+.block-editor-block-inspector button.components-button.block-editor-block-styles__item.is-next-40px-default-size.is-secondary:first-child {
+	display: none;
 }
 
 /*********************

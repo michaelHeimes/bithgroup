@@ -37,7 +37,7 @@ if( $page_link || $icon || $title || $additional_links || $text ):?>
 										</div>
 										
 										<?php if($page_link && $card_version == 'row'):?>
-											<div class="arrow-wrap cell auto hide-for-large" style="opacity: 0;">
+											<div class="arrow-wrap cell auto hide-for-large">
 												<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 24h28m0 0L24 10m14 14L24 38" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 											</div>
 										<?php endif;?>
@@ -107,7 +107,7 @@ if( $page_link || $icon || $title || $additional_links || $text ):?>
 										<?php endif;?>
 										
 										<?php if($page_link && $card_version == 'row'):?>
-											<div class="arrow-wrap cell shrink show-for-large" style="opacity: 0;">
+											<div class="arrow-wrap cell shrink show-for-large">
 												<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 24h28m0 0L24 10m14 14L24 38" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 											</div>
 										<?php endif;?>

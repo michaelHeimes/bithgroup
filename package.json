@@ -1,6 +1,6 @@
 {
   "name": "trailhead",
-  "version": "1.0.0",
+  "version": "1.0.01",
   "description": "Trailhead WordPress theme build system",
   "type": "module",
   "scripts": {

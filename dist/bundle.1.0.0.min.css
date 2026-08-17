@@ -8776,15 +8776,9 @@ footer#colophon .site-info .menu.subfooter-links li {
     border-radius: 3rem;
   }
 }
-.icon-link-text-card.type-row:not(.transparent) a.page-link:hover + div .arrow-wrap {
-  opacity: 1 !important;
-}
 .icon-link-text-card.type-row:not(.transparent) .text-links a {
   position: relative;
   z-index: 1;
-}
-.icon-link-text-card.type-row:not(.transparent) .arrow-wrap {
-  transition: opacity 0.3s ease;
 }
 .icon-link-text-card.type-col .flex-dir-control {
   display: flex;
@@ -8938,17 +8932,12 @@ a.underline-arrow-link:after,
   background-image: url("../assets/svgs/underline-link-arrow-blue-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0;
   transition: opacity 0.3s ease;
 }
 a.underline-arrow-link:hover,
 .has-underline-arrow-link a:hover {
   color: var(--wp--preset--color--bith-blue-100);
   text-decoration-color: transparent;
-}
-a.underline-arrow-link:hover:after,
-.has-underline-arrow-link a:hover:after {
-  opacity: 1;
 }
 
 .has-bith-white-color a.underline-arrow-link,
@@ -8964,10 +8953,6 @@ a.underline-arrow-link:hover:after,
 .has-bith-white-color .has-underline-arrow-link a:hover {
   color: var(--wp--preset--color--bith-green-30);
   text-decoration-color: transparent;
-}
-.has-bith-white-color a.underline-arrow-link:hover:after,
-.has-bith-white-color .has-underline-arrow-link a:hover:after {
-  opacity: 1;
 }
 
 .main-nav ul.submenu,

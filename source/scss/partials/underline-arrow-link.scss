@@ -29,16 +29,12 @@ a.underline-arrow-link,
 		background-image: url('../assets/svgs/underline-link-arrow-blue-icon.svg');
 		background-size: contain;
 		background-repeat: no-repeat;
-		opacity: 0;
 		transition: opacity .3s ease;
 	}
 
 	&:hover {
 		color: $blue-100;
 		text-decoration-color: transparent; 
-		&:after {
-			opacity: 1;
-		}
 	}
 }
 
@@ -53,9 +49,6 @@ a.underline-arrow-link,
 		&:hover {
 			color: $green-30;
 			text-decoration-color: transparent;
-			&:after {
-				opacity: 1;
-			}
 		}
 	}
 }

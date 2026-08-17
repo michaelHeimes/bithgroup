@@ -85,22 +85,12 @@
 			@include breakpoint(large) {
 				border-radius: rem-calc(48);
 			}
-			&:hover {
-				&+ div {
-					.arrow-wrap {
-						opacity: 1 !important;
-					}
-				}
-			} 
 		}
 		.text-links {
 			a {
 				position: relative;
 				z-index: 1;
 			}
-		}
-		.arrow-wrap {
-			transition: opacity .3s ease;
 		}
 	}
 	&.type-col {

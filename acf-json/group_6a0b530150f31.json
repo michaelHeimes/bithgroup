@@ -181,7 +181,7 @@
                     "taxonomy": "",
                     "allow_archives": 1,
                     "multiple": 0,
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "allow_in_bindings": 0,
                     "parent_repeater": "field_6a0b537fcb4a3"
                 },
@@ -328,5 +328,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1779138461
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1787001520
 }

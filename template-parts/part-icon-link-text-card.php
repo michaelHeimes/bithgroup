@@ -74,7 +74,15 @@ if( $page_link || $icon || $title || $additional_links || $text ):?>
 												
 											<?php elseif( $title ):?>
 
-												<h3 class="color-green-30 weight-500"><u><?=wp_kses_post( $title );?></u></h3>
+												<h3 class="color-green-30 weight-500">
+													<?php if($page_link):?>
+														<u>
+													<?php endif;?>
+															<?=wp_kses_post( $title );?>
+													<?php if($page_link):?>
+														</u>
+													<?php endif;?>
+												</h3>
 
 											<?php endif;?>
 

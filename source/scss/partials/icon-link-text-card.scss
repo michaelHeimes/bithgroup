@@ -40,6 +40,14 @@
 			border-radius: rem-calc(48);
 		}
 	}	
+	&.type-row .icon {
+		svg,
+		img {
+			width: 100%;
+			max-width: 64px;
+			height: auto;
+		}
+	}
 	&.type-row:not(.transparent) {
 		.inner.has-link {
 			&.has-link {
@@ -101,6 +109,12 @@
 			flex-direction: column;
 			.icon {
 				margin-bottom: 2rem;
+				svg,
+				img {
+					width: 100%;
+					max-width: 77px;
+					height: auto;
+				}
 			}
 			a:after {
 				transform: translateY(.15em);

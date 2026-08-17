@@ -70,8 +70,8 @@ elseif ( $posts_to_show === 'select' ) {
                         $post_id = $post->ID;
                     ?>
                         <article id="post-<?php the_ID(); ?>" <?php post_class('loop-post-card slide-1 swiper-slide'); ?>>
-                            <a class="has-bith-white-color border-white-30 bg-black-30 br-48 overflow-hidden h-100" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'trailhead' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
-                                <?php if ( has_post_thumbnail() ) :?>
+                            <?php if ( has_post_thumbnail() ) :?>
+                            <div class="inner has-bith-white-color border-white-30 bg-black-30 br-48 overflow-hidden h-100">
                                 <div class="thumb-wrap cell small-12 tablet-5 large-4">
                                     <div class="img-wrap position-relative">
                                         <?= get_the_post_thumbnail( $post_id, 'large', array('class' => 'br-32') ); ?>
@@ -79,11 +79,15 @@ elseif ( $posts_to_show === 'select' ) {
                                 </div>
                                 <?php endif;?>
                                 <div>
-                                    <h3 class="weight-500"><?php the_title();?></h3>
+                                    <h3 class="weight-500">
+                                        <a class="has-bith-white-color stretched-link h3" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'trailhead' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+                                            <?php the_title();?>
+                                        </a>
+                                    </h3>
                                     <p class="post-date p-sm"><?php echo get_the_date('F j, Y'); ?></p>
                                     <div class="p-md"><?php the_excerpt();?></div>
                                 </div>
-                            </a>
+                            </div>
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
                 </div>

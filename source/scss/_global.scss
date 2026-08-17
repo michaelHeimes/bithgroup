@@ -50,7 +50,20 @@ GLOBAL ELEMENTS
 		margin-bottom: 0;
 	}
 }
-
+.stretched-link::after {
+  	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	content: "";
+}
+.br-48 {
+	.stretched-link::after {
+		@extend .br-48;
+	}
+}
 .block-editor-block-inspector button.components-button.block-editor-block-styles__item.is-next-40px-default-size.is-secondary:first-child {
 	display: none;
 }

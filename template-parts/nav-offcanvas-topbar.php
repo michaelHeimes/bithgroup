@@ -16,11 +16,11 @@
 				<?php
 				if ( is_front_page() && is_home() ) :
 					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Links to home page"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php
 				else :
 					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Links to home page"><?php bloginfo( 'name' ); ?></a></p>
 					<?php
 				endif;
 				$trailhead_description = get_bloginfo( 'description', 'display' );
@@ -31,7 +31,7 @@
 			</div><!-- .site-branding -->
 		
 			<ul class="menu">
-				<li class="logo"><a href="<?php echo home_url(); ?>" rel="home">
+				<li class="logo"><a href="<?php echo home_url(); ?>" rel="home" aria-label="Links to home page">
 					<?php echo file_get_contents( get_theme_file_path( '/assets/svgs/bithgroup-logo.svg' ) ); ?>
 				</a></li>
 			</ul>

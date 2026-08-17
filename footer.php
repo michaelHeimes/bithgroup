@@ -54,7 +54,9 @@ $footer_social_links = get_field('footer_social_links', 'option') ?? null;
 									<?php if($footer_logo || $footer_address):?>
 										<div class="logo-address-wrap grid-x grid-padding-x flex-dir-column medium-flex-dir-row tablet-flex-dir-column ">
 											<div class="cell medium-shrink tablet-12 logo-wrap">
-												<?=wp_get_attachment_image( $footer_logo['id'], 'full' );?>
+												<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Links to home page">
+													<?=wp_get_attachment_image( $footer_logo['id'], 'full' );?>
+												</a>
 											</div>
 											<?php if($footer_address):?>
 												<div class="cell medium-auto tablet-12 address">

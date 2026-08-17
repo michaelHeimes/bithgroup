@@ -1,6 +1,6 @@
-#main-nav {
-	.is-dropdown-submenu-parent > a::after, 
-	.is-accordion-submenu-parent .submenu-toggle::after { 
+.main-nav {
+	&.dropdown.menu > li.is-dropdown-submenu-parent > a::after, 
+	&.accordion-menu .is-accordion-submenu-parent .submenu-toggle::after { 
 		border: 0; 
 		content: ''; 
 		display: inline-block; 
@@ -42,7 +42,7 @@
 	}
 }
 
-#main-nav.accordion-menu {
+.main-nav.accordion-menu {
 	padding: 2rem 0;
 	ul.submenu {
 		width: calc(100% - 46px);
@@ -117,7 +117,7 @@ header.site-header {
 			}			
 		}
 			
-		#main-nav {
+		.main-nav {
 			align-items: center;
 			li {
 				border-radius: 1rem;
@@ -229,7 +229,7 @@ header.site-header {
 	
 	}
 	&.has-bith-white-color {
-		#top-bar-menu #main-nav {
+		#top-bar-menu .main-nav {
 			>li {
 				> a {
 					color: $white;
@@ -246,7 +246,7 @@ header.site-header {
 			.logo .bith-logo-text {
 				fill: $blue-100;
 			}
-			#main-nav {
+			.main-nav {
 				>li {
 					> a {
 						color: $blue-100;
@@ -299,7 +299,7 @@ header.site-header {
 				fill: $blue-100;
 			}
 		}
-		#top-bar-menu #main-nav.dropdown.menu > li {
+		#top-bar-menu .main-nav.dropdown.menu > li {
 			> a {
 				color: $blue-100;
 				&:hover,
@@ -337,7 +337,7 @@ header.site-header {
 		}
 	}
 	header.site-header.has-bith-blue-color {
-		#top-bar-menu #main-nav.dropdown.menu > li {
+		#top-bar-menu .main-nav.dropdown.menu > li {
 			> a {
 				color: $blue-100;
 			}

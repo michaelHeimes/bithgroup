@@ -2,14 +2,20 @@
 	display: flex;
 	flex-direction: column;
 	height: auto;
-	a {
+	.inner {
 		padding: 2rem;
 		box-shadow: $glow-on-dark-pre-hover;
 		transition: transform .4s ease, box-shadow .4s ease, background-color .4s ease, color .4s ease;
+		a {		
+			transition: transform .4s ease, box-shadow .4s ease, background-color .4s ease, color .4s ease;
+		}
 		&:hover {
 			background-color: $white;
 			color : $onyx !important;
 			box-shadow: $glow-on-dark; 	
+			a.has-bith-white-color {
+				color: var(--wp--preset--color--bith-onyx) !important;
+			}
 		}
 	}
 	.thumb-wrap {

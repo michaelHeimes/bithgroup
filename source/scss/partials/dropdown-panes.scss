@@ -1,4 +1,4 @@
-#main-nav ul.submenu,
+.main-nav ul.submenu,
 .dropdown-pane ul {
 	border-radius: 1rem;
 	background-color: $white;
@@ -23,7 +23,7 @@
 	}
 }
 
-#main-nav ul.submenu {
+.main-nav ul.submenu {
 	padding: 12px;
 	box-shadow: $glow-on-light;
 }

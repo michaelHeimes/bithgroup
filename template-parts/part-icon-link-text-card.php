@@ -20,7 +20,7 @@ if( $page_link || $icon || $title || $additional_links || $text ):?>
 			<?php if($page_link && $card_version == 'row'):?>
 				<a class="page-link" href="<?=esc_url($page_link);?>"
 					<?php if($title):?>
-						ara-label="Links to <?=wp_kses_post( $title );?> page"
+						aria-label="Links to <?=wp_kses_post( $title );?> page"
 					<?php endif;?>
 					>
 				</a>
@@ -32,23 +32,15 @@ if( $page_link || $icon || $title || $additional_links || $text ):?>
 							<?php if( $icon ):?>
 								<div class="cell shrink icon">
 									<div class="grid-x grid-padding-x align-middle">
-										
-										<?php if($page_link):?>
-											<div class="cell shrink">
-										<?php endif;?>
-										
-										<?=wp_get_attachment_image( $icon['id'], 'full', false, array( 'class' => 'style-svg' ) );?>
-										
-										<?php if($page_link):?>
-											</div>
-										<?php endif;?>
+										<div class="cell shrink">
+											<?=wp_get_attachment_image( $icon['id'], 'full', false, array( 'class' => 'style-svg' ) );?>
+										</div>
 										
 										<?php if($page_link && $card_version == 'row'):?>
 											<div class="arrow-wrap cell auto hide-for-large" style="opacity: 0;">
 												<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 24h28m0 0L24 10m14 14L24 38" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 											</div>
 										<?php endif;?>
-										
 									</div>
 								</div>
 							<?php endif;?>
@@ -64,14 +56,20 @@ if( $page_link || $icon || $title || $additional_links || $text ):?>
 										
 											<?php if($title && $card_version == 'column-additional-links'):?>
 												
-												<h3 class="color-green-30 has-underline-arrow-link">
-													<a class="color-green-30 weight-500" href="<?=esc_url($page_link);?>"
-													<?php if($title):?>
-														ara-label="Links to <?=wp_kses_post( $title );?> page"
-													<?php endif;?>
+												<h3 class="color-green-30 has-underline-arrow-link weight-500">
+													<?php if($page_link):?>
+														<a class="color-green-30" href="<?=esc_url($page_link);?>"
+														<?php if($title):?>
+											
+															aria-label="Links to <?=wp_kses_post( $title );?> page"
+														<?php endif;?>
 													>
+													<?php endif?>
 														<?=wp_kses_post( $title );?>
-													</a>
+													<?php if($page_link):?>
+														</a>
+													<?php endif?>
+													
 												</h3>
 												
 											<?php elseif( $title ):?>
@@ -90,7 +88,7 @@ if( $page_link || $icon || $title || $additional_links || $text ):?>
 															$link_target = $link['target'] ? $link['target'] : '_self';	
 													?>
 														<li class="has-underline-arrow-link">
-															<img src="<?=get_template_directory_uri();?>/assets/svgs/additional-link-icon.svg">
+															<img src="<?=get_template_directory_uri();?>/assets/svgs/additional-link-icon.svg" alt="icon for additional links">
 															<a class="color-green-30" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 																<span><?php echo esc_html( $link_title ); ?></span>
 															</a>

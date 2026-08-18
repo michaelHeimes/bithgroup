@@ -42,6 +42,6 @@ $text = get_field('text') ?? null;
 					<p><?=wp_kses_post($text);?></p>
 				<?php endif;?>
 			</div>
-		</div> <!-- Fixed HTML Typo here: changed </dix> to </div> -->
+		</div>
 	</div>
 </div>

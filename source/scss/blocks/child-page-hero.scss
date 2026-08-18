@@ -1,10 +1,10 @@
 .child-page-hero {
+	padding-top: clamp(4rem, 3.143rem + 4.286vw, 7rem);
 	padding-bottom: clamp(1.625rem, 0.982rem + 3.214vw, 3.875rem);
 	@include breakpoint(tablet) {
 		padding-bottom: clamp(8.5rem, 10.375rem + -9.375vw, 1.938rem);
 	}
 	.image-wrap {
-		margin-top: clamp(4rem, 3.143rem + 4.286vw, 7rem);
 		margin-bottom: clamp(1.875rem, 1.786rem + 0.446vw, 2.188rem);
 		max-width: 47%;
 		@include breakpoint(tablet) {

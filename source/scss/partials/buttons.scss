@@ -61,7 +61,7 @@
 		}
 	}
 }
-.wp-block-button__link,
+.wp-block-button,
 .is-style-blue-100 {
 	.button:not(.acf-button):not([data-name='add']),
 	a.wp-block-button__link {
@@ -70,7 +70,11 @@
 			background-color: $blue-100;
 		}
 		&:hover {
+			background-color: $green-100;
 			color: $onyx;
+			span {
+				color: $onyx;
+			}
 			&:before {
 				background-color: $green-100;
 			}
@@ -137,7 +141,6 @@
 	}
 }
 
-/* 1. Base / Default Button Style Rule (Forces Blue Layout automatically) */
 .editor-styles-wrapper .wp-block-button .wp-block-button__link,
 .editor-styles-wrapper .is-style-blue-100 .wp-block-button__link {
 	background-color: $blue-100 !important;
@@ -150,7 +153,6 @@
 	color: $white !important;
 }
 
-/* 2. Explicit Green Style Variant Override */
 .editor-styles-wrapper .is-style-green-100 .wp-block-button__link {
 	background-color: $green-100 !important; 
 	border: 0 !important;
@@ -161,7 +163,6 @@
 	color: $white !important;
 }
 
-/* 3. Explicit Outline Style Variant Override */
 .editor-styles-wrapper .is-style-outline-1 .wp-block-button__link {
 	background-color: transparent !important;
 	border: 1px solid $black-30 !important; 
@@ -176,7 +177,6 @@
 	background-color: transparent !important;
 }
 
-/* 4. Layout fixes */
 .wp-block-buttons > .wp-block-button.has-custom-width .wp-block-button__link {
 	width: auto !important;
 }

@@ -43,7 +43,7 @@ $image = get_field('image') ?? null;
 	<?php endif; ?>
 
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x align-bottom align-justify tablet-flex-dir-row-reverse">
+		<div class="grid-x grid-padding-x align-justify tablet-flex-dir-row-reverse">
 			<?php if($image):?>
 				<div class="cell small-12 tablet-4">
 					<div class="image-wrap">
@@ -59,6 +59,6 @@ $image = get_field('image') ?? null;
 					<p><?=wp_kses_post($text);?></p>
 				<?php endif;?>
 			</div>
-		</div> <!-- Fixed HTML Typo here: changed </dix> to </div> -->
+		</div>
 	</div>
 </div>

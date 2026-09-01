@@ -126,37 +126,39 @@ get_header();
 					);
 	
 				endwhile;
-	
-				trailhead_page_navi();
-				
-				$is_first_block = false;
-				$class_name = 'centered-green-radial-gradient-cta-banner content-section custom-section-pattern has-bith-radial-gradient-background has-bith-onyx-color';
-				$use_global_values = true;
-				$pulse_eyebrow = get_field('ccrg_pulse_eyebrow', 'option') ?? null;
-				$eyebrow_tag   = get_field('ccrg_eyebrow_tag', 'option') ?? null;
-				$title         = get_field('ccrg_title', 'option') ?? null;
-				$title_tag     = get_field('ccrg_title_tag', 'option') ?? null;
-				$button_link   = get_field('ccrg_button_link', 'option') ?? null;
-					
-				get_template_part('template-parts/part', 'centered-green-radial-gradient-cta-banner',
-					array(
-						'is_first_block' => $is_first_block,
-						'class_name' => $class_name,
-						'pulse_eyebrow' => $pulse_eyebrow,
-						'eyebrow_tag'   => $eyebrow_tag,
-						'title'         => $title,
-						'title_tag'     => $title_tag,
-						'button_link'   => $button_link,
-					)
-				);
-	
-			else :
-	
-				get_template_part( 'template-parts/content', 'none' );
-	
-			endif;
 			?>
 		</div>
+			
+		<?php
+			trailhead_page_navi();
+			
+			$is_first_block = false;
+			$class_name = 'centered-green-radial-gradient-cta-banner content-section custom-section-pattern has-bith-radial-gradient-background has-bith-onyx-color';
+			$use_global_values = true;
+			$pulse_eyebrow = get_field('ccrg_pulse_eyebrow', 'option') ?? null;
+			$eyebrow_tag   = get_field('ccrg_eyebrow_tag', 'option') ?? null;
+			$title         = get_field('ccrg_title', 'option') ?? null;
+			$title_tag     = get_field('ccrg_title_tag', 'option') ?? null;
+			$button_link   = get_field('ccrg_button_link', 'option') ?? null;
+				
+			get_template_part('template-parts/part', 'centered-green-radial-gradient-cta-banner',
+				array(
+					'is_first_block' => $is_first_block,
+					'class_name' => $class_name,
+					'pulse_eyebrow' => $pulse_eyebrow,
+					'eyebrow_tag'   => $eyebrow_tag,
+					'title'         => $title,
+					'title_tag'     => $title_tag,
+					'button_link'   => $button_link,
+				)
+			);
+
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif;
+		?>
 	</main><!-- #main -->
 
 <?php

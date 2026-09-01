@@ -6,9 +6,10 @@ function trailhead_page_navi() {
 	
 	$current_page = max( 1, get_query_var( 'paged' ) );
 	$total_pages  = $wp_query->max_num_pages;
-
-	// If there is only 1 page total, set total pages to 1 so navigation still renders
-	$total_pages = $total_pages > 0 ? $total_pages : 1;
+		
+	if ( $total_pages <= 1 ) {
+		return;
+	}
 
 	// Fetch links as a flat array instead of a broken nested list
 	$page_array = paginate_links( array(

@@ -61,7 +61,7 @@
 		}
 	}
 }
-.wp-block-button,
+.wp-block-button:not(.is-style-outline-1),
 .is-style-blue-100 {
 	.button:not(.acf-button):not([data-name='add']),
 	a.wp-block-button__link {
